@@ -1,0 +1,17 @@
+# Dependências do Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Relatórios de Cobertura de Testes (Jest)
+coverage/
+.nyc_output/
+
+# Compilação e Artefatos do TypeScript
+dist/
+out/
+*.tsbuildinfo
+
+# Configurações do Editor VS Code
+.vscode/
