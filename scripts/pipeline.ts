@@ -1,27 +1,80 @@
 /// <reference types="node" />
 
-import { exec } from "child_process";
-import { promisify } from "util";
+import { exec, spawn }  from "child_process";
+import { promisify }    from "util";
 
 const execAsync = promisify(exec);
 
-// ─── Runner ───────────────────────────────────────────────────────────────────
+// ─── Cores ANSI ───────────────────────────────────────────────────────────────
 
-async function run(script: string, label: string): Promise<void> {
-    const sep = "─".repeat(60);
-    console.log(`\n${sep}`);
-    console.log(`▶  ${label}`);
-    console.log(sep);
+const A = {
+    reset:  "\x1b[0m",
+    bold:   "\x1b[1m",
+    dim:    "\x1b[2m",
+    green:  "\x1b[32m",
+    red:    "\x1b[31m",
+    cyan:   "\x1b[36m",
+    clear:  "\x1b[K"
+};
+
+// ─── Passo 1: herda stdio para mostrar a barra de progresso ao vivo ───────────
+
+function runInherit(script: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+        const child = spawn("npx", ["ts-node", `scripts/${script}`], {
+            stdio:  "inherit",
+            shell:  true,
+            cwd:    process.cwd()
+        });
+        child.on("close", code => {
+            if (code === 0) resolve();
+            else reject(new Error(`${script} encerrou com código ${code}`));
+        });
+        child.on("error", reject);
+    });
+}
+
+// ─── Passos 2–5: spinner com elapsed time ─────────────────────────────────────
+
+const FRAMES = ["⠋","⠙","⠹","⠸","⠼","⠴","⠦","⠧","⠇","⠏"];
+
+async function runWithSpinner(script: string, label: string): Promise<void> {
+    let frame = 0;
+    const t0  = Date.now();
+
+    const spin = setInterval(() => {
+        const s = ((Date.now() - t0) / 1000).toFixed(1);
+        process.stdout.write(
+            `\r  ${A.cyan}${FRAMES[frame++ % FRAMES.length]}${A.reset}  ${label}  ${A.dim}${s}s${A.reset}${A.clear}`
+        );
+    }, 80);
 
     try {
         const { stdout, stderr } = await execAsync(
             `npx ts-node scripts/${script}`,
             { maxBuffer: 1024 * 1024 * 50, cwd: process.cwd() }
         );
-        if (stdout) process.stdout.write(stdout);
-        if (stderr) process.stderr.write(stderr);
+
+        clearInterval(spin);
+        const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+        process.stdout.write(
+            `\r  ${A.green}✔${A.reset}  ${A.bold}${label}${A.reset}  ${A.dim}${elapsed}s${A.reset}${A.clear}\n`
+        );
+
+        // Imprime stdout caso contenha mensagens úteis (✔ linhas dos scripts)
+        if (stdout.trim()) {
+            stdout.trim().split("\n").forEach(l =>
+                console.log(`     ${A.dim}${l.trim()}${A.reset}`)
+            );
+        }
+        if (stderr.trim()) process.stderr.write(stderr);
+
     } catch (err: any) {
+        clearInterval(spin);
         const out = (err.stdout || "") + (err.stderr || "");
+        process.stdout.write(
+            `\r  ${A.red}✗${A.reset}  ${A.bold}${label}${A.reset}${A.clear}\n`
+        );
         if (out) process.stderr.write(out);
         throw new Error(`Falha em ${script} (exit code ${err.code ?? "?"})`);
     }
@@ -31,36 +84,42 @@ async function run(script: string, label: string): Promise<void> {
 
 async function main() {
     const inicio = Date.now();
-    const eq = "═".repeat(60);
+    const eq     = "═".repeat(62);
 
-    console.log(`\n${eq}`);
-    console.log(`  PIPELINE — LLMs × Testes Unitários`);
-    console.log(`  ${new Date().toLocaleString("pt-BR")}`);
-    console.log(eq);
+    console.log(`\n${A.bold}${eq}${A.reset}`);
+    console.log(`${A.bold}  PIPELINE — LLMs × Testes Unitários${A.reset}`);
+    console.log(`${A.dim}  ${new Date().toLocaleString("pt-BR")}${A.reset}`);
+    console.log(`${A.bold}${eq}${A.reset}\n`);
 
-    await run("coletarResultados.ts", "1/5 — Executando testes (60 execuções)");
-    await run("gerarEstatisticas.ts", "2/5 — Calculando estatísticas descritivas");
-    await run("gerarTabelaLatex.ts",  "3/5 — Gerando tabelas LaTeX");
-    await run("gerarGraficos.ts",     "4/5 — Gerando gráficos SVG");
-    await run("gerarRelatorio.ts",    "5/5 — Gerando relatório Markdown");
+    // Passo 1: barra de progresso ao vivo (stdio herdado do processo filho)
+    console.log(`${A.bold}  1/5 — Executando testes (60 execuções)${A.reset}`);
+    await runInherit("coletarResultados.ts");
+
+    console.log();
+
+    // Passos 2–5: spinner por etapa
+    await runWithSpinner("gerarEstatisticas.ts", "2/5 — Estatísticas descritivas  ");
+    await runWithSpinner("gerarTabelaLatex.ts",  "3/5 — Tabelas LaTeX             ");
+    await runWithSpinner("gerarGraficos.ts",     "4/5 — Gráficos SVG              ");
+    await runWithSpinner("gerarRelatorio.ts",    "5/5 — Relatório Markdown        ");
 
     const min = ((Date.now() - inicio) / 60000).toFixed(1);
 
-    console.log(`\n${eq}`);
-    console.log(`  ✅ Pipeline concluído em ${min} min`);
-    console.log(eq);
-    console.log(`\nArquivos gerados em resultados/`);
-    console.log(`  json/                  ← JSONs do Jest (60 arquivos)`);
-    console.log(`  coverage/              ← Cobertura individual (60 arquivos)`);
-    console.log(`  logs/                  ← Logs individuais (60 arquivos)`);
-    console.log(`  resultados-compilados/ ← resultados.json + resultados.csv`);
-    console.log(`  estatisticas/          ← estatisticas.json + estatisticas.md`);
-    console.log(`  latex/                 ← tabelas.tex + fragmentos individuais`);
-    console.log(`  graficos/              ← heatmap, taxa-sucesso, testes, cobertura, algoritmos (.svg)`);
-    console.log(`  relatorio.md           ← Relatório completo em Markdown`);
+    console.log(`\n${A.bold}${eq}${A.reset}`);
+    console.log(`${A.green}${A.bold}  ✅ Pipeline concluído em ${min} min${A.reset}`);
+    console.log(`${A.bold}${eq}${A.reset}`);
+    console.log(`\n${A.dim}Arquivos gerados em resultados/${A.reset}`);
+    console.log(`${A.dim}  json/                  ← JSONs do Jest (60 arquivos)${A.reset}`);
+    console.log(`${A.dim}  coverage/              ← Cobertura individual (60 arquivos)${A.reset}`);
+    console.log(`${A.dim}  logs/                  ← Logs individuais (60 arquivos)${A.reset}`);
+    console.log(`${A.dim}  resultados-compilados/ ← resultados.json + resultados.csv${A.reset}`);
+    console.log(`${A.dim}  estatisticas/          ← estatisticas.json + estatisticas.md${A.reset}`);
+    console.log(`${A.dim}  latex/                 ← tabelas.tex + fragmentos individuais${A.reset}`);
+    console.log(`${A.dim}  graficos/              ← 5 SVGs (heatmap, taxa-sucesso, testes, cobertura, algoritmos)${A.reset}`);
+    console.log(`${A.dim}  relatorio.md           ← Relatório completo em Markdown${A.reset}`);
 }
 
 main().catch(err => {
-    console.error("\n❌ Erro no pipeline:", err.message);
+    console.error(`\n${A.red}❌ Erro no pipeline:${A.reset}`, err.message);
     process.exit(1);
 });

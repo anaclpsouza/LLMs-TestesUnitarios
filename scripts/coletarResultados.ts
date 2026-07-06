@@ -138,18 +138,61 @@ function parseTime(text: string) {
     return m ? m[1] : "";
 }
 
+// ─── Progresso no terminal ───────────────────────────────────────────────────
+
+const TOTAL = modelos.length * algoritmos.length;
+let executado = 0;
+
+const A = {
+    reset:  "\x1b[0m",
+    bold:   "\x1b[1m",
+    dim:    "\x1b[2m",
+    green:  "\x1b[32m",
+    red:    "\x1b[31m",
+    amber:  "\x1b[33m",
+    cyan:   "\x1b[36m",
+    clear:  "\x1b[K"
+};
+
+function renderBar(status: string, modelo: string, algoritmo: string, tempo: string): void {
+
+    executado++;
+    const pct    = executado / TOTAL;
+    const W      = 30;
+    const filled = Math.round(pct * W);
+    const bar    = "\u2588".repeat(filled) + "\u2591".repeat(W - filled);
+
+    const statusStr =
+        status === "OK"      ? `${A.green}\u2713 OK${A.reset}` :
+        status === "FAIL"    ? `${A.red}\u2717 FAIL${A.reset}` :
+                               `${A.amber}\u23F1 TIMEOUT${A.reset}`;
+
+    const count  = `${String(executado).padStart(2)}/${TOTAL}`;
+    const pctStr = `${Math.round(pct * 100)}%`.padStart(4);
+    const alg    = algoritmo.padEnd(26);
+    const mod    = modelo.padEnd(7);
+
+    const line =
+        `\r${A.dim}[${A.reset}${A.bold}${bar}${A.reset}${A.dim}]${A.reset}` +
+        ` ${A.bold}${count}${A.reset} ${A.dim}${pctStr}${A.reset}` +
+        `  ${A.cyan}${mod}${A.reset}${A.dim}::${A.reset} ${alg}` +
+        ` ${statusStr}  ${A.dim}${tempo}s${A.reset}`;
+
+    process.stdout.write(line + A.clear);
+
+    if (executado === TOTAL) {
+        process.stdout.write("\n");
+    }
+}
+
 async function executar() {
 
     for (const modelo of modelos) {
-
-        console.log(modelo.nome);
 
         // Slug do modelo para nomes de arquivo (ex: "GPT-4o" -> "gpt")
         const modeloSlug = modelo.nome.toLowerCase().replace(/[^a-z0-9]/g, "").replace("4o", "") || modelo.nome.toLowerCase();
 
         for (const algoritmo of algoritmos) {
-
-            console.log("  ", algoritmo);
 
             const teste      = `${modelo.pasta}/${algoritmo}.test.ts`;
             const jsonOut    = `resultados/json/${modeloSlug}-${algoritmo}.json`;
@@ -184,14 +227,9 @@ async function executar() {
 
                 const cov = parseCoverageFromFile(coverageDst);
 
-                resultados.push({
-                    modelo:    modelo.nome,
-                    algoritmo,
-                    status:    "OK",
-                    ...tests,
-                    ...cov,
-                    tempo:     parseTime(texto)
-                });
+                const r = { modelo: modelo.nome, algoritmo, status: "OK", ...tests, ...cov, tempo: parseTime(texto) };
+                resultados.push(r);
+                renderBar(r.status, modelo.nome, algoritmo, r.tempo);
 
             } catch (err: any) {
 
@@ -212,6 +250,7 @@ async function executar() {
                         lines:      "",
                         tempo:      `>${TIMEOUT / 1000}s`
                     });
+                    renderBar("TIMEOUT", modelo.nome, algoritmo, `>${TIMEOUT / 1000}s`);
 
                 } else {
 
@@ -229,14 +268,9 @@ async function executar() {
 
                     const cov = parseCoverageFromFile(coverageDst);
 
-                    resultados.push({
-                        modelo:    modelo.nome,
-                        algoritmo,
-                        status:    "FAIL",
-                        ...tests,
-                        ...cov,
-                        tempo:     parseTime(texto)
-                    });
+                    const r = { modelo: modelo.nome, algoritmo, status: "FAIL", ...tests, ...cov, tempo: parseTime(texto) };
+                    resultados.push(r);
+                    renderBar(r.status, modelo.nome, algoritmo, r.tempo);
 
                 }
 
