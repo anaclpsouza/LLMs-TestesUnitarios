@@ -1,17 +1,30 @@
-# Dependências do Node
+# ─── Dependências ──────────────────────────────────────────────────────────────
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Relatórios de Cobertura de Testes (Jest)
-coverage/
-.nyc_output/
-
-# Compilação e Artefatos do TypeScript
+# ─── Compilação TypeScript ─────────────────────────────────────────────────────
 dist/
 out/
 *.tsbuildinfo
 
-# Configurações do Editor VS Code
+# ─── Jest ──────────────────────────────────────────────────────────────────────
+# Cobertura gerada na raiz (temporária, usada só durante execução)
+coverage/
+
+# ─── Resultados do experimento ─────────────────────────────────────────────────
+# Os artefatos gerados pelo pipeline ficam dentro de resultados/
+# e NÃO devem ser versionados (são reproduzíveis com npm run experimento)
+resultados/
+
+# Arquivos de resultado antigos que ficavam na raiz (migrados para resultados/)
+resultados.json
+resultados.csv
+coverage-gpt/
+coverage-gemini/
+
+# ─── Editor ────────────────────────────────────────────────────────────────────
 .vscode/
+.idea/
+*.DS_Store

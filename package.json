@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "experimento":  "ts-node scripts/pipeline.ts",
+    "testes":       "ts-node scripts/coletarResultados.ts",
+    "estatisticas": "ts-node scripts/gerarEstatisticas.ts",
+    "latex":        "ts-node scripts/gerarTabelaLatex.ts",
+    "graficos":     "ts-node scripts/gerarGraficos.ts",
+    "relatorio":    "ts-node scripts/gerarRelatorio.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +17,10 @@
   "type": "commonjs",
   "devDependencies": {
     "@types/jest": "^30.0.0",
-    "@types/node": "^26.0.0",
+    "@types/node": "^26.1.0",
     "jest": "^30.4.2",
     "ts-jest": "^29.4.11",
+    "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   }
 }
