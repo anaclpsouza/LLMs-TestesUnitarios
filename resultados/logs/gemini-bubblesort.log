@@ -1,0 +1,28 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   16.75 |     3.12 |    4.16 |   19.35 |                                                                                                                                    
+ funcoes.ts |   16.75 |     3.12 |    4.16 |   19.35 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+PASS src/gemini15/bubblesort.test.ts
+  bubblesort
+    Caminho Feliz (Fluxos Positivos)
+      √ deve ordenar corretamente um array desordenado de números positivos (2 ms)
+      √ deve manter um array que já está ordenado inalterado
+      √ deve ordenar corretamente um array em ordem totalmente inversa
+      √ deve ordenar corretamente um array que contém elementos duplicados
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar um array vazio quando receber um array vazio (1 ms)
+      √ deve retornar o mesmo array imutável em valores quando houver apenas um elemento
+      √ deve ordenar corretamente arrays contendo números negativos
+      √ deve lidar corretamente com limites numéricos máximos e mínimos do JavaScript
+    Fluxos de Cobertura de Ramos (Branch Coverage e Mutabilidade)
+      √ deve garantir a mutação do array original passado por referência conforme implementação
+      √ deve executar apenas uma iteração do loop externo se nenhuma troca (shift) for necessária (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        1.945 s, estimated 2 s
+Ran all test suites matching src/gemini15/bubblesort.test.ts.
+Test results written to: resultados\json\gemini-bubblesort.json

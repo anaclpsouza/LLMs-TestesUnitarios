@@ -1,0 +1,54 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   16.75 |     3.12 |    4.16 |   19.35 |                                                                                                                                    
+ funcoes.ts |   16.75 |     3.12 |    4.16 |   19.35 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+PASS src/claude35/bubblesort.test.ts
+  bubblesort
+    Caminho Feliz (Fluxos Positivos)
+      √ deve ordenar array de inteiros positivos desordenados (2 ms)
+      √ deve ordenar array em ordem decrescente para crescente
+      √ deve retornar o mesmo array já ordenado sem alterações (1 ms)
+      √ deve ordenar array com dois elementos fora de ordem
+      √ deve retornar array de dois elementos já ordenados (1 ms)
+      √ deve ordenar array com números negativos
+      √ deve ordenar array com mistura de negativos e positivos (1 ms)
+      √ deve ordenar array com zeros e positivos
+      √ deve ordenar array com números decimais (1 ms)
+      √ deve ordenar array com valores repetidos
+      √ deve ordenar array com todos os elementos iguais
+      √ deve ordenar array com Number.MAX_SAFE_INTEGER e Number.MIN_SAFE_INTEGER (1 ms)
+      √ deve ordenar array longo corretamente (1 ms)
+      √ deve ordenar array com Infinity e -Infinity (1 ms)
+      √ deve ordenar array com valores negativos e zero
+      √ deve ordenar array com três elementos em ordem aleatória
+      √ deve ordenar array onde apenas o primeiro elemento está fora de lugar
+      √ deve ordenar array onde apenas o último elemento está fora de lugar (1 ms)
+    Casos de Borda (Edge Cases)
+      √ deve retornar array vazio para array vazio
+      √ deve retornar o mesmo array para array de um único elemento
+      √ deve retornar o mesmo array para array de um único elemento negativo
+      √ deve retornar o mesmo array para array de um único zero (1 ms)
+      √ deve ordenar array com todos os zeros
+      √ deve lidar corretamente com NaN no array (comportamento definido pelo JS)
+      √ deve ordenar array de dois zeros (1 ms)
+      √ deve ordenar array de dois elementos negativos
+      √ deve ordenar array com Number.MAX_SAFE_INTEGER duplicado
+      √ deve ordenar array com Number.MIN_SAFE_INTEGER duplicado
+      √ array retornado deve ter o mesmo comprimento do array de entrada (1 ms)
+      √ deve modificar o array original (ordenação in-place)
+      √ resultado deve conter exatamente os mesmos elementos da entrada
+      √ deve ordenar array com alternância de positivos e negativos
+      √ deve ordenar corretamente array com elemento único repetido muitas vezes (1 ms)
+      √ deve ordenar array com dois blocos já ordenados internamente mas trocados entre si
+      √ propriedade: elemento no índice 0 deve ser o menor após ordenação
+      √ propriedade: elemento no último índice deve ser o maior após ordenação
+      √ propriedade: cada elemento deve ser menor ou igual ao próximo após ordenação (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       37 passed, 37 total
+Snapshots:   0 total
+Time:        2.044 s
+Ran all test suites matching src/claude35/bubblesort.test.ts.
+Test results written to: resultados\json\claude-bubblesort.json

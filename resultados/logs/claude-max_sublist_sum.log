@@ -1,0 +1,53 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   14.05 |        0 |    4.16 |   16.77 |                                                                                                                                    
+ funcoes.ts |   14.05 |        0 |    4.16 |   16.77 | 9-10,15-17,22-23,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+PASS src/claude35/max_sublist_sum.test.ts
+  max_sublist_sum
+    Caminho Feliz (Fluxos Positivos)
+      √ deve retornar a soma correta para array com todos os valores positivos (2 ms)
+      √ deve retornar a soma do subarray máximo clássico
+      √ deve retornar o único elemento positivo em array majoritariamente negativo (1 ms)
+      √ deve retornar a soma de subarray no meio do array
+      √ deve retornar a soma de subarray no início do array
+      √ deve retornar a soma de subarray no final do array
+      √ deve retornar o valor de array com um único elemento positivo
+      √ deve retornar 0 para array com um único elemento negativo
+      √ deve retornar a soma total quando todos os elementos são positivos e crescentes (1 ms)
+      √ deve retornar corretamente quando há empate entre subarrays
+      √ deve retornar corretamente para array com alternância positivo/negativo
+      √ deve retornar a soma total de array longo com todos positivos
+    Fluxos Negativos
+      √ deve retornar 0 para array com todos os valores negativos
+      √ deve retornar 0 para array com todos os valores iguais a zero (1 ms)
+      √ deve retornar 0 para array com mistura de negativos e zeros
+      √ deve retornar 0 quando soma parcial sempre resulta negativa
+    Casos de Borda (Edge Cases)
+      √ deve retornar 0 para array vazio
+      √ deve retornar 0 para array com elemento zero único
+      √ deve lidar corretamente com Number.MAX_SAFE_INTEGER
+      √ deve lidar corretamente com Number.MIN_SAFE_INTEGER
+      √ deve lidar com array contendo Number.MAX_SAFE_INTEGER e valores negativos
+      √ deve retornar 0 para array contendo apenas Number.MIN_SAFE_INTEGER (1 ms)
+      √ deve lidar com valores decimais (float)
+      √ deve lidar com array de um único elemento zero
+      √ deve lidar com grandes arrays todos negativos retornando 0 (2 ms)
+      √ deve lidar com grandes arrays todos positivos retornando a soma total (1 ms)
+      √ deve ignorar zeros à esquerda e à direita e retornar subarray interno
+      √ deve retornar corretamente com Infinity positivo no array
+      √ deve retornar 0 com -Infinity no array e sem positivos
+      √ deve retornar NaN quando array contém NaN junto com positivos
+      √ deve retornar 0 quando array contém apenas NaN
+      √ deve manter resultado correto para array com dois elementos positivos
+      √ deve manter resultado correto para array com dois elementos negativos
+      √ deve manter resultado correto para array com positivo seguido de negativo
+      √ deve manter resultado correto para array com negativo seguido de positivo
+
+Test Suites: 1 passed, 1 total
+Tests:       35 passed, 35 total
+Snapshots:   0 total
+Time:        1.875 s, estimated 2 s
+Ran all test suites matching src/claude35/max_sublist_sum.test.ts.
+Test results written to: resultados\json\claude-max_sublist_sum.json

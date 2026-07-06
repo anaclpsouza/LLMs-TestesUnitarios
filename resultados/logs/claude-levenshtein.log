@@ -1,0 +1,75 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   15.67 |     12.5 |    4.16 |   16.77 |                                                                                                                                  
+ funcoes.ts |   15.67 |     12.5 |    4.16 |   16.77 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+PASS src/claude35/levenshtein.test.ts
+  levenshtein
+    Caminho Feliz (Fluxos Positivos)
+      √ deve retornar 0 para strings idênticas "abc" (2 ms)
+      √ deve retornar 0 para duas strings vazias
+      √ deve retornar 1 para substituição de um único caractere (1 ms)
+      √ deve retornar 1 para inserção de um único caractere
+      √ deve retornar 1 para deleção de um único caractere
+      √ deve retornar 3 para "kitten" -> "sitting" (exemplo clássico) (1 ms)
+      √ deve retornar 3 para "sitting" -> "kitten"
+      √ deve retornar 2 para "sunday" -> "saturday" (1 ms)
+      √ deve retornar 1 para "cat" -> "bat"
+      √ deve retornar 2 para "cat" -> "car" (1 ms)
+      √ deve retornar 2 para "book" -> "back"
+      √ deve retornar 1 para strings que diferem apenas no último caractere
+      √ deve retornar 1 para strings que diferem apenas no primeiro caractere
+      √ deve retornar distância correta para "flaw" -> "lawn"
+      √ deve retornar distância correta para "gumbo" -> "gambol"
+      √ deve retornar 5 para "" -> "hello" (inserções)
+      √ deve retornar 5 para "hello" -> "" (deleções)
+      √ deve retornar distância correta para strings com caracteres repetidos "aaa" -> "aaaa"
+      √ deve retornar distância correta para "abc" -> "cba" (reversão) (1 ms)
+      √ deve retornar distância correta para "intention" -> "execution" (29 ms)
+    Propriedade de Simetria
+      √ levenshtein(s, t) deve ser igual a levenshtein(t, s) para "abc" e "xyz"
+      √ levenshtein(s, t) deve ser igual a levenshtein(t, s) para "kitten" e "sitting" (1 ms)
+      √ levenshtein(s, t) deve ser igual a levenshtein(t, s) para "ab" e "ba"
+      √ levenshtein(s, t) deve ser igual a levenshtein(t, s) para strings vazias e não vazias
+      √ levenshtein(s, t) deve ser igual a levenshtein(t, s) para "sunday" e "saturday" (1 ms)
+    Propriedade de Desigualdade Triangular
+      √ levenshtein(a, c) <= levenshtein(a, b) + levenshtein(b, c)
+      √ desigualdade triangular para strings com inserções e deleções (1 ms)
+    Fluxos Negativos e Casos Limite de Strings
+      √ deve retornar comprimento de t quando s é vazia e t tem 1 caractere
+      √ deve retornar comprimento de s quando t é vazia e s tem 1 caractere
+      √ deve retornar comprimento de t para s vazia com t de múltiplos caracteres
+      √ deve retornar comprimento de s para t vazia com s de múltiplos caracteres (1 ms)
+      √ deve lidar com strings contendo espaços
+      √ deve lidar com strings contendo caracteres especiais
+      √ deve lidar com strings contendo caracteres especiais diferentes
+      √ deve lidar com strings numéricas
+      √ deve lidar com strings numéricas diferentes (1 ms)
+      √ deve diferenciar maiúsculas e minúsculas: "ABC" vs "abc"
+      √ deve diferenciar maiúsculas e minúsculas: "Hello" vs "hello"
+      √ deve lidar com strings com acentos: "ação" vs "acao"
+      √ deve retornar resultado correto para strings com apenas espaços
+      √ deve retornar resultado correto para string de espaços vs vazia
+    Casos de Borda (Edge Cases)
+      √ deve retornar 0 para strings idênticas de um único caractere
+      √ deve retornar 1 para dois caracteres totalmente diferentes
+      √ deve retornar comprimento máximo para strings completamente diferentes do mesmo tamanho
+      √ deve retornar distância correta para string de comprimento 1 vs vazia (1 ms)
+      √ deve retornar distância correta para vazia vs comprimento 1
+      √ resultado deve sempre ser não negativo
+      √ resultado deve sempre ser um inteiro (1 ms)
+      √ distância nunca deve exceder o comprimento máximo das duas strings (1 ms)
+      √ distância nunca deve ser menor que a diferença absoluta dos comprimentos
+      √ deve retornar 0 ao comparar string longa consigo mesma
+      √ deve retornar distância correta para prefixo: "abc" -> "abcdef"
+      √ deve retornar distância correta para sufixo: "def" -> "abcdef"
+      √ deve lidar com strings com nova linha e tab
+      √ deve retornar 1 para strings que diferem apenas por um tab vs espaço
+
+Test Suites: 1 passed, 1 total
+Tests:       55 passed, 55 total
+Snapshots:   0 total
+Time:        1.994 s, estimated 3 s
+Ran all test suites matching src/claude35/levenshtein.test.ts.
+Test results written to: resultados\json\claude-levenshtein.json

@@ -1,0 +1,47 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   18.37 |     9.37 |    4.16 |   20.64 |                                                                                                                                  
+ funcoes.ts |   18.37 |     9.37 |    4.16 |   20.64 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gemini15/lis.test.ts
+  lis (Longest Increasing Subsequence)
+    Caminho Feliz (Fluxos Positivos)
+      √ deve retornar o comprimento correto para uma sequência misturada padrão (2 ms)
+      √ deve retornar o comprimento total se o array já estiver estritamente crescente
+      √ deve retornar 1 se o array estiver estritamente decrescente
+      √ deve tratar corretamente sequências com flutuações e elementos repetidos
+      × deve calcular corretamente quando o menor elemento está no meio (2 ms)
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar 0 se o array estiver vazio (1 ms)
+      √ deve retornar 1 para um array com apenas um elemento
+      √ deve funcionar corretamente com arrays contendo números negativos
+      √ deve lidar corretamente com o valor zero (1 ms)
+      √ deve suportar limites numéricos máximos e mínimos do JavaScript
+    Cobertura de Ramos de Fluxo Interno (Branch Coverage)
+      √ deve acionar o ramo onde val não é menor que arr[ends[length_prefix + 1]] e length_prefix !== longest
+      √ deve ignorar a atualização do mapa se as condições do bloco condicional externo não forem atendidas
+
+  ● lis (Longest Increasing Subsequence) › Caminho Feliz (Fluxos Positivos) › deve calcular corretamente quando o menor elemento está no meio
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 4
+
+    [0m [90m 22 |[39m
+     [90m 23 |[39m     it([32m'deve calcular corretamente quando o menor elemento está no meio'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 24 |[39m       expect(lis([[35m3[39m[33m,[39m [35m4[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m [90m// LIS: [-1, 0, 1, 2] precedido por lógicas de substituição[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 25 |[39m     })[33m;[39m
+     [90m 26 |[39m   })[33m;[39m
+     [90m 27 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/lis.test.ts:24:40)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 11 passed, 12 total
+Snapshots:   0 total
+Time:        1.624 s, estimated 2 s
+Ran all test suites matching src/gemini15/lis.test.ts.
+Test results written to: resultados\json\gemini-lis.json

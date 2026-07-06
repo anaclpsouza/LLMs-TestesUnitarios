@@ -1,0 +1,29 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   14.05 |     3.12 |    4.16 |   16.77 |                                                                                                                                    
+ funcoes.ts |   14.05 |     3.12 |    4.16 |   16.77 | 9-10,15-17,22-23,28-34,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+PASS src/gemini15/flatten.test.ts
+  flatten
+    Caminho Feliz (Fluxos Positivos)
+      √ deve manter um array plano inalterado (2 ms)
+      √ deve achatar um array com um nível de aninhamento
+      √ deve achatar um array com múltiplos níveis de aninhamento profundo
+      √ deve funcionar corretamente com arrays de strings e tipos mistos planos
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar um array vazio quando receber um array vazio
+      √ deve lidar corretamente com arrays contendo apenas arrays vazios em múltiplos níveis (1 ms)
+      √ deve preservar valores falsy como nulo, undefined, zero e strings vazias sem achatá-los ou removê-los
+      √ deve tratar elementos que são objetos complexos ou referências sem modificá-los
+      √ deve funcionar com arrays extremamente longos e planos (4 ms)
+    Fluxos Alternativos e Variações
+      √ deve achatar arrays onde todos os elementos são arrays
+      √ deve respeitar a ordem original dos elementos ao achatar de forma recursiva (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        1.628 s, estimated 2 s
+Ran all test suites matching src/gemini15/flatten.test.ts.
+Test results written to: resultados\json\gemini-flatten.json

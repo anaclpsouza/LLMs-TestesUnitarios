@@ -1,0 +1,60 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   13.51 |     6.25 |    4.16 |   15.48 |                                                                                                                                    
+ funcoes.ts |   13.51 |     6.25 |    4.16 |   15.48 | 9-10,15-17,22-23,28-34,39-47,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gpt4o/is_palindrome.test.ts
+  is_palindrome
+    Casos positivos
+      √ deve retornar true para string vazia (2 ms)
+      √ deve retornar true para string com um único caractere
+      √ deve retornar true para palíndromo com quantidade par de caracteres
+      √ deve retornar true para palíndromo com quantidade ímpar de caracteres (1 ms)
+      √ deve retornar true para outro palíndromo conhecido
+      √ deve considerar espaços como parte da string
+      √ deve considerar caracteres especiais
+      √ deve considerar números como caracteres válidos
+      √ deve considerar letras acentuadas corretamente
+    Casos negativos
+      √ deve retornar false para string que não é palíndromo
+      √ deve retornar false quando apenas o primeiro e último caracteres diferem
+      √ deve diferenciar letras maiúsculas e minúsculas
+      √ deve considerar espaços na comparação (1 ms)
+      √ deve retornar false para sequência numérica que não é palíndromo
+    Casos de borda
+      √ deve retornar true para dois caracteres iguais
+      √ deve retornar false para dois caracteres diferentes
+      √ deve lidar corretamente com palíndromo longo (1 ms)
+      √ deve retornar true para string composta apenas por espaços
+    Entradas inválidas ou não tratadas explicitamente
+      √ deve lançar TypeError quando a entrada for null (55 ms)
+      √ deve lançar TypeError quando a entrada for undefined (1 ms)
+      √ deve lançar TypeError quando um número for passado em tempo de execução (1 ms)
+      √ deve lançar TypeError quando um objeto for passado em tempo de execução
+      × deve lançar TypeError quando um array for passado em tempo de execução (1 ms)
+
+  ● is_palindrome › Entradas inválidas ou não tratadas explicitamente › deve lançar TypeError quando um array for passado em tempo de execução
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 100 |[39m
+     [90m 101 |[39m     test([32m'deve lançar TypeError quando um array for passado em tempo de execução'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 102 |[39m       expect(() [33m=>[39m is_palindrome([] [36mas[39m unknown [36mas[39m string))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m     |[39m                                                            [31m[1m^[22m[39m
+     [90m 103 |[39m     })[33m;[39m
+     [90m 104 |[39m   })[33m;[39m
+     [90m 105 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/is_palindrome.test.ts:102:60)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 22 passed, 23 total
+Snapshots:   0 total
+Time:        1.943 s, estimated 2 s
+Ran all test suites matching src/gpt4o/is_palindrome.test.ts.
+Test results written to: resultados\json\gpt-is_palindrome.json

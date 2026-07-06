@@ -1,0 +1,31 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   19.45 |     9.37 |    8.33 |   21.93 |                                                                                                                                  
+ funcoes.ts |   19.45 |     9.37 |    8.33 |   21.93 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-196,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+PASS src/gemini15/mergesort.test.ts
+  mergesort
+    Caminho Feliz (Fluxos Positivos)
+      √ deve ordenar corretamente um array desordenado de números positivos (3 ms)
+      √ deve manter intacto um array que já está ordenado (1 ms)
+      √ deve ordenar um array que está em ordem totalmente inversa
+      √ deve ordenar corretamente mantendo a estabilidade com múltiplos elementos repetidos (1 ms)
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar um array vazio quando receber um array vazio (caso base de parada)
+      √ deve retornar o próprio array se ele possuir apenas um elemento (caso base de parada)
+      √ deve ordenar corretamente arrays contendo números negativos
+      √ deve ordenar corretamente um array composto apenas por elementos idênticos
+      √ deve lidar de forma precisa com limites numéricos máximos e mínimos do JavaScript
+    Garantia de Imutabilidade e Cobertura de Ramos (Branch Coverage)
+      √ deve garantir que o algoritmo seja puro e não modifique a referência do array original
+      √ deve cobrir o ramo em que o array da esquerda (left) se esgota primeiro no laço while do merge
+      √ deve cobrir o ramo em que o array da direita (right) se esgota primeiro no laço while do merge (1 ms)
+      √ deve garantir a correta ordenação e cobertura da condição de igualdade estável (left[i] <= right[j])
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.556 s, estimated 2 s
+Ran all test suites matching src/gemini15/mergesort.test.ts.
+Test results written to: resultados\json\gemini-mergesort.json

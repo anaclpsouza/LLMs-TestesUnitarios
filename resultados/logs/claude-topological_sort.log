@@ -1,0 +1,52 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |      20 |     9.37 |    8.33 |   21.29 |                                                                                                                                  
+ funcoes.ts |      20 |     9.37 |    8.33 |   21.29 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+PASS src/claude35/topological_sort.test.ts
+  topological_sort
+    Caminho Feliz (Fluxos Positivos)
+      √ deve ordenar grafo linear simples A -> B -> C (3 ms)
+      √ deve ordenar grafo com duas arestas independentes saindo de A (1 ms)
+      √ deve retornar ordem válida para DAG clássico de 4 nós
+      √ deve retornar todos os nós em alguma ordem válida
+      √ deve respeitar precedência: cada aresta u->v deve ter u antes de v
+      √ deve retornar ordem correta para grafo com múltiplas fontes (1 ms)
+      √ deve ordenar corretamente grafo de dependências de tarefas
+      √ deve preservar a ordem topológica em DAG com múltiplos caminhos
+      √ deve retornar ordem com nó único sem arestas
+      √ deve ordenar grafo de 2 nós com uma aresta
+      √ deve conter todos os nós no resultado (1 ms)
+    Casos Sem Arestas (Grafos Sem Dependências)
+      √ deve retornar todos os nós em alguma ordem para grafo sem arestas
+      √ deve retornar os nós na ordem original quando não há dependências
+      √ deve retornar nó único sem arestas (1 ms)
+    Fluxos Negativos — Grafo com Ciclo
+      √ deve retornar [] para ciclo simples A -> B -> A
+      √ deve retornar [] para ciclo de três nós A -> B -> C -> A
+      √ deve retornar [] para ciclo de um nó (self-loop) A -> A
+      √ deve retornar [] para grafo com ciclo parcial e nós fora do ciclo
+      √ deve retornar [] para ciclo de 4 nós
+      √ deve retornar [] para ciclo embutido em grafo maior
+    Casos de Borda (Edge Cases)
+      √ deve retornar [] para lista de nós vazia e lista de arestas vazia
+      √ deve retornar [] para lista de nós vazia com arestas fornecidas (1 ms)
+      √ resultado deve conter cada nó exatamente uma vez
+      √ resultado deve ter comprimento igual ao número de nós em DAG válido
+      √ deve respeitar precedência para todas as arestas no resultado
+      √ deve lidar com nós com strings mais longas como identificadores (1 ms)
+      √ deve lidar com nós identificados por números como strings
+      √ deve lidar com arestas redundantes paralelas sem ciclo
+      √ deve retornar [] para dois nós com ciclo mútuo
+      √ deve lidar com grafo diamante A->B, A->C, B->D, C->D (1 ms)
+      √ deve lidar com muitos nós sem arestas (todos são fontes) (1 ms)
+      √ deve lidar com grafo de cadeia longa de 10 nós
+      √ nenhum elemento do resultado deve aparecer antes de seus predecessores
+
+Test Suites: 1 passed, 1 total
+Tests:       33 passed, 33 total
+Snapshots:   0 total
+Time:        2.212 s, estimated 3 s
+Ran all test suites matching src/claude35/topological_sort.test.ts.
+Test results written to: resultados\json\claude-topological_sort.json

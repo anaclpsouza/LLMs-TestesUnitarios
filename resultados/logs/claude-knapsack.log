@@ -1,0 +1,107 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   14.05 |        0 |    4.16 |   16.12 |                                                                                                                                  
+ funcoes.ts |   14.05 |        0 |    4.16 |   16.12 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+FAIL src/claude35/knapsack.test.ts
+  knapsack
+    Caminho Feliz (Fluxos Positivos)
+      √ deve retornar valor ótimo para exemplo clássico com 4 itens (2 ms)
+      √ deve retornar valor ótimo para mochila com capacidade exata de um item
+      √ deve retornar valor ótimo combinando múltiplos itens
+      √ deve retornar valor ótimo para capacidade que permite todos os itens (1 ms)
+      √ deve retornar valor ótimo para mochila com único item que cabe exatamente
+      √ deve retornar valor ótimo escolhendo item mais valioso dentre alternativas
+      √ deve retornar valor ótimo para mochila com capacidade 10 e múltiplos itens
+      √ deve retornar valor ótimo ignorando itens mais pesados que a capacidade
+      √ deve retornar valor ótimo para mochila de capacidade 1 com itens de peso 1
+      √ deve retornar valor correto para itens com mesmo peso mas valores diferentes
+      × deve retornar valor correto para itens com mesmo valor mas pesos diferentes (1 ms)
+      × deve resolver instância clássica 0/1 de referência
+      × deve retornar valor ótimo para grande capacidade e muitos itens (1 ms)
+      √ deve retornar valor ótimo quando todos os itens cabem na mochila
+    Fluxos Negativos
+      √ deve retornar 0 para array de itens vazio
+      √ deve retornar 0 para capacidade 0 com itens disponíveis
+      √ deve retornar 0 para capacidade 0 e array vazio
+      √ deve retornar 0 quando nenhum item cabe na mochila
+      √ deve retornar 0 quando capacidade é menor que o menor peso (1 ms)
+      √ deve retornar 0 quando todos os itens têm peso maior que a capacidade
+    Casos de Borda (Edge Cases)
+      √ deve retornar 0 para capacidade 0 e lista vazia
+      √ deve retornar 0 para lista vazia com qualquer capacidade
+      √ deve retornar valor correto para único item que cabe exatamente (1 ms)
+      √ deve retornar 0 para único item que não cabe
+      √ deve retornar valor correto para item de peso 1 e capacidade 1
+      √ deve retornar valor correto para capacidade igual ao peso total de todos os itens
+      √ deve retornar valor correto para item com valor 0
+      √ deve retornar valor correto para todos os itens com valor 0 (1 ms)
+      √ deve retornar valor correto com item de peso 1 repetível até capacidade
+      √ deve retornar valor máximo com Number.MAX_SAFE_INTEGER como valor de item
+      √ deve lidar com múltiplos itens de peso 1 e capacidade total (1 ms)
+      √ resultado deve ser sempre não negativo
+      √ resultado deve ser sempre inteiro para itens com valores inteiros
+      √ resultado nunca deve exceder a soma de todos os valores disponíveis (1 ms)
+      √ deve ser determinístico: mesma entrada produz mesmo resultado
+      √ deve lidar com mochila de capacidade 1 e um item de peso 1
+      √ deve lidar com lista de um item e capacidade menor que o peso do item
+      √ deve lidar com grande quantidade de itens (1 ms)
+
+  ● knapsack › Caminho Feliz (Fluxos Positivos) › deve retornar valor correto para itens com mesmo valor mas pesos diferentes
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 50
+    Received: 20
+
+    [0m [90m 56 |[39m     test([32m'deve retornar valor correto para itens com mesmo valor mas pesos diferentes'[39m[33m,[39m () [33m=>[39m {
+     [90m 57 |[39m       [36mconst[39m items[33m:[39m [number[33m,[39m number][] [33m=[39m [[[35m1[39m[33m,[39m [35m10[39m][33m,[39m [[35m3[39m[33m,[39m [35m10[39m][33m,[39m [[35m5[39m[33m,[39m [35m10[39m]][33m;[39m
+    [31m[1m>[22m[39m[90m 58 |[39m       expect(knapsack([35m5[39m[33m,[39m items))[33m.[39mtoBe([35m50[39m)[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 59 |[39m     })[33m;[39m
+     [90m 60 |[39m
+     [90m 61 |[39m     test([32m'deve resolver instância clássica 0/1 de referência'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/knapsack.test.ts:58:34)
+
+  ● knapsack › Caminho Feliz (Fluxos Positivos) › deve resolver instância clássica 0/1 de referência
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 32
+    Received: 26
+
+    [0m [90m 66 |[39m         [[35m1[39m[33m,[39m [35m4[39m][33m,[39m
+     [90m 67 |[39m       ][33m;[39m
+    [31m[1m>[22m[39m[90m 68 |[39m       expect(knapsack([35m6[39m[33m,[39m items))[33m.[39mtoBe([35m32[39m)[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 69 |[39m     })[33m;[39m
+     [90m 70 |[39m
+     [90m 71 |[39m     test([32m'deve retornar valor ótimo para grande capacidade e muitos itens'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/knapsack.test.ts:68:34)
+
+  ● knapsack › Caminho Feliz (Fluxos Positivos) › deve retornar valor ótimo para grande capacidade e muitos itens
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 30
+    Received: 25
+
+    [0m [90m 73 |[39m         [[35m1[39m[33m,[39m [35m2[39m][33m,[39m [[35m3[39m[33m,[39m [35m5[39m][33m,[39m [[35m4[39m[33m,[39m [35m8[39m][33m,[39m [[35m5[39m[33m,[39m [35m9[39m][33m,[39m [[35m7[39m[33m,[39m [35m10[39m][33m,[39m
+     [90m 74 |[39m       ][33m;[39m
+    [31m[1m>[22m[39m[90m 75 |[39m       expect(knapsack([35m15[39m[33m,[39m items))[33m.[39mtoBe([35m30[39m)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 76 |[39m     })[33m;[39m
+     [90m 77 |[39m
+     [90m 78 |[39m     test([32m'deve retornar valor ótimo quando todos os itens cabem na mochila'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/knapsack.test.ts:75:35)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 35 passed, 38 total
+Snapshots:   0 total
+Time:        2.121 s
+Ran all test suites matching src/claude35/knapsack.test.ts.
+Test results written to: resultados\json\claude-knapsack.json

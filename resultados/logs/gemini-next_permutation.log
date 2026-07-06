@@ -1,0 +1,71 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   17.29 |     6.25 |    4.16 |   19.35 |                                                                                                                                  
+ funcoes.ts |   17.29 |     6.25 |    4.16 |   19.35 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gemini15/next_permutation.test.ts
+  next_permutation
+    Caminho Feliz (Fluxos Positivos)
+      √ deve retornar a próxima permutação lexicográfica padrão de um array simples (3 ms)
+      √ deve avançar corretamente quando o pivô exige troca do primeiro elemento
+      √ deve lidar corretamente com permutações de sub-sufixos maiores (1 ms)
+      √ deve encontrar a próxima permutação em uma sequência com elementos repetidos
+      √ deve avançar corretamente quando há múltiplos elementos repetidos no sufixo decrescente
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar um array vazio se o array original estiver vazio
+      √ deve retornar um array vazio se o array contiver apenas um elemento
+      √ deve retornar um array vazio se o array já estiver na sua última permutação lexicográfica (totalmente decrescente)
+      √ deve retornar um array vazio se todos os elementos do array forem idênticos (1 ms)
+      × deve lidar corretamente com arrays contendo números negativos (3 ms)
+      √ deve funcionar com limites numéricos máximos e mínimos do JavaScript
+    Cobertura de Ramos de Fluxo Interno (Branch Coverage)
+      √ deve testar a busca pelo pivô quando arr[i] >= arr[i+1] em grande parte do array
+      × deve mutar parcialmente o array original devido às trocas in-place antes de retornar a nova fatia concatenada
+
+  ● next_permutation › Casos de Borda e Limites (Edge Cases) › deve lidar corretamente com arrays contendo números negativos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+    -   -3,
+        -2,
+    +   -3,
+        -1,
+      ]
+
+    [0m [90m 50 |[39m     it([32m'deve lidar corretamente com arrays contendo números negativos'[39m[33m,[39m () [33m=>[39m {
+     [90m 51 |[39m       [36mconst[39m input [33m=[39m [[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m2[39m][33m;[39m
+    [31m[1m>[22m[39m[90m 52 |[39m       expect(next_permutation(input))[33m.[39mtoEqual([[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m1[39m])[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 53 |[39m     })[33m;[39m
+     [90m 54 |[39m
+     [90m 55 |[39m     it([32m'deve funcionar com limites numéricos máximos e mínimos do JavaScript'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/next_permutation.test.ts:52:39)
+
+  ● next_permutation › Cobertura de Ramos de Fluxo Interno (Branch Coverage) › deve mutar parcialmente o array original devido às trocas in-place antes de retornar a nova fatia concatenada
+
+    expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not 4
+
+    [0m [90m 70 |[39m       next_permutation(input)[33m;[39m
+     [90m 71 |[39m       [90m// Garante que o efeito colateral da mutação do operador 'arr[i] = arr[j]' ocorreu no array original passado por referência[39m
+    [31m[1m>[22m[39m[90m 72 |[39m       expect(input[[35m2[39m])[33m.[39mnot[33m.[39mtoBe([35m4[39m)[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 73 |[39m     })[33m;[39m
+     [90m 74 |[39m   })[33m;[39m
+     [90m 75 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/next_permutation.test.ts:72:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 11 passed, 13 total
+Snapshots:   0 total
+Time:        1.873 s, estimated 2 s
+Ran all test suites matching src/gemini15/next_permutation.test.ts.
+Test results written to: resultados\json\gemini-next_permutation.json

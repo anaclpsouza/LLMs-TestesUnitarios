@@ -1,0 +1,41 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   15.67 |     12.5 |    4.16 |   16.77 |                                                                                                                                  
+ funcoes.ts |   15.67 |     12.5 |    4.16 |   16.77 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+PASS src/gpt4o/levenshtein.test.ts
+  levenshtein
+    Casos positivos
+      √ deve retornar 0 para strings idênticas (3 ms)
+      √ deve retornar 0 para duas strings vazias
+      √ deve calcular corretamente uma inserção
+      √ deve calcular corretamente uma remoção
+      √ deve calcular corretamente uma substituição
+      √ deve calcular corretamente múltiplas operações (1 ms)
+      √ deve calcular corretamente outro exemplo conhecido
+      √ deve calcular corretamente quando apenas o último caractere difere (1 ms)
+      √ deve calcular corretamente para números representados como strings
+    Casos de borda
+      √ deve retornar o tamanho da segunda string quando a primeira for vazia
+      √ deve retornar o tamanho da primeira string quando a segunda for vazia
+      √ deve considerar espaços como caracteres válidos
+      √ deve considerar diferença entre maiúsculas e minúsculas
+      √ deve lidar corretamente com caracteres especiais
+      √ deve lidar corretamente com caracteres acentuados
+      √ deve ser simétrica (1 ms)
+      √ deve retornar a distância igual ao tamanho para strings completamente diferentes de mesmo tamanho
+    Entradas inválidas ou não tratadas explicitamente
+      √ deve lançar TypeError quando a primeira string for null (26 ms)
+      √ deve lançar TypeError quando a segunda string for null (1 ms)
+      √ deve lançar TypeError quando a primeira string for undefined
+      √ deve lançar TypeError quando a segunda string for undefined (1 ms)
+      √ deve lançar TypeError quando a primeira entrada for um número (1 ms)
+      √ deve lançar TypeError quando a segunda entrada for um objeto
+
+Test Suites: 1 passed, 1 total
+Tests:       23 passed, 23 total
+Snapshots:   0 total
+Time:        1.89 s, estimated 2 s
+Ran all test suites matching src/gpt4o/levenshtein.test.ts.
+Test results written to: resultados\json\gpt-levenshtein.json

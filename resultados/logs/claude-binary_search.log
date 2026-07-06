@@ -1,0 +1,84 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   16.21 |     6.25 |    4.16 |   19.35 |                                                                                                                                    
+ funcoes.ts |   16.21 |     6.25 |    4.16 |   19.35 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+FAIL src/claude35/binary_search.test.ts
+  binary_search
+    Caminho Feliz (Fluxos Positivos)
+      √ deve encontrar elemento no meio do array (3 ms)
+      √ deve encontrar elemento no início do array
+      √ deve encontrar elemento no final do array
+      √ deve encontrar elemento em array de dois elementos — primeiro
+      √ deve encontrar elemento em array de dois elementos — segundo
+      √ deve encontrar elemento em array de um único elemento
+      √ deve encontrar elemento em array grande ordenado
+      √ deve encontrar elemento no índice 0 em array grande (1 ms)
+      √ deve encontrar elemento no último índice em array grande
+      √ deve encontrar elemento com valores negativos no array
+      √ deve encontrar elemento zero em array com negativos e positivos
+      √ deve encontrar elemento com Number.MAX_SAFE_INTEGER
+      √ deve encontrar elemento com Number.MIN_SAFE_INTEGER
+      √ deve encontrar elemento em array com apenas números negativos
+      √ deve encontrar elemento em array com números decimais
+      √ deve retornar índice correto quando há apenas dois elementos e busca o último
+    Fluxos Negativos — Elemento Não Encontrado
+      √ deve retornar -1 para elemento ausente em array populado
+      √ deve retornar -1 para elemento menor que todos os elementos
+      √ deve retornar -1 para elemento maior que todos os elementos
+      √ deve retornar -1 para elemento ausente em array vazio
+      √ deve retornar -1 para elemento ausente em array de um único elemento
+      √ deve retornar -1 para elemento ausente entre dois elementos (1 ms)
+      √ deve retornar -1 para elemento ausente em array de negativos
+      √ deve retornar -1 para busca de 0 em array sem zero
+      √ deve retornar -1 para busca de valor negativo em array positivo (1 ms)
+      √ deve retornar -1 para busca de valor positivo em array negativo
+      × deve retornar -1 para NaN como elemento buscado (2 ms)
+      √ deve retornar -1 para Infinity ausente no array
+      √ deve retornar -1 para -Infinity ausente no array
+      √ deve retornar -1 para Number.MAX_SAFE_INTEGER ausente no array (1 ms)
+      √ deve retornar -1 para Number.MIN_SAFE_INTEGER ausente no array
+    Casos de Borda (Edge Cases)
+      √ deve retornar -1 para array vazio
+      √ deve funcionar corretamente com array de um elemento encontrado (1 ms)
+      √ deve funcionar corretamente com array de um elemento não encontrado
+      √ deve encontrar Infinity quando presente no array
+      √ deve encontrar -Infinity quando presente no array
+      √ deve lidar com array de dois elementos iguais — encontrado no índice esperado (1 ms)
+      √ deve retornar índice válido para array de 3 elementos, busca no meio
+      √ deve retornar -1 para array de tamanho par com elemento ausente entre dois centrais
+      √ resultado deve ser sempre um número inteiro (1 ms)
+      √ resultado deve ser -1 ou um índice válido do array
+      √ índice retornado deve corresponder ao elemento buscado no array
+      √ deve funcionar corretamente com array de tamanho par — elemento no final
+      √ deve funcionar corretamente com array de tamanho par — elemento no início
+      √ deve funcionar corretamente com array de tamanho ímpar — elemento no início (1 ms)
+      √ deve funcionar corretamente com array de tamanho ímpar — elemento no final
+      √ deve funcionar para array com 1000 elementos na busca do elemento central
+      √ deve retornar -1 para busca em array de 1000 elementos com valor ausente (1 ms)
+      √ todos os elementos de array pequeno devem ser encontrados nos índices corretos (1 ms)
+
+  ● binary_search › Fluxos Negativos — Elemento Não Encontrado › deve retornar -1 para NaN como elemento buscado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: -1
+    Received: 1
+
+    [0m [90m 114 |[39m
+     [90m 115 |[39m     test([32m'deve retornar -1 para NaN como elemento buscado'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 116 |[39m       expect(binary_search([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m][33m,[39m [33mNaN[39m))[33m.[39mtoBe([33m-[39m[35m1[39m)[33m;[39m
+     [90m     |[39m                                             [31m[1m^[22m[39m
+     [90m 117 |[39m     })[33m;[39m
+     [90m 118 |[39m
+     [90m 119 |[39m     test([32m'deve retornar -1 para Infinity ausente no array'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/binary_search.test.ts:116:45)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 48 passed, 49 total
+Snapshots:   0 total
+Time:        2.873 s, estimated 3 s
+Ran all test suites matching src/claude35/binary_search.test.ts.
+Test results written to: resultados\json\claude-binary_search.json

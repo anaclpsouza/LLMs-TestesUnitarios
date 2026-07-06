@@ -1,0 +1,53 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                        
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------------
+All files   |   15.13 |     3.12 |    12.5 |   16.12 |                                                                                                                                          
+ funcoes.ts |   15.13 |     3.12 |    12.5 |   16.12 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,201-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gpt4o/quicksort.test.ts
+  quicksort
+    Casos positivos
+      √ deve retornar um array vazio quando a entrada for vazia (3 ms)
+      √ deve ordenar um array com um único elemento (1 ms)
+      √ deve ordenar um array já ordenado (1 ms)
+      √ deve ordenar um array em ordem decrescente
+      √ deve ordenar um array com valores aleatórios (1 ms)
+      √ deve ordenar números negativos e positivos
+      √ deve ordenar números decimais (1 ms)
+      √ deve manter elementos duplicados
+    Casos de borda
+      √ deve retornar um novo array, sem modificar o original (1 ms)
+      √ deve ordenar corretamente Number.MAX_SAFE_INTEGER e Number.MIN_SAFE_INTEGER
+      √ deve ordenar corretamente valores Infinity e -Infinity (1 ms)
+      × deve preservar NaN conforme comportamento das comparações do JavaScript (1 ms)
+    Entradas inválidas ou não tratadas explicitamente
+      √ deve lançar TypeError quando o array for null (17 ms)
+      √ deve lançar TypeError quando o array for undefined (1 ms)
+      √ deve lançar TypeError quando o argumento for um objeto
+      √ deve lançar TypeError quando o argumento for um número (1 ms)
+      √ deve lançar TypeError quando o argumento for uma string
+
+  ● quicksort › Casos de borda › deve preservar NaN conforme comportamento das comparações do JavaScript
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 3
+    Received length: 2
+    Received array:  [1, 2]
+
+    [0m [90m 86 |[39m       [36mconst[39m resultado [33m=[39m quicksort([[35m2[39m[33m,[39m [33mNumber[39m[33m.[39m[33mNaN[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m 87 |[39m
+    [31m[1m>[22m[39m[90m 88 |[39m       expect(resultado)[33m.[39mtoHaveLength([35m3[39m)[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 89 |[39m       expect(resultado[[35m0[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 90 |[39m       expect(resultado[[35m1[39m])[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m 91 |[39m       expect(resultado[[35m2[39m])[33m.[39mtoBeNaN()[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:88:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 16 passed, 17 total
+Snapshots:   0 total
+Time:        2.01 s
+Ran all test suites matching src/gpt4o/quicksort.test.ts.
+Test results written to: resultados\json\gpt-quicksort.json

@@ -1,0 +1,138 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   13.51 |     6.25 |    4.16 |   15.48 |                                                                                                                                    
+ funcoes.ts |   13.51 |     6.25 |    4.16 |   15.48 | 9-10,15-17,22-23,28-34,39-47,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+FAIL src/claude35/is_palindrome.test.ts
+  is_palindrome
+    Caminho Feliz (Fluxos Positivos) — Palíndromos Válidos
+      √ deve retornar true para string vazia (caso base) (2 ms)
+      √ deve retornar true para string de um único caractere (caso base)
+      √ deve retornar true para string de um único número
+      √ deve retornar true para palíndromo de dois caracteres iguais
+      √ deve retornar true para palíndromo clássico "racecar" (1 ms)
+      √ deve retornar true para palíndromo "madam"
+      √ deve retornar true para palíndromo "level"
+      √ deve retornar true para palíndromo "noon" (1 ms)
+      √ deve retornar true para palíndromo "civic"
+      √ deve retornar true para palíndromo numérico "12321"
+      √ deve retornar true para palíndromo numérico "1221"
+      √ deve retornar true para palíndromo com caracteres especiais "!@!"
+      √ deve retornar true para string com espaço único " "
+      √ deve retornar true para palíndromo com espaços "a b a"
+      √ deve retornar true para palíndromo com espaços simétricos "  "
+      √ deve retornar true para palíndromo longo de caracteres repetidos (1 ms)
+      √ deve retornar true para palíndromo com caracteres acentuados "áéá"
+      √ deve retornar true para palíndromo com letras maiúsculas "ABA"
+      √ deve retornar true para palíndromo com dois espaços "a  a"
+      √ deve retornar true para palíndromo alfanumérico "a1a"
+    Caminho Feliz (Fluxos Positivos) — Não Palíndromos
+      √ deve retornar false para string "ab" (dois caracteres diferentes)
+      √ deve retornar false para string "hello"
+      √ deve retornar false para string "world"
+      √ deve retornar false para string "TypeScript"
+      √ deve retornar false para string "abcd" (1 ms)
+      √ deve retornar false para string "12345"
+      √ deve retornar false para string "abca" (primeiro e último iguais mas meio diferente não conta)
+      √ deve retornar false para string "racecarX"
+      √ deve retornar false para "Madam" com case misto (M !== m)
+      × deve retornar false para string "ab ba" com espaço no meio não simétrico (2 ms)
+    Casos de Borda (Edge Cases)
+      √ deve retornar true para string vazia (comprimento 0)
+      √ deve retornar true para string de comprimento 1 com número
+      √ deve retornar true para string de comprimento 1 com caractere especial
+      √ deve retornar false para string de dois caracteres distintos
+      √ deve retornar true para palíndromo par de comprimento 2
+      √ deve retornar false para string com mesmo início e fim mas interior diferente "abcba" variante "abcca"
+      √ deve diferenciar maiúsculas de minúsculas: "Aa" não é palíndromo
+      √ deve diferenciar maiúsculas de minúsculas: "AaBbBbAa" não é palíndromo
+      √ deve retornar true para palíndromo com tab "a	a"
+      √ deve retornar true para palíndromo com nova linha "a
+a"
+      √ deve retornar false para string com nova linha não simétrica "a
+b"
+      √ deve retornar true para string de zeros "000"
+      √ deve retornar true para palíndromo grande de comprimento par (1 ms)
+      √ deve retornar true para palíndromo grande de comprimento ímpar
+      × deve retornar false para quase-palíndromo com único caractere diferente no meio
+      √ deve lançar erro para null como argumento (16 ms)
+      √ deve lançar erro para undefined como argumento (1 ms)
+      √ deve lançar erro para número como argumento (1 ms)
+      × deve lançar erro para array como argumento
+      × deve retornar true para palíndromo com barra invertida "a\a" (1 ms)
+      √ deve retornar true para string "\"\"" (aspas duplas)
+
+  ● is_palindrome › Caminho Feliz (Fluxos Positivos) — Não Palíndromos › deve retornar false para string "ab ba" com espaço no meio não simétrico
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 123 |[39m
+     [90m 124 |[39m     test([32m'deve retornar false para string "ab ba" com espaço no meio não simétrico'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 125 |[39m       expect(is_palindrome([32m'ab ba'[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m     |[39m                                      [31m[1m^[22m[39m
+     [90m 126 |[39m     })[33m;[39m
+     [90m 127 |[39m   })[33m;[39m
+     [90m 128 |[39m[0m
+
+      at Object.<anonymous> (src/claude35/is_palindrome.test.ts:125:38)
+
+  ● is_palindrome › Casos de Borda (Edge Cases) › deve retornar false para quase-palíndromo com único caractere diferente no meio
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 187 |[39m
+     [90m 188 |[39m     test([32m'deve retornar false para quase-palíndromo com único caractere diferente no meio'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 189 |[39m       expect(is_palindrome([32m'abcXcba'[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m     |[39m                                        [31m[1m^[22m[39m
+     [90m 190 |[39m     })[33m;[39m
+     [90m 191 |[39m
+     [90m 192 |[39m     test([32m'deve lançar erro para null como argumento'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/is_palindrome.test.ts:189:40)
+
+  ● is_palindrome › Casos de Borda (Edge Cases) › deve lançar erro para array como argumento
+
+    expect(received).toThrow()
+
+    Received function did not throw
+
+    [0m [90m 203 |[39m
+     [90m 204 |[39m     test([32m'deve lançar erro para array como argumento'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 205 |[39m       expect(() [33m=>[39m is_palindrome([] [36mas[39m unknown [36mas[39m string))[33m.[39mtoThrow()[33m;[39m
+     [90m     |[39m                                                            [31m[1m^[22m[39m
+     [90m 206 |[39m     })[33m;[39m
+     [90m 207 |[39m
+     [90m 208 |[39m     test([32m'deve retornar true para palíndromo com barra invertida "a\\a"'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/is_palindrome.test.ts:205:60)
+
+  ● is_palindrome › Casos de Borda (Edge Cases) › deve retornar true para palíndromo com barra invertida "a\a"
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 207 |[39m
+     [90m 208 |[39m     test([32m'deve retornar true para palíndromo com barra invertida "a\\a"'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 209 |[39m       expect(is_palindrome([32m'a\\a'[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m     |[39m                                     [31m[1m^[22m[39m
+     [90m 210 |[39m     })[33m;[39m
+     [90m 211 |[39m
+     [90m 212 |[39m     test([32m'deve retornar true para string "\\"\\"" (aspas duplas)'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/is_palindrome.test.ts:209:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 47 passed, 51 total
+Snapshots:   0 total
+Time:        1.946 s, estimated 3 s
+Ran all test suites matching src/claude35/is_palindrome.test.ts.
+Test results written to: resultados\json\claude-is_palindrome.json

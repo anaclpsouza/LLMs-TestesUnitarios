@@ -1,0 +1,31 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   15.67 |     12.5 |    4.16 |   16.77 |                                                                                                                                  
+ funcoes.ts |   15.67 |     12.5 |    4.16 |   16.77 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+PASS src/gemini15/levenshtein.test.ts
+  levenshtein
+    Caminho Feliz (Fluxos Positivos)
+      √ deve retornar 0 para strings idênticas (2 ms)
+      √ deve calcular corretamente a distância para uma substituição simples (1 ms)
+      √ deve calcular corretamente a distância para uma inserção simples
+      √ deve calcular corretamente a distância para uma remoção simples (1 ms)
+      √ deve resolver distâncias com múltiplas operações mistas (1 ms)
+      √ deve avançar corretamente recursão quando os primeiros caracteres coincidem
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar 0 quando ambas as strings forem vazias
+      √ deve retornar o comprimento da segunda string se a primeira for vazia
+      √ deve retornar o comprimento da primeira string se a segunda for vazia
+      √ deve ser sensível a maiúsculas e minúsculas (case-sensitive)
+      √ deve processar corretamente strings contendo caracteres especiais e espaços
+    Cobertura de Ramos e Fluxos Alternativos (Branch Coverage)
+      √ deve acionar o ramo de substituição/inserção/deleção escolhendo o menor valor via Math.min
+      √ deve calcular a distância correta para strings complementares totalmente diferentes
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.754 s, estimated 2 s
+Ran all test suites matching src/gemini15/levenshtein.test.ts.
+Test results written to: resultados\json\gemini-levenshtein.json

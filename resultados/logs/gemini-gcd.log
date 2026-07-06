@@ -1,0 +1,31 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   12.43 |     3.12 |    4.16 |   14.19 |                                                                                                                                    
+ funcoes.ts |   12.43 |     3.12 |    4.16 |   14.19 | 9-10,15-17,22-23,28-34,39-47,52-56,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+PASS src/gemini15/gcd.test.ts
+  gcd
+    Caminho Feliz (Fluxos Positivos)
+      √ deve retornar o MDC correto quando "a" é divisível por "b" (2 ms)
+      √ deve retornar o MDC correto para números primos entre si
+      √ deve calcular o MDC corretamente para valores positivos padrão
+      √ deve calcular o MDC corretamente independentemente da ordem dos parâmetros (a > b)
+      √ deve calcular o MDC corretamente independentemente da ordem dos parâmetros (a < b) (1 ms)
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar "a" quando "b" for igual a 0 (caso base)
+      √ deve retornar 0 quando ambos os argumentos forem 0
+      √ deve retornar "b" quando "a" for 0 e "b" for diferente de zero (1 ms)
+      √ deve retornar o próprio número quando ambos forem iguais
+      √ deve funcionar corretamente com o valor 1 como um dos argumentos
+    Fluxos Negativos e Comportamentos com Sinais
+      √ deve calcular o MDC corretamente quando "a" é negativo (1 ms)
+      √ deve calcular o MDC corretamente quando "b" é negativo
+      √ deve calcular o MDC corretamente quando ambos são negativos
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.7 s, estimated 2 s
+Ran all test suites matching src/gemini15/gcd.test.ts.
+Test results written to: resultados\json\gemini-gcd.json

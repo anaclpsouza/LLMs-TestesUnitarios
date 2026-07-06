@@ -1,0 +1,71 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   19.45 |     9.37 |    8.33 |   21.93 |                                                                                                                                  
+ funcoes.ts |   19.45 |     9.37 |    8.33 |   21.93 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-196,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gpt4o/mergesort.test.ts
+  mergesort
+    Casos positivos
+      √ deve retornar um array vazio quando a entrada for vazia (3 ms)
+      √ deve retornar o mesmo array quando possuir apenas um elemento (1 ms)
+      √ deve ordenar um array já ordenado (1 ms)
+      √ deve ordenar um array em ordem decrescente
+      √ deve ordenar um array com valores aleatórios (1 ms)
+      √ deve ordenar números negativos e positivos
+      √ deve ordenar números decimais (1 ms)
+      √ deve ordenar corretamente elementos duplicados
+    Casos de borda
+      √ deve retornar um novo array para listas com mais de um elemento (1 ms)
+      √ deve retornar a mesma referência para array com um elemento
+      √ deve ordenar corretamente Number.MAX_SAFE_INTEGER e Number.MIN_SAFE_INTEGER
+      √ deve ordenar corretamente Infinity e -Infinity
+      × deve preservar NaN ao final da ordenação conforme comportamento das comparações (1 ms)
+    Entradas inválidas ou não tratadas explicitamente
+      √ deve lançar TypeError quando o array for null (54 ms)
+      √ deve lançar TypeError quando o array for undefined (1 ms)
+      √ deve lançar TypeError quando o argumento for um objeto (1 ms)
+      √ deve lançar TypeError quando o argumento for um número
+      × deve lançar TypeError quando o argumento for uma string
+
+  ● mergesort › Casos de borda › deve preservar NaN ao final da ordenação conforme comportamento das comparações
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: NaN
+
+    [0m [90m 102 |[39m       expect(resultado)[33m.[39mtoHaveLength([35m3[39m)[33m;[39m
+     [90m 103 |[39m       expect(resultado[[35m0[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 104 |[39m       expect(resultado[[35m1[39m])[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m     |[39m                            [31m[1m^[22m[39m
+     [90m 105 |[39m       expect(resultado[[35m2[39m])[33m.[39mtoBeNaN()[33m;[39m
+     [90m 106 |[39m     })[33m;[39m
+     [90m 107 |[39m   })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/mergesort.test.ts:104:28)
+
+  ● mergesort › Entradas inválidas ou não tratadas explicitamente › deve lançar TypeError quando o argumento for uma string
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 125 |[39m
+     [90m 126 |[39m     test([32m'deve lançar TypeError quando o argumento for uma string'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 127 |[39m       expect(() [33m=>[39m mergesort([32m'123'[39m [36mas[39m unknown [36mas[39m number[]))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m     |[39m                                                             [31m[1m^[22m[39m
+     [90m 128 |[39m     })[33m;[39m
+     [90m 129 |[39m   })[33m;[39m
+     [90m 130 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/mergesort.test.ts:127:61)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 16 passed, 18 total
+Snapshots:   0 total
+Time:        1.946 s, estimated 2 s
+Ran all test suites matching src/gpt4o/mergesort.test.ts.
+Test results written to: resultados\json\gpt-mergesort.json

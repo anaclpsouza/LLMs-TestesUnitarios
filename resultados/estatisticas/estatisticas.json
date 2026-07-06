@@ -1,0 +1,396 @@
+{
+  "geradoEm": "2026-07-06T02:53:03.684Z",
+  "global": {
+    "totalExecucoes": 60,
+    "ok": 30,
+    "fail": 29,
+    "timeout": 1,
+    "taxaSucesso": 50,
+    "totalTestes": 1330,
+    "totalPassados": 1271,
+    "totalFalhos": 59
+  },
+  "porModelo": {
+    "GPT-4o": {
+      "algoritmos": {
+        "ok": 6,
+        "fail": 14,
+        "timeout": 0,
+        "total": 20
+      },
+      "taxaSucesso": 30,
+      "testes": {
+        "passed": 341,
+        "failed": 33,
+        "total": 374,
+        "taxaPassagem": 91.2
+      },
+      "coverage": {
+        "statements": {
+          "media": 15.46,
+          "mediana": 15.14,
+          "desvio": 2.19,
+          "min": 12.43,
+          "max": 20
+        },
+        "branches": {
+          "media": 6.16,
+          "mediana": 6.25,
+          "desvio": 2.95,
+          "min": 3.13,
+          "max": 12.5
+        },
+        "functions": {
+          "media": 5.21,
+          "mediana": 4.17,
+          "desvio": 2.23,
+          "min": 4.17,
+          "max": 12.5
+        },
+        "lines": {
+          "media": 14.95,
+          "mediana": 14.54,
+          "desvio": 2.53,
+          "min": 11.22,
+          "max": 18.88
+        }
+      },
+      "tempo": {
+        "media": 2.11,
+        "mediana": 1.82,
+        "desvio": 1.21,
+        "min": 1.65,
+        "max": 7.24,
+        "total": 40.08
+      }
+    },
+    "Gemini": {
+      "algoritmos": {
+        "ok": 17,
+        "fail": 3,
+        "timeout": 0,
+        "total": 20
+      },
+      "taxaSucesso": 85,
+      "testes": {
+        "passed": 220,
+        "failed": 4,
+        "total": 224,
+        "taxaPassagem": 98.2
+      },
+      "coverage": {
+        "statements": {
+          "media": 15.54,
+          "mediana": 15.41,
+          "desvio": 2.2,
+          "min": 12.43,
+          "max": 20
+        },
+        "branches": {
+          "media": 6.25,
+          "mediana": 6.25,
+          "desvio": 2.84,
+          "min": 3.13,
+          "max": 12.5
+        },
+        "functions": {
+          "media": 5.21,
+          "mediana": 4.17,
+          "desvio": 2.23,
+          "min": 4.17,
+          "max": 12.5
+        },
+        "lines": {
+          "media": 15.03,
+          "mediana": 15.31,
+          "desvio": 2.53,
+          "min": 11.22,
+          "max": 18.88
+        }
+      },
+      "tempo": {
+        "media": 1.68,
+        "mediana": 1.67,
+        "desvio": 0.1,
+        "min": 1.54,
+        "max": 1.95,
+        "total": 33.6
+      }
+    },
+    "Claude": {
+      "algoritmos": {
+        "ok": 7,
+        "fail": 12,
+        "timeout": 1,
+        "total": 20
+      },
+      "taxaSucesso": 35,
+      "testes": {
+        "passed": 710,
+        "failed": 22,
+        "total": 732,
+        "taxaPassagem": 97
+      },
+      "coverage": {
+        "statements": {
+          "media": 15.59,
+          "mediana": 15.41,
+          "desvio": 2.25,
+          "min": 12.43,
+          "max": 20
+        },
+        "branches": {
+          "media": 6.04,
+          "mediana": 6.25,
+          "desvio": 2.9,
+          "min": 3.13,
+          "max": 12.5
+        },
+        "functions": {
+          "media": 5.33,
+          "mediana": 4.17,
+          "desvio": 2.32,
+          "min": 4.17,
+          "max": 12.5
+        },
+        "lines": {
+          "media": 15.11,
+          "mediana": 15.31,
+          "desvio": 2.52,
+          "min": 11.22,
+          "max": 18.88
+        }
+      },
+      "tempo": {
+        "media": 2.37,
+        "mediana": 2.04,
+        "desvio": 1.19,
+        "min": 1.8,
+        "max": 7.3,
+        "total": 45.02
+      }
+    }
+  },
+  "porAlgoritmo": {
+    "factorial": {
+      "ok": 2,
+      "fail": 1,
+      "timeout": 0,
+      "taxaSucesso": 66.7,
+      "porModelo": {
+        "GPT-4o": "OK",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "fibonacci": {
+      "ok": 2,
+      "fail": 0,
+      "timeout": 1,
+      "taxaSucesso": 66.7,
+      "porModelo": {
+        "GPT-4o": "OK",
+        "Gemini": "OK",
+        "Claude": "TIMEOUT"
+      }
+    },
+    "reverse_string": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "FAIL",
+        "Claude": "OK"
+      }
+    },
+    "max_sublist_sum": {
+      "ok": 3,
+      "fail": 0,
+      "timeout": 0,
+      "taxaSucesso": 100,
+      "porModelo": {
+        "GPT-4o": "OK",
+        "Gemini": "OK",
+        "Claude": "OK"
+      }
+    },
+    "flatten": {
+      "ok": 2,
+      "fail": 1,
+      "timeout": 0,
+      "taxaSucesso": 66.7,
+      "porModelo": {
+        "GPT-4o": "OK",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "is_palindrome": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "gcd": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "binary_search": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "bubblesort": {
+      "ok": 2,
+      "fail": 1,
+      "timeout": 0,
+      "taxaSucesso": 66.7,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "OK"
+      }
+    },
+    "find_in_sorted": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "shortest_path_lengths": {
+      "ok": 2,
+      "fail": 1,
+      "timeout": 0,
+      "taxaSucesso": 66.7,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "OK"
+      }
+    },
+    "pascal": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "next_permutation": {
+      "ok": 0,
+      "fail": 3,
+      "timeout": 0,
+      "taxaSucesso": 0,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "FAIL",
+        "Claude": "FAIL"
+      }
+    },
+    "levenshtein": {
+      "ok": 3,
+      "fail": 0,
+      "timeout": 0,
+      "taxaSucesso": 100,
+      "porModelo": {
+        "GPT-4o": "OK",
+        "Gemini": "OK",
+        "Claude": "OK"
+      }
+    },
+    "lis": {
+      "ok": 0,
+      "fail": 3,
+      "timeout": 0,
+      "taxaSucesso": 0,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "FAIL",
+        "Claude": "FAIL"
+      }
+    },
+    "quicksort": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "mergesort": {
+      "ok": 2,
+      "fail": 1,
+      "timeout": 0,
+      "taxaSucesso": 66.7,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "OK"
+      }
+    },
+    "knapsack": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "shortest_path_step": {
+      "ok": 1,
+      "fail": 2,
+      "timeout": 0,
+      "taxaSucesso": 33.3,
+      "porModelo": {
+        "GPT-4o": "FAIL",
+        "Gemini": "OK",
+        "Claude": "FAIL"
+      }
+    },
+    "topological_sort": {
+      "ok": 3,
+      "fail": 0,
+      "timeout": 0,
+      "taxaSucesso": 100,
+      "porModelo": {
+        "GPT-4o": "OK",
+        "Gemini": "OK",
+        "Claude": "OK"
+      }
+    }
+  }
+}

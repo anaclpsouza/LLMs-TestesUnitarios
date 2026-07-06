@@ -1,0 +1,44 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   12.43 |     3.12 |    4.16 |   14.19 |                                                                                                                                    
+ funcoes.ts |   12.43 |     3.12 |    4.16 |   14.19 | 9-10,15-17,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gemini15/reverse_string.test.ts
+  reverse_string
+    Caminho Feliz (Fluxos Positivos)
+      √ deve inverter corretamente uma palavra simples (2 ms)
+      √ deve inverter corretamente uma palavra com letras maiúsculas e minúsculas mantendo o case
+      √ deve inverter corretamente uma frase com espaços
+      √ deve manter caracteres especiais e números na ordem inversa correta
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar uma string vazia quando receber uma string vazia (caso base)
+      √ deve retornar o próprio caractere quando receber uma string de comprimento 1
+      √ deve inverter corretamente strings contendo caracteres com múltiplos espaços em branco
+      × deve tratar corretamente caracteres unicode e emojis (2 ms)
+    Fluxos Negativos e Limites de Pilha
+      √ deve suportar uma string razoavelmente longa sem estourar o limite de recursão padrão (1 ms)
+
+  ● reverse_string › Casos de Borda e Limites (Edge Cases) › deve tratar corretamente caracteres unicode e emojis
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "👍😊"
+    Received: "�😊�"
+
+    [0m [90m 36 |[39m       [90m// Nota: Emojis compostos podem sofrer quebra de surrógados na inversão simples por índice, [39m
+     [90m 37 |[39m       [90m// o teste garante o comportamento matemático exato da função fornecida.[39m
+    [31m[1m>[22m[39m[90m 38 |[39m       expect(reverse_string([32m'😊👍'[39m))[33m.[39mtoBe([32m'👍😊'[39m)[33m;[39m
+     [90m    |[39m                                      [31m[1m^[22m[39m
+     [90m 39 |[39m     })[33m;[39m
+     [90m 40 |[39m   })[33m;[39m
+     [90m 41 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/reverse_string.test.ts:38:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        1.596 s, estimated 2 s
+Ran all test suites matching src/gemini15/reverse_string.test.ts.
+Test results written to: resultados\json\gemini-reverse_string.json

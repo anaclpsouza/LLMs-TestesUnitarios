@@ -1,0 +1,74 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   17.29 |     4.68 |    4.16 |   19.35 |                                                                                                                                  
+ funcoes.ts |   17.29 |     4.68 |    4.16 |   19.35 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gpt4o/next_permutation.test.ts
+  next_permutation
+    Casos positivos
+      √ deve retornar a próxima permutação para um array simples (2 ms)
+      √ deve encontrar a próxima permutação quando a troca ocorre no início
+      √ deve encontrar a próxima permutação quando a troca ocorre no meio (1 ms)
+      √ deve funcionar para arrays com dois elementos
+      √ deve funcionar para números negativos (1 ms)
+      √ deve funcionar com números decimais
+      √ deve funcionar com elementos duplicados
+      √ deve funcionar com Number.MAX_SAFE_INTEGER (1 ms)
+    Casos de borda
+      √ deve retornar array vazio quando não existir próxima permutação
+      √ deve retornar array vazio para array com um único elemento
+      √ deve retornar array vazio para array vazio (1 ms)
+      √ deve retornar array vazio quando todos os elementos forem iguais
+      √ deve modificar o array original antes de retornar o resultado
+      √ deve preservar Infinity na ordenação
+    Entradas inválidas ou não tratadas explicitamente
+      √ deve lançar TypeError quando o array for null (26 ms)
+      √ deve lançar TypeError quando o array for undefined
+      × deve lançar TypeError quando o array for um objeto
+      × deve lançar TypeError quando o array for um número (1 ms)
+      √ deve lançar TypeError quando o array for uma string
+      √ deve lidar com NaN conforme as comparações do JavaScript (1 ms)
+
+  ● next_permutation › Entradas inválidas ou não tratadas explicitamente › deve lançar TypeError quando o array for um objeto
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 88 |[39m       expect(() [33m=>[39m
+     [90m 89 |[39m         next_permutation({} [36mas[39m unknown [36mas[39m number[])
+    [31m[1m>[22m[39m[90m 90 |[39m       )[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 91 |[39m     })[33m;[39m
+     [90m 92 |[39m
+     [90m 93 |[39m     test([32m'deve lançar TypeError quando o array for um número'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:90:9)
+
+  ● next_permutation › Entradas inválidas ou não tratadas explicitamente › deve lançar TypeError quando o array for um número
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 94 |[39m       expect(() [33m=>[39m
+     [90m 95 |[39m         next_permutation([35m123[39m [36mas[39m unknown [36mas[39m number[])
+    [31m[1m>[22m[39m[90m 96 |[39m       )[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 97 |[39m     })[33m;[39m
+     [90m 98 |[39m
+     [90m 99 |[39m     test([32m'deve lançar TypeError quando o array for uma string'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:96:9)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 18 passed, 20 total
+Snapshots:   0 total
+Time:        1.67 s, estimated 2 s
+Ran all test suites matching src/gpt4o/next_permutation.test.ts.
+Test results written to: resultados\json\gpt-next_permutation.json

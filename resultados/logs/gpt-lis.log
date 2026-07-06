@@ -1,0 +1,110 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   18.37 |     9.37 |    4.16 |   20.64 |                                                                                                                                  
+ funcoes.ts |   18.37 |     9.37 |    4.16 |   20.64 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+FAIL src/gpt4o/lis.test.ts
+  lis
+    Casos positivos
+      √ deve retornar 0 para um array vazio (4 ms)
+      √ deve retornar 1 para um array com um único elemento
+      √ deve retornar o tamanho do array para sequência estritamente crescente
+      √ deve retornar 1 para sequência estritamente decrescente (1 ms)
+      √ deve calcular corretamente um caso clássico de LIS (1 ms)
+      √ deve calcular corretamente outro exemplo conhecido
+      √ deve calcular corretamente para sequência mista
+      √ deve calcular corretamente para números negativos
+      √ deve calcular corretamente para números decimais
+    Casos de borda
+      √ deve considerar elementos duplicados como não crescentes
+      √ deve lidar corretamente com duplicados intercalados
+      √ deve lidar corretamente com Number.MAX_SAFE_INTEGER
+      √ deve lidar corretamente com Number.MIN_SAFE_INTEGER
+      √ deve retornar 1 quando todos os elementos forem iguais
+      × deve retornar 0 quando o array contiver apenas NaN (2 ms)
+      √ deve lidar corretamente com Infinity
+    Entradas inválidas ou não tratadas explicitamente
+      √ deve lançar TypeError quando o array for null (52 ms)
+      √ deve lançar TypeError quando o array for undefined (1 ms)
+      × deve lançar TypeError quando o argumento for um objeto
+      × deve lançar TypeError quando o argumento for um número
+      × deve lançar TypeError quando o argumento for uma string
+
+  ● lis › Casos de borda › deve retornar 0 quando o array contiver apenas NaN
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+    [0m [90m 67 |[39m
+     [90m 68 |[39m     test([32m'deve retornar 0 quando o array contiver apenas NaN'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 69 |[39m       expect(lis([[33mNumber[39m[33m.[39m[33mNaN[39m]))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 70 |[39m     })[33m;[39m
+     [90m 71 |[39m
+     [90m 72 |[39m     test([32m'deve lidar corretamente com Infinity'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:69:33)
+
+  ● lis › Entradas inválidas ou não tratadas explicitamente › deve lançar TypeError quando o argumento for um objeto
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 85 |[39m
+     [90m 86 |[39m     test([32m'deve lançar TypeError quando o argumento for um objeto'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 87 |[39m       expect(() [33m=>[39m lis({} [36mas[39m unknown [36mas[39m number[]))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                    [31m[1m^[22m[39m
+     [90m 88 |[39m     })[33m;[39m
+     [90m 89 |[39m
+     [90m 90 |[39m     test([32m'deve lançar TypeError quando o argumento for um número'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:87:52)
+
+  ● lis › Entradas inválidas ou não tratadas explicitamente › deve lançar TypeError quando o argumento for um número
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 89 |[39m
+     [90m 90 |[39m     test([32m'deve lançar TypeError quando o argumento for um número'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 91 |[39m       expect(() [33m=>[39m lis([35m123[39m [36mas[39m unknown [36mas[39m number[]))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                     [31m[1m^[22m[39m
+     [90m 92 |[39m     })[33m;[39m
+     [90m 93 |[39m
+     [90m 94 |[39m     test([32m'deve lançar TypeError quando o argumento for uma string'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:91:53)
+
+  ● lis › Entradas inválidas ou não tratadas explicitamente › deve lançar TypeError quando o argumento for uma string
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 93 |[39m
+     [90m 94 |[39m     test([32m'deve lançar TypeError quando o argumento for uma string'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 95 |[39m       expect(() [33m=>[39m lis([32m'123'[39m [36mas[39m unknown [36mas[39m number[]))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                       [31m[1m^[22m[39m
+     [90m 96 |[39m     })[33m;[39m
+     [90m 97 |[39m   })[33m;[39m
+     [90m 98 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:95:55)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 17 passed, 21 total
+Snapshots:   0 total
+Time:        1.981 s, estimated 2 s
+Ran all test suites matching src/gpt4o/lis.test.ts.
+Test results written to: resultados\json\gpt-lis.json

@@ -1,0 +1,26 @@
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+All files   |   16.75 |     6.25 |    4.16 |    18.7 |                                                                                                                                  
+ funcoes.ts |   16.75 |     6.25 |    4.16 |    18.7 | 9-10,15-17,22-23,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|----------------------------------------------------------------------------------------------------------------------------------
+PASS src/gemini15/pascal.test.ts
+  pascal
+    Caminho Feliz (Fluxos Positivos)
+      √ deve gerar o Triângulo de Pascal correto com 1 linha (3 ms)
+      √ deve gerar o Triângulo de Pascal correto com 2 linhas
+      √ deve gerar o Triângulo de Pascal correto com 3 linhas (1 ms)
+      √ deve gerar o Triângulo de Pascal correto com 5 linhas
+    Casos de Borda e Limites (Edge Cases)
+      √ deve retornar a estrutura inicial de 1 linha quando "n" for igual a 0 (1 ms)
+      √ deve retornar a estrutura inicial de 1 linha quando "n" for um número negativo
+      √ deve lidar corretamente com um valor de linhas intermediariamente alto
+    Cobertura de Ramos de Fluxo Interno (Branch Coverage)
+      √ deve cobrir as condições de contorno de coluna (upleft e upright zerados nas extremidades)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        1.707 s, estimated 2 s
+Ran all test suites matching src/gemini15/pascal.test.ts.
+Test results written to: resultados\json\gemini-pascal.json

@@ -1,0 +1,20 @@
+
+<--- Last few GCs --->
+
+[25636:00000228B1DD0000]     5394 ms: Mark-Compact 1974.7 (2126.5) -> 1942.7 (2126.2) MB, pooled: 1 MB, 44.90 / 0.00 ms  (average mu = 0.553, current mu = 0.403) allocation failure; scavenge might not succeed
+[25636:00000228B1DD0000]     5498 ms: Mark-Compact 1947.8 (2127.8) -> 1944.3 (2128.1) MB, pooled: 1 MB, 100.79 / 0.00 ms  (average mu = 0.287, current mu = 0.037) allocation failure; scavenge might not succeed
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF7EB9E0CCF node::OnFatalError+1343
+ 2: 00007FF7EC62F697 v8::Function::NewInstance+423
+ 3: 00007FF7EC4300C7 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+ 4: 00007FF7EC42DD66 v8::base::AddressSpaceReservation::AddressSpaceReservation+313014
+ 5: 00007FF7EC4483DA X509_STORE_set_cleanup+5098
+ 6: 00007FF7EC454238 uv_timer_set_repeat+19096
+ 7: 00007FF7EC46C01E uv_timer_set_repeat+116862
+ 8: 00007FF7EC251851 v8::TypecheckWitness::TypecheckWitness+127377
+ 9: 00007FF7EC2501DC v8::TypecheckWitness::TypecheckWitness+121628
+10: 00007FF7EC035458 v8::String::Value::~Value+205288
+11: 00000228EA5375FA 

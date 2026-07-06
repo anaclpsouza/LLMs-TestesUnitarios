@@ -1,0 +1,73 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   14.05 |     3.12 |    4.16 |   16.77 |                                                                                                                                    
+ funcoes.ts |   14.05 |     3.12 |    4.16 |   16.77 | 9-10,15-17,22-23,28-34,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+FAIL src/claude35/flatten.test.ts
+  flatten
+    Caminho Feliz (Fluxos Positivos)
+      √ deve achatar array com um único nível de aninhamento (3 ms)
+      √ deve achatar array com dois níveis de aninhamento
+      √ deve achatar array com múltiplos níveis de aninhamento profundo
+      √ deve retornar o mesmo array quando não há aninhamento (1 ms)
+      √ deve achatar array com strings
+      √ deve achatar array com tipos mistos (1 ms)
+      √ deve achatar array com booleanos
+      √ deve achatar array com objetos
+      √ deve achatar array com null e undefined entre elementos (1 ms)
+      √ deve achatar array com números negativos
+      √ deve achatar array com números decimais
+      √ deve achatar array com aninhamento assimétrico (1 ms)
+      √ deve achatar array com elementos duplicados
+      √ deve preservar a ordem dos elementos após achatamento
+      √ deve achatar array com NaN (1 ms)
+      √ deve achatar array com Infinity e -Infinity
+      √ deve achatar array com Number.MAX_SAFE_INTEGER e Number.MIN_SAFE_INTEGER
+    Fluxos Negativos
+      √ deve retornar array vazio para array vazio
+      √ deve retornar array vazio para array de arrays vazios
+      √ deve retornar array vazio para array profundamente aninhado de arrays vazios
+      √ deve lidar com null como elemento direto sem lançar erro
+      √ deve lidar com undefined como elemento direto sem lançar erro
+      √ deve lançar erro ao receber null como argumento (27 ms)
+      √ deve lançar erro ao receber undefined como argumento (1 ms)
+      × deve lançar erro ao receber string como argumento (1 ms)
+      √ deve lançar erro ao receber número como argumento (1 ms)
+    Casos de Borda (Edge Cases)
+      √ deve achatar array com único elemento não aninhado
+      √ deve achatar array com único subarray unitário
+      √ deve achatar array com aninhamento de nível único muito largo (3 ms)
+      √ deve achatar array com muitos subarrays de um elemento (5 ms)
+      √ deve achatar array com função como elemento
+      √ deve achatar array com símbolo como elemento
+      √ deve achatar array contendo string vazia (1 ms)
+      √ deve achatar corretamente array com zeros
+      √ deve achatar corretamente array com false e 0 (valores falsy)
+      √ resultado deve ser sempre um array plano independente da profundidade (1 ms)
+      √ deve preservar referência de objetos após achatamento
+      √ resultado achatado deve ter comprimento igual à soma dos elementos originais
+      √ deve achatar array misto com aninhamentos em posições alternadas
+
+  ● flatten › Fluxos Negativos › deve lançar erro ao receber string como argumento
+
+    expect(received).toThrow()
+
+    Received function did not throw
+
+    [0m [90m 110 |[39m
+     [90m 111 |[39m         test([32m'deve lançar erro ao receber string como argumento'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 112 |[39m             expect(() [33m=>[39m flatten([32m'string'[39m [36mas[39m unknown [36mas[39m any[]))[33m.[39mtoThrow()[33m;[39m
+     [90m     |[39m                                                                 [31m[1m^[22m[39m
+     [90m 113 |[39m         })[33m;[39m
+     [90m 114 |[39m
+     [90m 115 |[39m         test([32m'deve lançar erro ao receber número como argumento'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:112:65)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 38 passed, 39 total
+Snapshots:   0 total
+Time:        2.164 s, estimated 3 s
+Ran all test suites matching src/claude35/flatten.test.ts.
+Test results written to: resultados\json\claude-flatten.json

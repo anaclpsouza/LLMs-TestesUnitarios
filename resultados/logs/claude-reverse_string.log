@@ -1,0 +1,52 @@
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                  
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+All files   |   12.43 |     3.12 |    4.16 |   14.19 |                                                                                                                                    
+ funcoes.ts |   12.43 |     3.12 |    4.16 |   14.19 | 9-10,15-17,28-34,39-47,52-56,63-64,69-81,86-98,103,108-115,120-130,135-148,155-162,172-187,192-212,215-219,224-230,235-247,252-269 
+------------|---------|----------|---------|---------|------------------------------------------------------------------------------------------------------------------------------------
+PASS src/claude35/reverse_string.test.ts
+  reverse_string
+    Caminho Feliz (Fluxos Positivos)
+      √ deve inverter uma string simples de letras minúsculas (3 ms)
+      √ deve inverter uma string simples de letras maiúsculas (1 ms)
+      √ deve inverter uma string com letras maiúsculas e minúsculas mistas
+      √ deve inverter uma string com espaços
+      √ deve inverter uma string com números
+      √ deve inverter uma string alfanumérica
+      √ deve inverter uma string com caracteres especiais (1 ms)
+      √ deve inverter uma string com pontuação
+      √ deve inverter uma string com caracteres acentuados
+      √ deve inverter uma string com espaços múltiplos (1 ms)
+      √ deve inverter uma frase completa
+      √ deve inverter uma string com tabs e quebras de linha
+    Casos de Borda (Edge Cases)
+      √ deve retornar string vazia para string vazia (caso base)
+      √ deve retornar o mesmo caractere para string de um único caractere
+      √ deve retornar o mesmo caractere para string de um único número
+      √ deve retornar o mesmo caractere especial para string de um único caractere especial
+      √ deve manter palíndromo igual após inversão
+      √ deve manter palíndromo de número igual após inversão
+      √ deve inverter string composta apenas de espaços (1 ms)
+      √ deve inverter string composta apenas de um espaço
+      √ deve inverter string com caracteres Unicode (emoji)
+      √ deve inverter string longa sem erro de stack overflow (1 ms)
+      √ deve inverter string com caracteres repetidos (1 ms)
+      √ deve inverter string apenas com zeros
+      √ deve inverter string contendo apenas nova linha
+      √ deve preservar o tamanho da string após inversão
+      √ inverter duas vezes deve retornar a string original
+      √ inverter duas vezes string vazia deve retornar string vazia (1 ms)
+      √ deve inverter string com barra invertida
+      √ deve inverter string com aspas simples e duplas
+    Fluxos Negativos / Comportamento com Tipos Inesperados
+      √ deve lançar erro ou retornar comportamento definido para null coercido como string (29 ms)
+      √ deve lançar erro ou retornar comportamento definido para undefined coercido como string (1 ms)
+      √ deve lançar erro ou retornar comportamento definido para número coercido como string (1 ms)
+      √ deve lançar erro ou retornar comportamento definido para array coercido como string (5 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       34 passed, 34 total
+Snapshots:   0 total
+Time:        1.888 s, estimated 2 s
+Ran all test suites matching src/claude35/reverse_string.test.ts.
+Test results written to: resultados\json\claude-reverse_string.json
