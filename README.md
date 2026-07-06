@@ -108,7 +108,7 @@ Para garantir justiça na comparação, o mesmo prompt exato foi fornecido em co
 
 ```powershell
 git clone https://github.com/anaclpsouza/LLMs-TestesUnitarios.git
-cd PROJETO-FINAL-ESWIII
+cd LLMs-TestesUnitarios
 npm install
 ```
 
