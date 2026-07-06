@@ -32,6 +32,22 @@ Avaliar de forma quantitativa a capacidade de três LLMs comerciais na geração
 | Anthropic | `Claude 3.5 Sonnet` |
 | Google | `Gemini 1.5 Pro` |
 
+### 💬 Prompt Base Utilizado
+
+Para garantir justiça na comparação, o mesmo prompt exato foi fornecido em contextos limpos (zero-shot) para todos os modelos:
+
+> Atue como um Engenheiro de Software especialista em testes de software e controle de qualidade. Sua tarefa é escrever a suíte de testes unitários completa para a função em TypeScript fornecida ao final.
+> 
+> Restrições obrigatórias:
+> 1. Utilize o framework Jest e garanta compatibilidade estrita com TypeScript (@jest/globals);
+> 2. Utilize importação nomeada da função testada;
+> 3. Não utilize mocks, stubs ou spies;
+> 4. Busque máxima cobertura de linhas e ramos;
+> 5. Inclua testes para casos de borda pertinentes ao algoritmo;
+> 6. Retorne exclusivamente o código TypeScript da suíte de testes.
+
+*Após o prompt, era fornecido apenas o código-fonte da função correspondente.*
+
 ---
 
 ## 📂 Estrutura do Repositório
@@ -159,6 +175,6 @@ Relatório autocontido com resumo executivo, tabelas detalhadas por modelo, aná
 
 **Desenvolvido por:** Ana Clara Pereira de Souza
 
-**Orientador / Professor:** Filipe Fernandes PhD
+**Professor:** Filipe Fernandes PhD
 
 **Instituição:** IF Sudeste MG – Campus Manhuaçu
