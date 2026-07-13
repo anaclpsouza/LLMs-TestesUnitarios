@@ -1,0 +1,187 @@
+
+FAIL src/gpt4o/max_sublist_sum.test.ts
+  ● max_sublist_sum › computes the maximum sublist sum for mixed positive and negative numbers
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 7
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"computes the maximum sublist sum for mixed positive and negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(max_sublist_sum([[35m1[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m2[39m[33m,[39m [33m-[39m[35m5[39m]))[33m.[39mtoBe([35m8[39m)[33m;[39m
+     [90m    |[39m                                                           [31m[1m^[22m[39m
+     [90m 30 |[39m         expect(max_sublist_sum([[35m4[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [33m-[39m[35m5[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:29:59)
+
+  ● max_sublist_sum › resets the running sum after it becomes negative
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 1
+
+    [0m [90m 32 |[39m
+     [90m 33 |[39m     test([32m"resets the running sum after it becomes negative"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 34 |[39m         expect(max_sublist_sum([[33m-[39m[35m5[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 35 |[39m         expect(max_sublist_sum([[35m2[39m[33m,[39m [33m-[39m[35m10[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m]))[33m.[39mtoBe([35m11[39m)[33m;[39m
+     [90m 36 |[39m     })[33m;[39m
+     [90m 37 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:34:48)
+
+  ● max_sublist_sum › handles the best sublist at the end of the array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 9
+    Received: 4
+
+    [0m [90m 41 |[39m
+     [90m 42 |[39m     test([32m"handles the best sublist at the end of the array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 43 |[39m         expect(max_sublist_sum([[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m]))[33m.[39mtoBe([35m9[39m)[33m;[39m
+     [90m    |[39m                                                 [31m[1m^[22m[39m
+     [90m 44 |[39m     })[33m;[39m
+     [90m 45 |[39m
+     [90m 46 |[39m     test([32m"handles the best sublist in the middle of the array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:43:49)
+
+  ● max_sublist_sum › handles the best sublist in the middle of the array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 6
+
+    [0m [90m 45 |[39m
+     [90m 46 |[39m     test([32m"handles the best sublist in the middle of the array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m10[39m]))[33m.[39mtoBe([35m8[39m)[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 48 |[39m     })[33m;[39m
+     [90m 49 |[39m
+     [90m 50 |[39m     test([32m"handles zeros mixed with positive and negative numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:47:54)
+
+  ● max_sublist_sum › handles zeros mixed with positive and negative numbers
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 4
+
+    [0m [90m 49 |[39m
+     [90m 50 |[39m     test([32m"handles zeros mixed with positive and negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 51 |[39m         expect(max_sublist_sum([[35m0[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m0[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 52 |[39m     })[33m;[39m
+     [90m 53 |[39m
+     [90m 54 |[39m     test([32m"handles larger values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:51:61)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 9 passed, 14 total
+Snapshots:   0 total
+Time:        0.609 s, estimated 1 s
+Ran all test suites matching src\gpt4o\max_sublist_sum.test.ts.
+Test results written to: resultados\runs\gpt4o\max_sublist_sum\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\max_sublist_sum.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\max_sublist_sum\buggy\jest.json
+FAIL src/gpt4o/max_sublist_sum.test.ts
+  ● max_sublist_sum › computes the maximum sublist sum for mixed positive and negative numbers
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 7
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"computes the maximum sublist sum for mixed positive and negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(max_sublist_sum([[35m1[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m2[39m[33m,[39m [33m-[39m[35m5[39m]))[33m.[39mtoBe([35m8[39m)[33m;[39m
+     [90m    |[39m                                                           [31m[1m^[22m[39m
+     [90m 30 |[39m         expect(max_sublist_sum([[35m4[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [33m-[39m[35m5[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:29:59)
+
+  ● max_sublist_sum › resets the running sum after it becomes negative
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 1
+
+    [0m [90m 32 |[39m
+     [90m 33 |[39m     test([32m"resets the running sum after it becomes negative"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 34 |[39m         expect(max_sublist_sum([[33m-[39m[35m5[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 35 |[39m         expect(max_sublist_sum([[35m2[39m[33m,[39m [33m-[39m[35m10[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m]))[33m.[39mtoBe([35m11[39m)[33m;[39m
+     [90m 36 |[39m     })[33m;[39m
+     [90m 37 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:34:48)
+
+  ● max_sublist_sum › handles the best sublist at the end of the array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 9
+    Received: 4
+
+    [0m [90m 41 |[39m
+     [90m 42 |[39m     test([32m"handles the best sublist at the end of the array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 43 |[39m         expect(max_sublist_sum([[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m]))[33m.[39mtoBe([35m9[39m)[33m;[39m
+     [90m    |[39m                                                 [31m[1m^[22m[39m
+     [90m 44 |[39m     })[33m;[39m
+     [90m 45 |[39m
+     [90m 46 |[39m     test([32m"handles the best sublist in the middle of the array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:43:49)
+
+  ● max_sublist_sum › handles the best sublist in the middle of the array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 6
+
+    [0m [90m 45 |[39m
+     [90m 46 |[39m     test([32m"handles the best sublist in the middle of the array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m10[39m]))[33m.[39mtoBe([35m8[39m)[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 48 |[39m     })[33m;[39m
+     [90m 49 |[39m
+     [90m 50 |[39m     test([32m"handles zeros mixed with positive and negative numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:47:54)
+
+  ● max_sublist_sum › handles zeros mixed with positive and negative numbers
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 4
+
+    [0m [90m 49 |[39m
+     [90m 50 |[39m     test([32m"handles zeros mixed with positive and negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 51 |[39m         expect(max_sublist_sum([[35m0[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m0[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 52 |[39m     })[33m;[39m
+     [90m 53 |[39m
+     [90m 54 |[39m     test([32m"handles larger values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/max_sublist_sum.test.ts:51:61)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 9 passed, 14 total
+Snapshots:   0 total
+Time:        0.609 s, estimated 1 s
+Ran all test suites matching src\gpt4o\max_sublist_sum.test.ts.
+Test results written to: resultados\runs\gpt4o\max_sublist_sum\buggy\jest.json

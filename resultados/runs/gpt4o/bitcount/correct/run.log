@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.849 s, estimated 1 s
+Ran all test suites matching src\gpt4o\bitcount.test.ts.
+Test results written to: resultados\runs\gpt4o\bitcount\correct\jest.json

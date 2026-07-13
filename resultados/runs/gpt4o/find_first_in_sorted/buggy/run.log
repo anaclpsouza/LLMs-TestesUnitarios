@@ -1,0 +1,3 @@
+
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\find_first_in_sorted.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\find_first_in_sorted\buggy\jest.json

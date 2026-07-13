@@ -1,0 +1,3 @@
+
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\bitcount.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\bitcount\buggy\jest.json

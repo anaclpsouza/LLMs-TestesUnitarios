@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        0.855 s, estimated 1 s
+Ran all test suites matching src\gemini15\lis.test.ts.
+Test results written to: resultados\runs\gemini15\lis\correct\jest.json

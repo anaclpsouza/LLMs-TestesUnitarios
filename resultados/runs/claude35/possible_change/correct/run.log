@@ -1,0 +1,297 @@
+
+FAIL src/claude35/possible_change.test.ts
+  ● possible_change › calcula corretamente com moedas repetidas na lista
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 6
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula corretamente com moedas repetidas na lista"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(possible_change([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m][33m,[39m [35m3[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"calcula corretamente para total pequeno com múltiplas moedas"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/possible_change.test.ts:41:43)
+
+  ● possible_change › calcula corretamente para conjunto de moedas com valor 0 incluso
+
+    RangeError: Maximum call stack size exceeded
+
+    [0m[0m
+
+      at cov_1skf5v1jdl (src/functions/possible_change.ts:256:31)
+      at cov_1skf5v1jdl (src/functions/possible_change.ts:4:18)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+
+  ● possible_change › calcula corretamente para total maior com moedas variadas
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 11
+
+    [0m [90m 59 |[39m
+     [90m 60 |[39m   test([32m"calcula corretamente para total maior com moedas variadas"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 61 |[39m     expect(possible_change([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m10[39m][33m,[39m [35m10[39m))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 62 |[39m   })[33m;[39m
+     [90m 63 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/possible_change.test.ts:61:48)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 12 passed, 15 total
+Snapshots:   0 total
+Time:        0.892 s, estimated 1 s
+Ran all test suites matching src\claude35\possible_change.test.ts.
+Test results written to: resultados\runs\claude35\possible_change\correct\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\possible_change.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\possible_change\correct\jest.json
+FAIL src/claude35/possible_change.test.ts
+  ● possible_change › calcula corretamente com moedas repetidas na lista
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 6
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula corretamente com moedas repetidas na lista"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(possible_change([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m][33m,[39m [35m3[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"calcula corretamente para total pequeno com múltiplas moedas"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/possible_change.test.ts:41:43)
+
+  ● possible_change › calcula corretamente para conjunto de moedas com valor 0 incluso
+
+    RangeError: Maximum call stack size exceeded
+
+    [0m[0m
+
+      at cov_1skf5v1jdl (src/functions/possible_change.ts:256:31)
+      at cov_1skf5v1jdl (src/functions/possible_change.ts:4:18)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+      at possible_change (src/functions/possible_change.ts:6:12)
+
+  ● possible_change › calcula corretamente para total maior com moedas variadas
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 11
+
+    [0m [90m 59 |[39m
+     [90m 60 |[39m   test([32m"calcula corretamente para total maior com moedas variadas"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 61 |[39m     expect(possible_change([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m10[39m][33m,[39m [35m10[39m))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 62 |[39m   })[33m;[39m
+     [90m 63 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/possible_change.test.ts:61:48)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 12 passed, 15 total
+Snapshots:   0 total
+Time:        0.892 s, estimated 1 s
+Ran all test suites matching src\claude35\possible_change.test.ts.
+Test results written to: resultados\runs\claude35\possible_change\correct\jest.json

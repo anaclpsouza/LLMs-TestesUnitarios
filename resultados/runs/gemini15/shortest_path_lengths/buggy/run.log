@@ -1,0 +1,151 @@
+
+FAIL src/gemini15/shortest_path_lengths.test.ts
+  ● shortest_path_lengths › should set direct edge distances when provided
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 5
+
+    [0m [90m 21 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m1[39m[33m,[39m [35m1[39m)))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m 22 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m1[39m)))[33m.[39mtoBe([35m5[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 23 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m1[39m[33m,[39m [35m0[39m)))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 24 |[39m
+     [90m 25 |[39m     })[33m;[39m
+     [90m 26 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:23:43)
+
+  ● shortest_path_lengths › should compute shortest paths through intermediate nodes (Floyd-Warshall)
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 7
+    Received: 10
+
+    [0m [90m 33 |[39m         [36mconst[39m result [33m=[39m shortest_path_lengths([35m3[39m[33m,[39m edges)[33m;[39m
+     [90m 34 |[39m
+    [31m[1m>[22m[39m[90m 35 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m2[39m)))[33m.[39mtoBe([35m7[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 36 |[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:35:43)
+
+  ● shortest_path_lengths › should retain POSITIVE_INFINITY when no path exists between nodes
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: Infinity
+    Received: 2
+
+    [0m [90m 43 |[39m         [36mconst[39m result [33m=[39m shortest_path_lengths([35m3[39m[33m,[39m edges)[33m;[39m
+     [90m 44 |[39m
+    [31m[1m>[22m[39m[90m 45 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m1[39m[33m,[39m [35m0[39m)))[33m.[39mtoBe([33mNumber[39m[33m.[39m[33mPOSITIVE_INFINITY[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 46 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m2[39m[33m,[39m [35m0[39m)))[33m.[39mtoBe([33mNumber[39m[33m.[39m[33mPOSITIVE_INFINITY[39m)[33m;[39m
+     [90m 47 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m2[39m)))[33m.[39mtoBe([33mNumber[39m[33m.[39m[33mPOSITIVE_INFINITY[39m)[33m;[39m
+     [90m 48 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:45:43)
+
+  ● shortest_path_lengths › should handle negative edge weights without negative cycles
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: Infinity
+
+    [0m [90m 80 |[39m         [36mconst[39m result [33m=[39m shortest_path_lengths([35m3[39m[33m,[39m edges)[33m;[39m
+     [90m 81 |[39m
+    [31m[1m>[22m[39m[90m 82 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m2[39m)))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 83 |[39m     })[33m;[39m
+     [90m 84 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:82:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 passed, 8 total
+Snapshots:   0 total
+Time:        0.587 s, estimated 1 s
+Ran all test suites matching src\gemini15\shortest_path_lengths.test.ts.
+Test results written to: resultados\runs\gemini15\shortest_path_lengths\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\shortest_path_lengths.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\shortest_path_lengths\buggy\jest.json
+FAIL src/gemini15/shortest_path_lengths.test.ts
+  ● shortest_path_lengths › should set direct edge distances when provided
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 5
+
+    [0m [90m 21 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m1[39m[33m,[39m [35m1[39m)))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m 22 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m1[39m)))[33m.[39mtoBe([35m5[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 23 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m1[39m[33m,[39m [35m0[39m)))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 24 |[39m
+     [90m 25 |[39m     })[33m;[39m
+     [90m 26 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:23:43)
+
+  ● shortest_path_lengths › should compute shortest paths through intermediate nodes (Floyd-Warshall)
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 7
+    Received: 10
+
+    [0m [90m 33 |[39m         [36mconst[39m result [33m=[39m shortest_path_lengths([35m3[39m[33m,[39m edges)[33m;[39m
+     [90m 34 |[39m
+    [31m[1m>[22m[39m[90m 35 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m2[39m)))[33m.[39mtoBe([35m7[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 36 |[39m
+     [90m 37 |[39m     })[33m;[39m
+     [90m 38 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:35:43)
+
+  ● shortest_path_lengths › should retain POSITIVE_INFINITY when no path exists between nodes
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: Infinity
+    Received: 2
+
+    [0m [90m 43 |[39m         [36mconst[39m result [33m=[39m shortest_path_lengths([35m3[39m[33m,[39m edges)[33m;[39m
+     [90m 44 |[39m
+    [31m[1m>[22m[39m[90m 45 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m1[39m[33m,[39m [35m0[39m)))[33m.[39mtoBe([33mNumber[39m[33m.[39m[33mPOSITIVE_INFINITY[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 46 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m2[39m[33m,[39m [35m0[39m)))[33m.[39mtoBe([33mNumber[39m[33m.[39m[33mPOSITIVE_INFINITY[39m)[33m;[39m
+     [90m 47 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m2[39m)))[33m.[39mtoBe([33mNumber[39m[33m.[39m[33mPOSITIVE_INFINITY[39m)[33m;[39m
+     [90m 48 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:45:43)
+
+  ● shortest_path_lengths › should handle negative edge weights without negative cycles
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: Infinity
+
+    [0m [90m 80 |[39m         [36mconst[39m result [33m=[39m shortest_path_lengths([35m3[39m[33m,[39m edges)[33m;[39m
+     [90m 81 |[39m
+    [31m[1m>[22m[39m[90m 82 |[39m         expect(result[33m.[39m[36mget[39m(edgeKey([35m0[39m[33m,[39m [35m2[39m)))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 83 |[39m     })[33m;[39m
+     [90m 84 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/shortest_path_lengths.test.ts:82:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 passed, 8 total
+Snapshots:   0 total
+Time:        0.587 s, estimated 1 s
+Ran all test suites matching src\gemini15\shortest_path_lengths.test.ts.
+Test results written to: resultados\runs\gemini15\shortest_path_lengths\buggy\jest.json

@@ -1,0 +1,645 @@
+
+FAIL src/claude35/get_factors.test.ts
+  ● get_factors › retorna o próprio número para número primo pequeno
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   2,
+    - ]
+    + Array []
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"retorna o próprio número para número primo pequeno"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(get_factors([35m2[39m))[33m.[39mtoEqual([[35m2[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"retorna o próprio número para outro número primo pequeno"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:9:28)
+
+  ● get_factors › retorna o próprio número para outro número primo pequeno
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   7,
+    - ]
+    + Array []
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m   test([32m"retorna o próprio número para outro número primo pequeno"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m     expect(get_factors([35m7[39m))[33m.[39mtoEqual([[35m7[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 14 |[39m   })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m   test([32m"fatora número composto simples"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:13:28)
+
+  ● get_factors › fatora número composto simples
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   2,
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"fatora número composto simples"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(get_factors([35m4[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 18 |[39m   })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m   test([32m"fatora número composto com múltiplos fatores primos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:17:28)
+
+  ● get_factors › fatora número composto com múltiplos fatores primos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+    -   3,
+      ]
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m   test([32m"fatora número composto com múltiplos fatores primos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m     expect(get_factors([35m12[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 22 |[39m   })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m   test([32m"fatora número composto com fatores primos distintos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:21:29)
+
+  ● get_factors › fatora número composto com fatores primos distintos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   5,
+      ]
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m   test([32m"fatora número composto com fatores primos distintos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m     expect(get_factors([35m15[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 26 |[39m   })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m   test([32m"fatora potência de 2"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:25:29)
+
+  ● get_factors › fatora potência de 2
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+    -   2,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m   test([32m"fatora potência de 2"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m     expect(get_factors([35m8[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 30 |[39m   })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m   test([32m"fatora número primo grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:29:28)
+
+  ● get_factors › fatora número primo grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   97,
+    - ]
+    + Array []
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m   test([32m"fatora número primo grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m     expect(get_factors([35m97[39m))[33m.[39mtoEqual([[35m97[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 34 |[39m   })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m   test([32m"fatora número composto grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:33:29)
+
+  ● get_factors › fatora número composto grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+        5,
+    -   5,
+      ]
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m   test([32m"fatora número composto grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m     expect(get_factors([35m100[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m   test([32m"fatora produto de dois primos grandes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:37:30)
+
+  ● get_factors › fatora produto de dois primos grandes
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        13,
+    -   17,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"fatora produto de dois primos grandes"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(get_factors([35m221[39m))[33m.[39mtoEqual([[35m13[39m[33m,[39m [35m17[39m])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"fatora número que é quadrado de um primo"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:41:30)
+
+  ● get_factors › fatora número que é quadrado de um primo
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        7,
+    -   7,
+      ]
+
+    [0m [90m 43 |[39m
+     [90m 44 |[39m   test([32m"fatora número que é quadrado de um primo"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 45 |[39m     expect(get_factors([35m49[39m))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 46 |[39m   })[33m;[39m
+     [90m 47 |[39m
+     [90m 48 |[39m   test([32m"fatora número composto com fator repetido e fator final grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:45:29)
+
+  ● get_factors › fatora número composto com fator repetido e fator final grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+    -   7,
+      ]
+
+    [0m [90m 47 |[39m
+     [90m 48 |[39m   test([32m"fatora número composto com fator repetido e fator final grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m     expect(get_factors([35m28[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 50 |[39m   })[33m;[39m
+     [90m 51 |[39m
+     [90m 52 |[39m   test([32m"fatora número com múltiplos fatores primos distintos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:49:29)
+
+  ● get_factors › fatora número com múltiplos fatores primos distintos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        3,
+    -   5,
+      ]
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m   test([32m"fatora número com múltiplos fatores primos distintos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m     expect(get_factors([35m30[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"fatora número igual a 2 vezes um primo grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:53:29)
+
+  ● get_factors › fatora número igual a 2 vezes um primo grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   47,
+      ]
+
+    [0m [90m 55 |[39m
+     [90m 56 |[39m   test([32m"fatora número igual a 2 vezes um primo grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 57 |[39m     expect(get_factors([35m94[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m47[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 58 |[39m   })[33m;[39m
+     [90m 59 |[39m
+     [90m 60 |[39m   test([32m"fatora número composto de três fatores primos distintos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:57:29)
+
+  ● get_factors › fatora número composto de três fatores primos distintos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+        5,
+    -   7,
+      ]
+
+    [0m [90m 59 |[39m
+     [90m 60 |[39m   test([32m"fatora número composto de três fatores primos distintos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 61 |[39m     expect(get_factors([35m105[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 62 |[39m   })[33m;[39m
+     [90m 63 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:61:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       14 failed, 1 passed, 15 total
+Snapshots:   0 total
+Time:        0.722 s, estimated 1 s
+Ran all test suites matching src\claude35\get_factors.test.ts.
+Test results written to: resultados\runs\claude35\get_factors\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\get_factors.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\get_factors\buggy\jest.json
+FAIL src/claude35/get_factors.test.ts
+  ● get_factors › retorna o próprio número para número primo pequeno
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   2,
+    - ]
+    + Array []
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"retorna o próprio número para número primo pequeno"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(get_factors([35m2[39m))[33m.[39mtoEqual([[35m2[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"retorna o próprio número para outro número primo pequeno"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:9:28)
+
+  ● get_factors › retorna o próprio número para outro número primo pequeno
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   7,
+    - ]
+    + Array []
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m   test([32m"retorna o próprio número para outro número primo pequeno"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m     expect(get_factors([35m7[39m))[33m.[39mtoEqual([[35m7[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 14 |[39m   })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m   test([32m"fatora número composto simples"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:13:28)
+
+  ● get_factors › fatora número composto simples
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   2,
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"fatora número composto simples"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(get_factors([35m4[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 18 |[39m   })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m   test([32m"fatora número composto com múltiplos fatores primos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:17:28)
+
+  ● get_factors › fatora número composto com múltiplos fatores primos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+    -   3,
+      ]
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m   test([32m"fatora número composto com múltiplos fatores primos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m     expect(get_factors([35m12[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 22 |[39m   })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m   test([32m"fatora número composto com fatores primos distintos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:21:29)
+
+  ● get_factors › fatora número composto com fatores primos distintos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   5,
+      ]
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m   test([32m"fatora número composto com fatores primos distintos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m     expect(get_factors([35m15[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 26 |[39m   })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m   test([32m"fatora potência de 2"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:25:29)
+
+  ● get_factors › fatora potência de 2
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+    -   2,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m   test([32m"fatora potência de 2"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m     expect(get_factors([35m8[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                            [31m[1m^[22m[39m
+     [90m 30 |[39m   })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m   test([32m"fatora número primo grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:29:28)
+
+  ● get_factors › fatora número primo grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   97,
+    - ]
+    + Array []
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m   test([32m"fatora número primo grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m     expect(get_factors([35m97[39m))[33m.[39mtoEqual([[35m97[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 34 |[39m   })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m   test([32m"fatora número composto grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:33:29)
+
+  ● get_factors › fatora número composto grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+        5,
+    -   5,
+      ]
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m   test([32m"fatora número composto grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m     expect(get_factors([35m100[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m   test([32m"fatora produto de dois primos grandes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:37:30)
+
+  ● get_factors › fatora produto de dois primos grandes
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        13,
+    -   17,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"fatora produto de dois primos grandes"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(get_factors([35m221[39m))[33m.[39mtoEqual([[35m13[39m[33m,[39m [35m17[39m])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"fatora número que é quadrado de um primo"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:41:30)
+
+  ● get_factors › fatora número que é quadrado de um primo
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        7,
+    -   7,
+      ]
+
+    [0m [90m 43 |[39m
+     [90m 44 |[39m   test([32m"fatora número que é quadrado de um primo"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 45 |[39m     expect(get_factors([35m49[39m))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 46 |[39m   })[33m;[39m
+     [90m 47 |[39m
+     [90m 48 |[39m   test([32m"fatora número composto com fator repetido e fator final grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:45:29)
+
+  ● get_factors › fatora número composto com fator repetido e fator final grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+    -   7,
+      ]
+
+    [0m [90m 47 |[39m
+     [90m 48 |[39m   test([32m"fatora número composto com fator repetido e fator final grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m     expect(get_factors([35m28[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 50 |[39m   })[33m;[39m
+     [90m 51 |[39m
+     [90m 52 |[39m   test([32m"fatora número com múltiplos fatores primos distintos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:49:29)
+
+  ● get_factors › fatora número com múltiplos fatores primos distintos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        3,
+    -   5,
+      ]
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m   test([32m"fatora número com múltiplos fatores primos distintos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m     expect(get_factors([35m30[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"fatora número igual a 2 vezes um primo grande"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:53:29)
+
+  ● get_factors › fatora número igual a 2 vezes um primo grande
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   47,
+      ]
+
+    [0m [90m 55 |[39m
+     [90m 56 |[39m   test([32m"fatora número igual a 2 vezes um primo grande"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 57 |[39m     expect(get_factors([35m94[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m47[39m])[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 58 |[39m   })[33m;[39m
+     [90m 59 |[39m
+     [90m 60 |[39m   test([32m"fatora número composto de três fatores primos distintos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:57:29)
+
+  ● get_factors › fatora número composto de três fatores primos distintos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+        5,
+    -   7,
+      ]
+
+    [0m [90m 59 |[39m
+     [90m 60 |[39m   test([32m"fatora número composto de três fatores primos distintos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 61 |[39m     expect(get_factors([35m105[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 62 |[39m   })[33m;[39m
+     [90m 63 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/get_factors.test.ts:61:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       14 failed, 1 passed, 15 total
+Snapshots:   0 total
+Time:        0.722 s, estimated 1 s
+Ran all test suites matching src\claude35\get_factors.test.ts.
+Test results written to: resultados\runs\claude35\get_factors\buggy\jest.json

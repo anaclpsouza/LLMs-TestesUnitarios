@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        0.837 s, estimated 1 s
+Ran all test suites matching src\claude35\bucketsort.test.ts.
+Test results written to: resultados\runs\claude35\bucketsort\correct\jest.json

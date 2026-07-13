@@ -1,0 +1,627 @@
+
+FAIL src/claude35/powerset.test.ts
+  ● powerset › calcula o conjunto potência para um único elemento
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+    -   Array [],
+        Array [
+          1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"calcula o conjunto potência para um único elemento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(powerset([[35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"calcula o conjunto potência para dois elementos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:9:27)
+
+  ● powerset › calcula o conjunto potência para dois elementos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          2,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m   test([32m"calcula o conjunto potência para dois elementos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 14 |[39m   })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m   test([32m"calcula o conjunto potência para três elementos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:13:30)
+
+  ● powerset › calcula o conjunto potência para três elementos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 22
+    + Received  +  0
+
+    @@ -1,28 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     3,
+    -   ],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -   ],
+        Array [
+          1,
+          2,
+          3,
+        ],
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"calcula o conjunto potência para três elementos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 18 |[39m       [][33m,[39m
+     [90m 19 |[39m       [[35m3[39m][33m,[39m
+     [90m 20 |[39m       [[35m2[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:17:33)
+
+  ● powerset › retorna o número correto de subconjuntos (2^n) para array de tamanho n
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 16
+    Received: 1
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m   test([32m"retorna o número correto de subconjuntos (2^n) para array de tamanho n"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m.[39mlength)[33m.[39mtoBe([35m16[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 31 |[39m   })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m   test([32m"calcula o conjunto potência para array de strings"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:30:43)
+
+  ● powerset › calcula o conjunto potência para array de strings
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     "b",
+    -   ],
+    -   Array [
+    -     "a",
+    -   ],
+        Array [
+          "a",
+          "b",
+        ],
+      ]
+
+    [0m [90m 32 |[39m
+     [90m 33 |[39m   test([32m"calcula o conjunto potência para array de strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 34 |[39m     expect(powerset([[32m"a"[39m[33m,[39m [32m"b"[39m]))[33m.[39mtoEqual([[][33m,[39m [[32m"b"[39m][33m,[39m [[32m"a"[39m][33m,[39m [[32m"a"[39m[33m,[39m [32m"b"[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 35 |[39m   })[33m;[39m
+     [90m 36 |[39m
+     [90m 37 |[39m   test([32m"calcula o conjunto potência para array com elementos duplicados"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:34:34)
+
+  ● powerset › calcula o conjunto potência para array com elementos duplicados
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          1,
+        ],
+      ]
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m   test([32m"calcula o conjunto potência para array com elementos duplicados"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 39 |[39m   })[33m;[39m
+     [90m 40 |[39m
+     [90m 41 |[39m   test([32m"inclui o array vazio como o primeiro subconjunto sempre"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:38:30)
+
+  ● powerset › inclui o array vazio como o primeiro subconjunto sempre
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   5,
+    +   6,
+    +   7,
+    + ]
+
+    [0m [90m 40 |[39m
+     [90m 41 |[39m   test([32m"inclui o array vazio como o primeiro subconjunto sempre"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 42 |[39m     expect(powerset([[35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m7[39m])[[35m0[39m])[33m.[39mtoEqual([])[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 43 |[39m   })[33m;[39m
+     [90m 44 |[39m
+     [90m 45 |[39m   test([32m"inclui o array completo como o último subconjunto sempre"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:42:36)
+
+  ● powerset › calcula o conjunto potência para array de quatro elementos numéricos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 57
+    + Received  +  0
+
+    @@ -1,63 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     4,
+    -   ],
+    -   Array [
+    -     3,
+    -   ],
+    -   Array [
+    -     3,
+    -     4,
+    -   ],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     2,
+    -     4,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -     3,
+    -   ],
+        Array [
+          1,
+          2,
+          3,
+          4,
+
+    [0m [90m 49 |[39m
+     [90m 50 |[39m   test([32m"calcula o conjunto potência para array de quatro elementos numéricos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 51 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 52 |[39m       [][33m,[39m
+     [90m 53 |[39m       [[35m4[39m][33m,[39m
+     [90m 54 |[39m       [[35m3[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:51:36)
+
+  ● powerset › todos os subconjuntos retornados são únicos como estruturas (sem duplicação de referência)
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 4
+    Received length: 1
+    Received array:  [[1, 2]]
+
+    [0m [90m 80 |[39m   test([32m"todos os subconjuntos retornados são únicos como estruturas (sem duplicação de referência)"[39m[33m,[39m () [33m=>[39m {
+     [90m 81 |[39m     [36mconst[39m result [33m=[39m powerset([[35m1[39m[33m,[39m [35m2[39m])[33m;[39m
+    [31m[1m>[22m[39m[90m 82 |[39m     expect(result)[33m.[39mtoHaveLength([35m4[39m)[33m;[39m
+     [90m    |[39m                    [31m[1m^[22m[39m
+     [90m 83 |[39m     expect([36mnew[39m [33mSet[39m(result[33m.[39mmap((s) [33m=>[39m [33mJSON[39m[33m.[39mstringify(s)))[33m.[39msize)[33m.[39mtoBe([35m4[39m)[33m;[39m
+     [90m 84 |[39m   })[33m;[39m
+     [90m 85 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:82:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 3 passed, 12 total
+Snapshots:   0 total
+Time:        0.626 s, estimated 1 s
+Ran all test suites matching src\claude35\powerset.test.ts.
+Test results written to: resultados\runs\claude35\powerset\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\powerset.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\powerset\buggy\jest.json
+FAIL src/claude35/powerset.test.ts
+  ● powerset › calcula o conjunto potência para um único elemento
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+    -   Array [],
+        Array [
+          1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"calcula o conjunto potência para um único elemento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(powerset([[35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"calcula o conjunto potência para dois elementos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:9:27)
+
+  ● powerset › calcula o conjunto potência para dois elementos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          2,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m   test([32m"calcula o conjunto potência para dois elementos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 14 |[39m   })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m   test([32m"calcula o conjunto potência para três elementos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:13:30)
+
+  ● powerset › calcula o conjunto potência para três elementos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 22
+    + Received  +  0
+
+    @@ -1,28 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     3,
+    -   ],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -   ],
+        Array [
+          1,
+          2,
+          3,
+        ],
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"calcula o conjunto potência para três elementos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 18 |[39m       [][33m,[39m
+     [90m 19 |[39m       [[35m3[39m][33m,[39m
+     [90m 20 |[39m       [[35m2[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:17:33)
+
+  ● powerset › retorna o número correto de subconjuntos (2^n) para array de tamanho n
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 16
+    Received: 1
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m   test([32m"retorna o número correto de subconjuntos (2^n) para array de tamanho n"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m.[39mlength)[33m.[39mtoBe([35m16[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 31 |[39m   })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m   test([32m"calcula o conjunto potência para array de strings"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:30:43)
+
+  ● powerset › calcula o conjunto potência para array de strings
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     "b",
+    -   ],
+    -   Array [
+    -     "a",
+    -   ],
+        Array [
+          "a",
+          "b",
+        ],
+      ]
+
+    [0m [90m 32 |[39m
+     [90m 33 |[39m   test([32m"calcula o conjunto potência para array de strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 34 |[39m     expect(powerset([[32m"a"[39m[33m,[39m [32m"b"[39m]))[33m.[39mtoEqual([[][33m,[39m [[32m"b"[39m][33m,[39m [[32m"a"[39m][33m,[39m [[32m"a"[39m[33m,[39m [32m"b"[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 35 |[39m   })[33m;[39m
+     [90m 36 |[39m
+     [90m 37 |[39m   test([32m"calcula o conjunto potência para array com elementos duplicados"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:34:34)
+
+  ● powerset › calcula o conjunto potência para array com elementos duplicados
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          1,
+        ],
+      ]
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m   test([32m"calcula o conjunto potência para array com elementos duplicados"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m 39 |[39m   })[33m;[39m
+     [90m 40 |[39m
+     [90m 41 |[39m   test([32m"inclui o array vazio como o primeiro subconjunto sempre"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:38:30)
+
+  ● powerset › inclui o array vazio como o primeiro subconjunto sempre
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 5
+
+    - Array []
+    + Array [
+    +   5,
+    +   6,
+    +   7,
+    + ]
+
+    [0m [90m 40 |[39m
+     [90m 41 |[39m   test([32m"inclui o array vazio como o primeiro subconjunto sempre"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 42 |[39m     expect(powerset([[35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m7[39m])[[35m0[39m])[33m.[39mtoEqual([])[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 43 |[39m   })[33m;[39m
+     [90m 44 |[39m
+     [90m 45 |[39m   test([32m"inclui o array completo como o último subconjunto sempre"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:42:36)
+
+  ● powerset › calcula o conjunto potência para array de quatro elementos numéricos
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 57
+    + Received  +  0
+
+    @@ -1,63 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     4,
+    -   ],
+    -   Array [
+    -     3,
+    -   ],
+    -   Array [
+    -     3,
+    -     4,
+    -   ],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     2,
+    -     4,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -     4,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -     3,
+    -   ],
+        Array [
+          1,
+          2,
+          3,
+          4,
+
+    [0m [90m 49 |[39m
+     [90m 50 |[39m   test([32m"calcula o conjunto potência para array de quatro elementos numéricos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 51 |[39m     expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 52 |[39m       [][33m,[39m
+     [90m 53 |[39m       [[35m4[39m][33m,[39m
+     [90m 54 |[39m       [[35m3[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:51:36)
+
+  ● powerset › todos os subconjuntos retornados são únicos como estruturas (sem duplicação de referência)
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 4
+    Received length: 1
+    Received array:  [[1, 2]]
+
+    [0m [90m 80 |[39m   test([32m"todos os subconjuntos retornados são únicos como estruturas (sem duplicação de referência)"[39m[33m,[39m () [33m=>[39m {
+     [90m 81 |[39m     [36mconst[39m result [33m=[39m powerset([[35m1[39m[33m,[39m [35m2[39m])[33m;[39m
+    [31m[1m>[22m[39m[90m 82 |[39m     expect(result)[33m.[39mtoHaveLength([35m4[39m)[33m;[39m
+     [90m    |[39m                    [31m[1m^[22m[39m
+     [90m 83 |[39m     expect([36mnew[39m [33mSet[39m(result[33m.[39mmap((s) [33m=>[39m [33mJSON[39m[33m.[39mstringify(s)))[33m.[39msize)[33m.[39mtoBe([35m4[39m)[33m;[39m
+     [90m 84 |[39m   })[33m;[39m
+     [90m 85 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/powerset.test.ts:82:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 3 passed, 12 total
+Snapshots:   0 total
+Time:        0.626 s, estimated 1 s
+Ran all test suites matching src\claude35\powerset.test.ts.
+Test results written to: resultados\runs\claude35\powerset\buggy\jest.json

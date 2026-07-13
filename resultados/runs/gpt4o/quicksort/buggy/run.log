@@ -1,0 +1,217 @@
+
+FAIL src/gpt4o/quicksort.test.ts
+  ● quicksort › sorts arrays with duplicate values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+    -   2,
+        3,
+    -   4,
+        4,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"sorts arrays with duplicate values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(quicksort([[35m4[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"sorts arrays where all values are equal"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:29:47)
+
+  ● quicksort › sorts arrays where all values are equal
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        7,
+    -   7,
+    -   7,
+    -   7,
+      ]
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"sorts arrays where all values are equal"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(quicksort([[35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m]))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"sorts arrays containing negative numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:33:41)
+
+  ● quicksort › sorts arrays containing zero and positive numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        0,
+    -   0,
+        1,
+        2,
+        3,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m     test([32m"sorts arrays containing zero and positive numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m         expect(quicksort([[35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 42 |[39m     })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m     test([32m"sorts arrays containing negative, zero, and positive numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:41:44)
+
+  ● quicksort › places values equal to the pivot in the greater partition
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+        3,
+    -   3,
+    -   3,
+      ]
+
+    [0m [90m 53 |[39m
+     [90m 54 |[39m     test([32m"places values equal to the pivot in the greater partition"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m         expect(quicksort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 56 |[39m     })[33m;[39m
+     [90m 57 |[39m
+     [90m 58 |[39m     test([32m"does not mutate the original array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:55:44)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 10 passed, 14 total
+Snapshots:   0 total
+Time:        0.587 s, estimated 1 s
+Ran all test suites matching src\gpt4o\quicksort.test.ts.
+Test results written to: resultados\runs\gpt4o\quicksort\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\quicksort.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\quicksort\buggy\jest.json
+FAIL src/gpt4o/quicksort.test.ts
+  ● quicksort › sorts arrays with duplicate values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+    -   2,
+        3,
+    -   4,
+        4,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"sorts arrays with duplicate values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(quicksort([[35m4[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"sorts arrays where all values are equal"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:29:47)
+
+  ● quicksort › sorts arrays where all values are equal
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        7,
+    -   7,
+    -   7,
+    -   7,
+      ]
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"sorts arrays where all values are equal"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(quicksort([[35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m]))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"sorts arrays containing negative numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:33:41)
+
+  ● quicksort › sorts arrays containing zero and positive numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        0,
+    -   0,
+        1,
+        2,
+        3,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m     test([32m"sorts arrays containing zero and positive numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m         expect(quicksort([[35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 42 |[39m     })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m     test([32m"sorts arrays containing negative, zero, and positive numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:41:44)
+
+  ● quicksort › places values equal to the pivot in the greater partition
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+        3,
+    -   3,
+    -   3,
+      ]
+
+    [0m [90m 53 |[39m
+     [90m 54 |[39m     test([32m"places values equal to the pivot in the greater partition"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m         expect(quicksort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 56 |[39m     })[33m;[39m
+     [90m 57 |[39m
+     [90m 58 |[39m     test([32m"does not mutate the original array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/quicksort.test.ts:55:44)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 10 passed, 14 total
+Snapshots:   0 total
+Time:        0.587 s, estimated 1 s
+Ran all test suites matching src\gpt4o\quicksort.test.ts.
+Test results written to: resultados\runs\gpt4o\quicksort\buggy\jest.json

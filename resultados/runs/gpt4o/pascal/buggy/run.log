@@ -1,0 +1,607 @@
+
+FAIL src/gpt4o/pascal.test.ts
+  ● pascal › returns two rows when n is two
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+    @@ -2,8 +2,7 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"returns two rows when n is two"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(pascal([35m2[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns three rows when n is three"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:13:27)
+
+  ● pascal › returns three rows when n is three
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    @@ -2,13 +2,11 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns three rows when n is three"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(pascal([35m3[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 18 |[39m     })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m     test([32m"returns the first five rows of Pascal's triangle"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:17:27)
+
+  ● pascal › returns the first five rows of Pascal's triangle
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 10
+    + Received  +  6
+
+    @@ -2,26 +2,22 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m     test([32m"returns the first five rows of Pascal's triangle"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m         expect(pascal([35m5[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 22 |[39m             [[35m1[39m][33m,[39m
+     [90m 23 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 24 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:21:27)
+
+  ● pascal › returns the first six rows of Pascal's triangle
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 15
+    + Received  + 10
+
+    @@ -2,34 +2,29 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+    -     1,
+    -     5,
+    -     10,
+    -     10,
+    -     5,
+          1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 29 |[39m
+     [90m 30 |[39m     test([32m"returns the first six rows of Pascal's triangle"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 31 |[39m         expect(pascal([35m6[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 32 |[39m             [[35m1[39m][33m,[39m
+     [90m 33 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 34 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:31:27)
+
+  ● pascal › each generated row has the expected length
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 2
+    Received length: 1
+    Received array:  [1]
+
+    [0m [90m 44 |[39m
+     [90m 45 |[39m         rows[33m.[39mforEach((row[33m,[39m index) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 46 |[39m             expect(row)[33m.[39mtoHaveLength(index [33m+[39m [35m1[39m)[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 47 |[39m         })[33m;[39m
+     [90m 48 |[39m
+     [90m 49 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:46:25
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:45:14)
+
+  ● pascal › each generated row starts and ends with one
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: NaN
+
+    [0m [90m 56 |[39m         rows[33m.[39mforEach((row) [33m=>[39m {
+     [90m 57 |[39m             expect(row[[35m0[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 58 |[39m             expect(row[row[33m.[39mlength [33m-[39m [35m1[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 59 |[39m         })[33m;[39m
+     [90m 60 |[39m
+     [90m 61 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:58:41
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:56:14)
+
+  ● pascal › generates symmetric rows
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+    -   NaN,
+        1,
+    +   NaN,
+      ]
+
+    [0m [90m 80 |[39m
+     [90m 81 |[39m         rows[33m.[39mforEach((row) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 82 |[39m             expect(row)[33m.[39mtoEqual([[33m...[39mrow][33m.[39mreverse())[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 83 |[39m         })[33m;[39m
+     [90m 84 |[39m
+     [90m 85 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:82:25
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:81:14)
+
+  ● pascal › row sums are powers of two
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+    [0m [90m 92 |[39m         rows[33m.[39mforEach((row[33m,[39m index) [33m=>[39m {
+     [90m 93 |[39m             [36mconst[39m sum [33m=[39m row[33m.[39mreduce((total[33m,[39m value) [33m=>[39m total [33m+[39m value[33m,[39m [35m0[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 94 |[39m             expect(sum)[33m.[39mtoBe([35m2[39m [33m**[39m index)[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 95 |[39m         })[33m;[39m
+     [90m 96 |[39m
+     [90m 97 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:94:25
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:92:14)
+
+  ● pascal › handles a larger valid n
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 9
+    + Received  + 8
+
+      Array [
+        1,
+    -   9,
+    -   36,
+    -   84,
+    -   126,
+    -   126,
+    -   84,
+    -   36,
+    -   9,
+    -   1,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+      ]
+
+    [0m [90m 102 |[39m
+     [90m 103 |[39m         expect(rows)[33m.[39mtoHaveLength([35m10[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 104 |[39m         expect(rows[[35m9[39m])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m9[39m[33m,[39m [35m36[39m[33m,[39m [35m84[39m[33m,[39m [35m126[39m[33m,[39m [35m126[39m[33m,[39m [35m84[39m[33m,[39m [35m36[39m[33m,[39m [35m9[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m     |[39m                         [31m[1m^[22m[39m
+     [90m 105 |[39m
+     [90m 106 |[39m     })[33m;[39m
+     [90m 107 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:104:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 3 passed, 12 total
+Snapshots:   0 total
+Time:        0.605 s, estimated 1 s
+Ran all test suites matching src\gpt4o\pascal.test.ts.
+Test results written to: resultados\runs\gpt4o\pascal\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\pascal.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\pascal\buggy\jest.json
+FAIL src/gpt4o/pascal.test.ts
+  ● pascal › returns two rows when n is two
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+    @@ -2,8 +2,7 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"returns two rows when n is two"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(pascal([35m2[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns three rows when n is three"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:13:27)
+
+  ● pascal › returns three rows when n is three
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    @@ -2,13 +2,11 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns three rows when n is three"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(pascal([35m3[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 18 |[39m     })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m     test([32m"returns the first five rows of Pascal's triangle"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:17:27)
+
+  ● pascal › returns the first five rows of Pascal's triangle
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 10
+    + Received  +  6
+
+    @@ -2,26 +2,22 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m     test([32m"returns the first five rows of Pascal's triangle"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m         expect(pascal([35m5[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 22 |[39m             [[35m1[39m][33m,[39m
+     [90m 23 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 24 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:21:27)
+
+  ● pascal › returns the first six rows of Pascal's triangle
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 15
+    + Received  + 10
+
+    @@ -2,34 +2,29 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+    -     1,
+    -     5,
+    -     10,
+    -     10,
+    -     5,
+          1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 29 |[39m
+     [90m 30 |[39m     test([32m"returns the first six rows of Pascal's triangle"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 31 |[39m         expect(pascal([35m6[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 32 |[39m             [[35m1[39m][33m,[39m
+     [90m 33 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 34 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:31:27)
+
+  ● pascal › each generated row has the expected length
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 2
+    Received length: 1
+    Received array:  [1]
+
+    [0m [90m 44 |[39m
+     [90m 45 |[39m         rows[33m.[39mforEach((row[33m,[39m index) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 46 |[39m             expect(row)[33m.[39mtoHaveLength(index [33m+[39m [35m1[39m)[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 47 |[39m         })[33m;[39m
+     [90m 48 |[39m
+     [90m 49 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:46:25
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:45:14)
+
+  ● pascal › each generated row starts and ends with one
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: NaN
+
+    [0m [90m 56 |[39m         rows[33m.[39mforEach((row) [33m=>[39m {
+     [90m 57 |[39m             expect(row[[35m0[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 58 |[39m             expect(row[row[33m.[39mlength [33m-[39m [35m1[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 59 |[39m         })[33m;[39m
+     [90m 60 |[39m
+     [90m 61 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:58:41
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:56:14)
+
+  ● pascal › generates symmetric rows
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+    -   NaN,
+        1,
+    +   NaN,
+      ]
+
+    [0m [90m 80 |[39m
+     [90m 81 |[39m         rows[33m.[39mforEach((row) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 82 |[39m             expect(row)[33m.[39mtoEqual([[33m...[39mrow][33m.[39mreverse())[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 83 |[39m         })[33m;[39m
+     [90m 84 |[39m
+     [90m 85 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:82:25
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:81:14)
+
+  ● pascal › row sums are powers of two
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+    [0m [90m 92 |[39m         rows[33m.[39mforEach((row[33m,[39m index) [33m=>[39m {
+     [90m 93 |[39m             [36mconst[39m sum [33m=[39m row[33m.[39mreduce((total[33m,[39m value) [33m=>[39m total [33m+[39m value[33m,[39m [35m0[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 94 |[39m             expect(sum)[33m.[39mtoBe([35m2[39m [33m**[39m index)[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 95 |[39m         })[33m;[39m
+     [90m 96 |[39m
+     [90m 97 |[39m[0m
+
+      at src/gpt4o/pascal.test.ts:94:25
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:92:14)
+
+  ● pascal › handles a larger valid n
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 9
+    + Received  + 8
+
+      Array [
+        1,
+    -   9,
+    -   36,
+    -   84,
+    -   126,
+    -   126,
+    -   84,
+    -   36,
+    -   9,
+    -   1,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+    +   NaN,
+      ]
+
+    [0m [90m 102 |[39m
+     [90m 103 |[39m         expect(rows)[33m.[39mtoHaveLength([35m10[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 104 |[39m         expect(rows[[35m9[39m])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m9[39m[33m,[39m [35m36[39m[33m,[39m [35m84[39m[33m,[39m [35m126[39m[33m,[39m [35m126[39m[33m,[39m [35m84[39m[33m,[39m [35m36[39m[33m,[39m [35m9[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m     |[39m                         [31m[1m^[22m[39m
+     [90m 105 |[39m
+     [90m 106 |[39m     })[33m;[39m
+     [90m 107 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/pascal.test.ts:104:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 3 passed, 12 total
+Snapshots:   0 total
+Time:        0.605 s, estimated 1 s
+Ran all test suites matching src\gpt4o\pascal.test.ts.
+Test results written to: resultados\runs\gpt4o\pascal\buggy\jest.json

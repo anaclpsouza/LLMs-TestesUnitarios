@@ -1,0 +1,85 @@
+
+FAIL src/gpt4o/is_valid_parenthesization.test.ts
+  ● is_valid_parenthesization › returns false for a single opening parenthesis
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m     test([32m"returns false for a single opening parenthesis"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(is_valid_parenthesization([32m"("[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m     test([32m"returns false for a single closing parenthesis"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/is_valid_parenthesization.test.ts:30:48)
+
+  ● is_valid_parenthesization › returns false when there are more opening than closing parentheses
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m     test([32m"returns false when there are more opening than closing parentheses"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(is_valid_parenthesization([32m"(()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 39 |[39m         expect(is_valid_parenthesization([32m"((()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 40 |[39m         expect(is_valid_parenthesization([32m"()(("[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 41 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/is_valid_parenthesization.test.ts:38:50)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 10 passed, 12 total
+Snapshots:   0 total
+Time:        0.566 s, estimated 1 s
+Ran all test suites matching src\gpt4o\is_valid_parenthesization.test.ts.
+Test results written to: resultados\runs\gpt4o\is_valid_parenthesization\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\is_valid_parenthesization.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\is_valid_parenthesization\buggy\jest.json
+FAIL src/gpt4o/is_valid_parenthesization.test.ts
+  ● is_valid_parenthesization › returns false for a single opening parenthesis
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m     test([32m"returns false for a single opening parenthesis"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(is_valid_parenthesization([32m"("[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m     test([32m"returns false for a single closing parenthesis"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/is_valid_parenthesization.test.ts:30:48)
+
+  ● is_valid_parenthesization › returns false when there are more opening than closing parentheses
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m     test([32m"returns false when there are more opening than closing parentheses"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(is_valid_parenthesization([32m"(()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 39 |[39m         expect(is_valid_parenthesization([32m"((()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 40 |[39m         expect(is_valid_parenthesization([32m"()(("[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 41 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/is_valid_parenthesization.test.ts:38:50)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 10 passed, 12 total
+Snapshots:   0 total
+Time:        0.566 s, estimated 1 s
+Ran all test suites matching src\gpt4o\is_valid_parenthesization.test.ts.
+Test results written to: resultados\runs\gpt4o\is_valid_parenthesization\buggy\jest.json

@@ -1,0 +1,83 @@
+
+FAIL src/claude35/lis.test.ts
+  ● lis › calcula corretamente para array maior com múltiplas subsequências possíveis
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 5
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m   test([32m"calcula corretamente para array maior com múltiplas subsequências possíveis"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m     expect(lis([[35m0[39m[33m,[39m [35m8[39m[33m,[39m [35m4[39m[33m,[39m [35m12[39m[33m,[39m [35m2[39m[33m,[39m [35m10[39m[33m,[39m [35m6[39m[33m,[39m [35m14[39m[33m,[39m [35m1[39m[33m,[39m [35m9[39m[33m,[39m [35m5[39m[33m,[39m [35m13[39m[33m,[39m [35m3[39m[33m,[39m [35m11[39m[33m,[39m [35m7[39m[33m,[39m [35m15[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                                         [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"calcula corretamente para array com um único pico"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/lis.test.ts:53:73)
+
+  ● lis › calcula corretamente para array com valores mistos incluindo zero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 3
+
+    [0m [90m 59 |[39m
+     [90m 60 |[39m   test([32m"calcula corretamente para array com valores mistos incluindo zero"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 61 |[39m     expect(lis([[35m3[39m[33m,[39m [35m0[39m[33m,[39m [35m6[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m8[39m[33m,[39m [35m9[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 62 |[39m   })[33m;[39m
+     [90m 63 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/lis.test.ts:61:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 13 passed, 15 total
+Snapshots:   0 total
+Time:        0.681 s, estimated 1 s
+Ran all test suites matching src\claude35\lis.test.ts.
+Test results written to: resultados\runs\claude35\lis\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\lis.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\lis\buggy\jest.json
+FAIL src/claude35/lis.test.ts
+  ● lis › calcula corretamente para array maior com múltiplas subsequências possíveis
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 5
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m   test([32m"calcula corretamente para array maior com múltiplas subsequências possíveis"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m     expect(lis([[35m0[39m[33m,[39m [35m8[39m[33m,[39m [35m4[39m[33m,[39m [35m12[39m[33m,[39m [35m2[39m[33m,[39m [35m10[39m[33m,[39m [35m6[39m[33m,[39m [35m14[39m[33m,[39m [35m1[39m[33m,[39m [35m9[39m[33m,[39m [35m5[39m[33m,[39m [35m13[39m[33m,[39m [35m3[39m[33m,[39m [35m11[39m[33m,[39m [35m7[39m[33m,[39m [35m15[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                                         [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"calcula corretamente para array com um único pico"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/lis.test.ts:53:73)
+
+  ● lis › calcula corretamente para array com valores mistos incluindo zero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 3
+
+    [0m [90m 59 |[39m
+     [90m 60 |[39m   test([32m"calcula corretamente para array com valores mistos incluindo zero"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 61 |[39m     expect(lis([[35m3[39m[33m,[39m [35m0[39m[33m,[39m [35m6[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m8[39m[33m,[39m [35m9[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 62 |[39m   })[33m;[39m
+     [90m 63 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/lis.test.ts:61:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 13 passed, 15 total
+Snapshots:   0 total
+Time:        0.681 s, estimated 1 s
+Ran all test suites matching src\claude35\lis.test.ts.
+Test results written to: resultados\runs\claude35\lis\buggy\jest.json

@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       19 passed, 19 total
+Snapshots:   0 total
+Time:        0.841 s, estimated 1 s
+Ran all test suites matching src\claude35\find_first_in_sorted.test.ts.
+Test results written to: resultados\runs\claude35\find_first_in_sorted\correct\jest.json

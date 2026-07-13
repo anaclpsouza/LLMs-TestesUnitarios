@@ -1,0 +1,629 @@
+
+FAIL src/gpt4o/bucketsort.test.ts
+  ● bucketsort › sorts an array with a single element
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   0,
+    - ]
+    + Array []
+
+    [0m [90m  8 |[39m
+     [90m  9 |[39m     test([32m"sorts an array with a single element"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m         expect(bucketsort([[35m0[39m][33m,[39m [35m1[39m))[33m.[39mtoEqual([[35m0[39m])[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 11 |[39m         expect(bucketsort([[35m3[39m][33m,[39m [35m4[39m))[33m.[39mtoEqual([[35m3[39m])[33m;[39m
+     [90m 12 |[39m     })[33m;[39m
+     [90m 13 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:10:36)
+
+  ● bucketsort › sorts an already sorted array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 6
+
+      Array [
+    -   0,
+        1,
+        2,
+    +   2,
+    +   3,
+        3,
+    +   3,
+    +   4,
+    +   4,
+    +   4,
+        4,
+      ]
+
+    [0m [90m 13 |[39m
+     [90m 14 |[39m     test([32m"sorts an already sorted array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 15 |[39m         expect(bucketsort([[35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m][33m,[39m [35m5[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 16 |[39m     })[33m;[39m
+     [90m 17 |[39m
+     [90m 18 |[39m     test([32m"sorts a reverse ordered array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:15:48)
+
+  ● bucketsort › sorts a reverse ordered array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 6
+
+      Array [
+        0,
+    +   0,
+    +   0,
+    +   0,
+        1,
+    +   1,
+    +   1,
+        2,
+    +   2,
+        3,
+    -   4,
+      ]
+
+    [0m [90m 17 |[39m
+     [90m 18 |[39m     test([32m"sorts a reverse ordered array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 19 |[39m         expect(bucketsort([[35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m][33m,[39m [35m5[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 20 |[39m     })[33m;[39m
+     [90m 21 |[39m
+     [90m 22 |[39m     test([32m"sorts an unsorted array with repeated values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:19:48)
+
+  ● bucketsort › sorts an unsorted array with repeated values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 7
+
+      Array [
+        0,
+    -   1,
+    +   0,
+    +   0,
+        1,
+        2,
+        2,
+        3,
+    -   3,
+    +   5,
+    +   5,
+    +   5,
+    +   6,
+    +   6,
+      ]
+
+    [0m [90m 21 |[39m
+     [90m 22 |[39m     test([32m"sorts an unsorted array with repeated values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 23 |[39m         expect(bucketsort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m][33m,[39m [35m4[39m))[33m.[39mtoEqual([
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 24 |[39m             [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m
+     [90m 25 |[39m         ])[33m;[39m
+     [90m 26 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:23:54)
+
+  ● bucketsort › sorts an array where all values are equal
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 6
+
+      Array [
+    -   2,
+    -   2,
+    +   0,
+    +   0,
+    +   1,
+    +   1,
+        2,
+        2,
+    +   3,
+    +   3,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"sorts an array where all values are equal"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(bucketsort([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m][33m,[39m [35m3[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing only the minimum bucket value"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:29:45)
+
+  ● bucketsort › handles arrays containing only the minimum bucket value
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 1
+
+    - Array [
+    -   0,
+    -   0,
+    -   0,
+    - ]
+    + Array []
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing only the minimum bucket value"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(bucketsort([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m][33m,[39m [35m4[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"handles arrays containing only the maximum valid bucket value"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:33:42)
+
+  ● bucketsort › handles arrays containing only the maximum valid bucket value
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  3
+    + Received  + 12
+
+      Array [
+    -   4,
+    -   4,
+    -   4,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   1,
+    +   1,
+    +   1,
+    +   1,
+    +   2,
+    +   2,
+    +   2,
+    +   2,
+      ]
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m     test([32m"handles arrays containing only the maximum valid bucket value"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(bucketsort([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m][33m,[39m [35m5[39m))[33m.[39mtoEqual([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 38 |[39m     })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m     test([32m"handles missing bucket values between present values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:37:42)
+
+  ● bucketsort › handles missing bucket values between present values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  2
+    + Received  + 10
+
+      Array [
+        0,
+        0,
+    +   0,
+    +   0,
+    +   0,
+    +   2,
+    +   2,
+    +   2,
+    +   3,
+        3,
+    -   5,
+    -   5,
+    +   3,
+    +   3,
+    +   3,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m     test([32m"handles missing bucket values between present values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m         expect(bucketsort([[35m5[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m0[39m][33m,[39m [35m6[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 42 |[39m     })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m     test([32m"sorts a larger valid input with many duplicates"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:41:48)
+
+  ● bucketsort › sorts a larger valid input with many duplicates
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  4
+    + Received  + 32
+
+      Array [
+        0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+        1,
+    -   1,
+    +   2,
+    +   2,
+        2,
+        2,
+    +   3,
+    +   3,
+        3,
+    +   3,
+    +   3,
+    +   3,
+        4,
+        4,
+    -   5,
+    -   6,
+        6,
+    -   6,
+    +   7,
+    +   7,
+    +   7,
+    +   7,
+    +   7,
+    +   8,
+    +   8,
+    +   8,
+    +   8,
+    +   9,
+    +   9,
+    +   9,
+    +   10,
+    +   10,
+    +   11,
+    +   11,
+    +   11,
+    +   11,
+    +   11,
+    +   11,
+      ]
+
+    [0m [90m 43 |[39m
+     [90m 44 |[39m     test([32m"sorts a larger valid input with many duplicates"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 45 |[39m         expect(bucketsort([[35m6[39m[33m,[39m [35m1[39m[33m,[39m [35m4[39m[33m,[39m [35m6[39m[33m,[39m [35m2[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m6[39m][33m,[39m [35m7[39m))[33m.[39mtoEqual([
+     [90m    |[39m                                                                     [31m[1m^[22m[39m
+     [90m 46 |[39m             [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m6[39m[33m,[39m [35m6[39m[33m,[39m
+     [90m 47 |[39m         ])[33m;[39m
+     [90m 48 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:45:69)
+
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 2 passed, 11 total
+Snapshots:   0 total
+Time:        0.571 s, estimated 1 s
+Ran all test suites matching src\gpt4o\bucketsort.test.ts.
+Test results written to: resultados\runs\gpt4o\bucketsort\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\bucketsort.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\bucketsort\buggy\jest.json
+FAIL src/gpt4o/bucketsort.test.ts
+  ● bucketsort › sorts an array with a single element
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   0,
+    - ]
+    + Array []
+
+    [0m [90m  8 |[39m
+     [90m  9 |[39m     test([32m"sorts an array with a single element"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m         expect(bucketsort([[35m0[39m][33m,[39m [35m1[39m))[33m.[39mtoEqual([[35m0[39m])[33m;[39m
+     [90m    |[39m                                    [31m[1m^[22m[39m
+     [90m 11 |[39m         expect(bucketsort([[35m3[39m][33m,[39m [35m4[39m))[33m.[39mtoEqual([[35m3[39m])[33m;[39m
+     [90m 12 |[39m     })[33m;[39m
+     [90m 13 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:10:36)
+
+  ● bucketsort › sorts an already sorted array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 6
+
+      Array [
+    -   0,
+        1,
+        2,
+    +   2,
+    +   3,
+        3,
+    +   3,
+    +   4,
+    +   4,
+    +   4,
+        4,
+      ]
+
+    [0m [90m 13 |[39m
+     [90m 14 |[39m     test([32m"sorts an already sorted array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 15 |[39m         expect(bucketsort([[35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m][33m,[39m [35m5[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 16 |[39m     })[33m;[39m
+     [90m 17 |[39m
+     [90m 18 |[39m     test([32m"sorts a reverse ordered array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:15:48)
+
+  ● bucketsort › sorts a reverse ordered array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 6
+
+      Array [
+        0,
+    +   0,
+    +   0,
+    +   0,
+        1,
+    +   1,
+    +   1,
+        2,
+    +   2,
+        3,
+    -   4,
+      ]
+
+    [0m [90m 17 |[39m
+     [90m 18 |[39m     test([32m"sorts a reverse ordered array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 19 |[39m         expect(bucketsort([[35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m][33m,[39m [35m5[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 20 |[39m     })[33m;[39m
+     [90m 21 |[39m
+     [90m 22 |[39m     test([32m"sorts an unsorted array with repeated values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:19:48)
+
+  ● bucketsort › sorts an unsorted array with repeated values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 7
+
+      Array [
+        0,
+    -   1,
+    +   0,
+    +   0,
+        1,
+        2,
+        2,
+        3,
+    -   3,
+    +   5,
+    +   5,
+    +   5,
+    +   6,
+    +   6,
+      ]
+
+    [0m [90m 21 |[39m
+     [90m 22 |[39m     test([32m"sorts an unsorted array with repeated values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 23 |[39m         expect(bucketsort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m][33m,[39m [35m4[39m))[33m.[39mtoEqual([
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 24 |[39m             [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m
+     [90m 25 |[39m         ])[33m;[39m
+     [90m 26 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:23:54)
+
+  ● bucketsort › sorts an array where all values are equal
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 6
+
+      Array [
+    -   2,
+    -   2,
+    +   0,
+    +   0,
+    +   1,
+    +   1,
+        2,
+        2,
+    +   3,
+    +   3,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"sorts an array where all values are equal"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(bucketsort([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m][33m,[39m [35m3[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing only the minimum bucket value"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:29:45)
+
+  ● bucketsort › handles arrays containing only the minimum bucket value
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 1
+
+    - Array [
+    -   0,
+    -   0,
+    -   0,
+    - ]
+    + Array []
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing only the minimum bucket value"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(bucketsort([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m][33m,[39m [35m4[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"handles arrays containing only the maximum valid bucket value"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:33:42)
+
+  ● bucketsort › handles arrays containing only the maximum valid bucket value
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  3
+    + Received  + 12
+
+      Array [
+    -   4,
+    -   4,
+    -   4,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   1,
+    +   1,
+    +   1,
+    +   1,
+    +   2,
+    +   2,
+    +   2,
+    +   2,
+      ]
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m     test([32m"handles arrays containing only the maximum valid bucket value"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(bucketsort([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m][33m,[39m [35m5[39m))[33m.[39mtoEqual([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 38 |[39m     })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m     test([32m"handles missing bucket values between present values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:37:42)
+
+  ● bucketsort › handles missing bucket values between present values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  2
+    + Received  + 10
+
+      Array [
+        0,
+        0,
+    +   0,
+    +   0,
+    +   0,
+    +   2,
+    +   2,
+    +   2,
+    +   3,
+        3,
+    -   5,
+    -   5,
+    +   3,
+    +   3,
+    +   3,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m     test([32m"handles missing bucket values between present values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m         expect(bucketsort([[35m5[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m0[39m][33m,[39m [35m6[39m))[33m.[39mtoEqual([[35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 42 |[39m     })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m     test([32m"sorts a larger valid input with many duplicates"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:41:48)
+
+  ● bucketsort › sorts a larger valid input with many duplicates
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  4
+    + Received  + 32
+
+      Array [
+        0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+    +   0,
+        1,
+    -   1,
+    +   2,
+    +   2,
+        2,
+        2,
+    +   3,
+    +   3,
+        3,
+    +   3,
+    +   3,
+    +   3,
+        4,
+        4,
+    -   5,
+    -   6,
+        6,
+    -   6,
+    +   7,
+    +   7,
+    +   7,
+    +   7,
+    +   7,
+    +   8,
+    +   8,
+    +   8,
+    +   8,
+    +   9,
+    +   9,
+    +   9,
+    +   10,
+    +   10,
+    +   11,
+    +   11,
+    +   11,
+    +   11,
+    +   11,
+    +   11,
+      ]
+
+    [0m [90m 43 |[39m
+     [90m 44 |[39m     test([32m"sorts a larger valid input with many duplicates"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 45 |[39m         expect(bucketsort([[35m6[39m[33m,[39m [35m1[39m[33m,[39m [35m4[39m[33m,[39m [35m6[39m[33m,[39m [35m2[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m6[39m][33m,[39m [35m7[39m))[33m.[39mtoEqual([
+     [90m    |[39m                                                                     [31m[1m^[22m[39m
+     [90m 46 |[39m             [35m0[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m6[39m[33m,[39m [35m6[39m[33m,[39m
+     [90m 47 |[39m         ])[33m;[39m
+     [90m 48 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/bucketsort.test.ts:45:69)
+
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 2 passed, 11 total
+Snapshots:   0 total
+Time:        0.571 s, estimated 1 s
+Ran all test suites matching src\gpt4o\bucketsort.test.ts.
+Test results written to: resultados\runs\gpt4o\bucketsort\buggy\jest.json

@@ -1,0 +1,357 @@
+
+FAIL src/gpt4o/next_permutation.test.ts
+  ● next_permutation › computes the next permutation for a two-element ascending array
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1]
+    Received: undefined
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m     test([32m"computes the next permutation for a two-element ascending array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 22 |[39m     })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     test([32m"returns undefined for a two-element descending array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:21:42)
+
+  ● next_permutation › computes the next permutation for an already ascending permutation
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1, 3, 2]
+    Received: undefined
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"computes the next permutation for an already ascending permutation"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"computes the next permutation when the pivot is at the first index"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:29:45)
+
+  ● next_permutation › computes the next permutation when the pivot is at the first index
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1, 3]
+    Received: undefined
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"computes the next permutation when the pivot is at the first index"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"computes the next permutation when the pivot is in the middle"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:33:45)
+
+  ● next_permutation › computes the next permutation when the pivot is in the middle
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 3, 1]
+    Received: undefined
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m     test([32m"computes the next permutation when the pivot is in the middle"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(next_permutation([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 38 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m 39 |[39m     })[33m;[39m
+     [90m 40 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:37:45)
+
+  ● next_permutation › computes the next permutation when the pivot is near the end
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1, 3, 2, 4]
+    Received: undefined
+
+    [0m [90m 40 |[39m
+     [90m 41 |[39m     test([32m"computes the next permutation when the pivot is near the end"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 42 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 43 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 44 |[39m     })[33m;[39m
+     [90m 45 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:42:48)
+
+  ● next_permutation › handles permutations with duplicate values
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1, 2, 1]
+    Received: undefined
+
+    [0m [90m 45 |[39m
+     [90m 46 |[39m     test([32m"handles permutations with duplicate values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 48 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m 49 |[39m         expect(next_permutation([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoBeUndefined()[33m;[39m
+     [90m 50 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:47:45)
+
+  ● next_permutation › chooses the rightmost successor greater than the pivot
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [5, 1, 1]
+    Received: undefined
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m     test([32m"chooses the rightmost successor greater than the pivot"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 54 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 55 |[39m     })[33m;[39m
+     [90m 56 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:53:45)
+
+  ● next_permutation › reverses the suffix after swapping the pivot
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1, 3, 4, 5]
+    Received: undefined
+
+    [0m [90m 56 |[39m
+     [90m 57 |[39m     test([32m"reverses the suffix after swapping the pivot"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 58 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                                   [31m[1m^[22m[39m
+     [90m 59 |[39m         expect(next_permutation([[35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m 60 |[39m     })[33m;[39m
+     [90m 61 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:58:51)
+
+  ● next_permutation › handles negative numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [-3, -1, -2]
+    Received: undefined
+
+    [0m [90m 61 |[39m
+     [90m 62 |[39m     test([32m"handles negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 63 |[39m         expect(next_permutation([[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m1[39m]))[33m.[39mtoEqual([[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m2[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 64 |[39m         expect(next_permutation([[33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m2[39m]))[33m.[39mtoEqual([[33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m3[39m])[33m;[39m
+     [90m 65 |[39m     })[33m;[39m
+     [90m 66 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:63:48)
+
+  ● next_permutation › does not mutate the original array when a next permutation exists
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1, 3]
+    Received: undefined
+
+    [0m [90m 72 |[39m
+     [90m 73 |[39m         expect(input)[33m.[39mtoEqual(original)[33m;[39m
+    [31m[1m>[22m[39m[90m 74 |[39m         expect(result)[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 75 |[39m         expect(result)[33m.[39mnot[33m.[39mtoBe(input)[33m;[39m
+     [90m 76 |[39m
+     [90m 77 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:74:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 6 passed, 16 total
+Snapshots:   0 total
+Time:        0.64 s, estimated 1 s
+Ran all test suites matching src\gpt4o\next_permutation.test.ts.
+Test results written to: resultados\runs\gpt4o\next_permutation\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\next_permutation.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\next_permutation\buggy\jest.json
+FAIL src/gpt4o/next_permutation.test.ts
+  ● next_permutation › computes the next permutation for a two-element ascending array
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1]
+    Received: undefined
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m     test([32m"computes the next permutation for a two-element ascending array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 22 |[39m     })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     test([32m"returns undefined for a two-element descending array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:21:42)
+
+  ● next_permutation › computes the next permutation for an already ascending permutation
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1, 3, 2]
+    Received: undefined
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"computes the next permutation for an already ascending permutation"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"computes the next permutation when the pivot is at the first index"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:29:45)
+
+  ● next_permutation › computes the next permutation when the pivot is at the first index
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1, 3]
+    Received: undefined
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"computes the next permutation when the pivot is at the first index"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"computes the next permutation when the pivot is in the middle"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:33:45)
+
+  ● next_permutation › computes the next permutation when the pivot is in the middle
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 3, 1]
+    Received: undefined
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m     test([32m"computes the next permutation when the pivot is in the middle"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(next_permutation([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 38 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m 39 |[39m     })[33m;[39m
+     [90m 40 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:37:45)
+
+  ● next_permutation › computes the next permutation when the pivot is near the end
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1, 3, 2, 4]
+    Received: undefined
+
+    [0m [90m 40 |[39m
+     [90m 41 |[39m     test([32m"computes the next permutation when the pivot is near the end"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 42 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 43 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 44 |[39m     })[33m;[39m
+     [90m 45 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:42:48)
+
+  ● next_permutation › handles permutations with duplicate values
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [1, 2, 1]
+    Received: undefined
+
+    [0m [90m 45 |[39m
+     [90m 46 |[39m     test([32m"handles permutations with duplicate values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 48 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m 49 |[39m         expect(next_permutation([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoBeUndefined()[33m;[39m
+     [90m 50 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:47:45)
+
+  ● next_permutation › chooses the rightmost successor greater than the pivot
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [5, 1, 1]
+    Received: undefined
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m     test([32m"chooses the rightmost successor greater than the pivot"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 54 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 55 |[39m     })[33m;[39m
+     [90m 56 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:53:45)
+
+  ● next_permutation › reverses the suffix after swapping the pivot
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1, 3, 4, 5]
+    Received: undefined
+
+    [0m [90m 56 |[39m
+     [90m 57 |[39m     test([32m"reverses the suffix after swapping the pivot"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 58 |[39m         expect(next_permutation([[35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                                   [31m[1m^[22m[39m
+     [90m 59 |[39m         expect(next_permutation([[35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m 60 |[39m     })[33m;[39m
+     [90m 61 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:58:51)
+
+  ● next_permutation › handles negative numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [-3, -1, -2]
+    Received: undefined
+
+    [0m [90m 61 |[39m
+     [90m 62 |[39m     test([32m"handles negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 63 |[39m         expect(next_permutation([[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m1[39m]))[33m.[39mtoEqual([[33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m2[39m])[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 64 |[39m         expect(next_permutation([[33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m3[39m[33m,[39m [33m-[39m[35m2[39m]))[33m.[39mtoEqual([[33m-[39m[35m1[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m3[39m])[33m;[39m
+     [90m 65 |[39m     })[33m;[39m
+     [90m 66 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:63:48)
+
+  ● next_permutation › does not mutate the original array when a next permutation exists
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 1, 3]
+    Received: undefined
+
+    [0m [90m 72 |[39m
+     [90m 73 |[39m         expect(input)[33m.[39mtoEqual(original)[33m;[39m
+    [31m[1m>[22m[39m[90m 74 |[39m         expect(result)[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 75 |[39m         expect(result)[33m.[39mnot[33m.[39mtoBe(input)[33m;[39m
+     [90m 76 |[39m
+     [90m 77 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_permutation.test.ts:74:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 6 passed, 16 total
+Snapshots:   0 total
+Time:        0.64 s, estimated 1 s
+Ran all test suites matching src\gpt4o\next_permutation.test.ts.
+Test results written to: resultados\runs\gpt4o\next_permutation\buggy\jest.json

@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       18 passed, 18 total
+Snapshots:   0 total
+Time:        0.921 s, estimated 1 s
+Ran all test suites matching src\gpt4o\find_in_sorted.test.ts.
+Test results written to: resultados\runs\gpt4o\find_in_sorted\correct\jest.json

@@ -1,0 +1,355 @@
+
+FAIL src/claude35/levenshtein.test.ts
+  ● levenshtein › retorna 0 para strings idênticas
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 6
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"retorna 0 para strings idênticas"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"kitten"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 18 |[39m   })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m   test([32m"calcula distância para strings de um único caractere iguais"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:17:45)
+
+  ● levenshtein › calcula distância para strings de um único caractere iguais
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m   test([32m"calcula distância para strings de um único caractere iguais"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m     expect(levenshtein([32m"a"[39m[33m,[39m [32m"a"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 22 |[39m   })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m   test([32m"calcula distância para strings de um único caractere diferentes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:21:35)
+
+  ● levenshtein › calcula distância clássica entre 'kitten' e 'sitting'
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m   test([32m"calcula distância clássica entre 'kitten' e 'sitting'"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m     expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"sitting"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 30 |[39m   })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m   test([32m"calcula distância quando uma string é prefixo da outra"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:29:46)
+
+  ● levenshtein › calcula distância quando uma string é prefixo da outra
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m   test([32m"calcula distância quando uma string é prefixo da outra"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m     expect(levenshtein([32m"test"[39m[33m,[39m [32m"testing"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 34 |[39m   })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m   test([32m"calcula distância para substituição única no meio"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:33:44)
+
+  ● levenshtein › calcula distância para substituição única no meio
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m   test([32m"calcula distância para substituição única no meio"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m     expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cot"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula distância para inserção única"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:37:39)
+
+  ● levenshtein › calcula distância para inserção única
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula distância para inserção única"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cats"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"calcula distância para remoção única"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:41:40)
+
+  ● levenshtein › calcula distância para remoção única
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 43 |[39m
+     [90m 44 |[39m   test([32m"calcula distância para remoção única"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 45 |[39m     expect(levenshtein([32m"cats"[39m[33m,[39m [32m"cat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 46 |[39m   })[33m;[39m
+     [90m 47 |[39m
+     [90m 48 |[39m   test([32m"calcula distância para strings completamente diferentes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:45:40)
+
+  ● levenshtein › calcula distância entre 'flaw' e 'lawn'
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 4
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m   test([32m"calcula distância entre 'flaw' e 'lawn'"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m     expect(levenshtein([32m"flaw"[39m[33m,[39m [32m"lawn"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"calcula distância entre strings com caracteres repetidos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:53:41)
+
+  ● levenshtein › calcula distância entre strings com caracteres repetidos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 4
+
+    [0m [90m 55 |[39m
+     [90m 56 |[39m   test([32m"calcula distância entre strings com caracteres repetidos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 57 |[39m     expect(levenshtein([32m"aaaa"[39m[33m,[39m [32m"aa"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 58 |[39m   })[33m;[39m
+     [90m 59 |[39m
+     [90m 60 |[39m   test([32m"calcula distância entre strings de mesmo comprimento totalmente distintas"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:57:39)
+
+  ● levenshtein › calcula distância entre strings anagram-like
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 3
+
+    [0m [90m 63 |[39m
+     [90m 64 |[39m   test([32m"calcula distância entre strings anagram-like"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 65 |[39m     expect(levenshtein([32m"abc"[39m[33m,[39m [32m"bca"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 66 |[39m   })[33m;[39m
+     [90m 67 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:65:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 6 passed, 16 total
+Snapshots:   0 total
+Time:        0.691 s, estimated 1 s
+Ran all test suites matching src\claude35\levenshtein.test.ts.
+Test results written to: resultados\runs\claude35\levenshtein\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\levenshtein.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\levenshtein\buggy\jest.json
+FAIL src/claude35/levenshtein.test.ts
+  ● levenshtein › retorna 0 para strings idênticas
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 6
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"retorna 0 para strings idênticas"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"kitten"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 18 |[39m   })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m   test([32m"calcula distância para strings de um único caractere iguais"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:17:45)
+
+  ● levenshtein › calcula distância para strings de um único caractere iguais
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m   test([32m"calcula distância para strings de um único caractere iguais"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m     expect(levenshtein([32m"a"[39m[33m,[39m [32m"a"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 22 |[39m   })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m   test([32m"calcula distância para strings de um único caractere diferentes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:21:35)
+
+  ● levenshtein › calcula distância clássica entre 'kitten' e 'sitting'
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m   test([32m"calcula distância clássica entre 'kitten' e 'sitting'"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m     expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"sitting"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 30 |[39m   })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m   test([32m"calcula distância quando uma string é prefixo da outra"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:29:46)
+
+  ● levenshtein › calcula distância quando uma string é prefixo da outra
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m   test([32m"calcula distância quando uma string é prefixo da outra"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m     expect(levenshtein([32m"test"[39m[33m,[39m [32m"testing"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 34 |[39m   })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m   test([32m"calcula distância para substituição única no meio"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:33:44)
+
+  ● levenshtein › calcula distância para substituição única no meio
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m   test([32m"calcula distância para substituição única no meio"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m     expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cot"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula distância para inserção única"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:37:39)
+
+  ● levenshtein › calcula distância para inserção única
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula distância para inserção única"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cats"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"calcula distância para remoção única"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:41:40)
+
+  ● levenshtein › calcula distância para remoção única
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 43 |[39m
+     [90m 44 |[39m   test([32m"calcula distância para remoção única"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 45 |[39m     expect(levenshtein([32m"cats"[39m[33m,[39m [32m"cat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 46 |[39m   })[33m;[39m
+     [90m 47 |[39m
+     [90m 48 |[39m   test([32m"calcula distância para strings completamente diferentes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:45:40)
+
+  ● levenshtein › calcula distância entre 'flaw' e 'lawn'
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 4
+
+    [0m [90m 51 |[39m
+     [90m 52 |[39m   test([32m"calcula distância entre 'flaw' e 'lawn'"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 53 |[39m     expect(levenshtein([32m"flaw"[39m[33m,[39m [32m"lawn"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"calcula distância entre strings com caracteres repetidos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:53:41)
+
+  ● levenshtein › calcula distância entre strings com caracteres repetidos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 4
+
+    [0m [90m 55 |[39m
+     [90m 56 |[39m   test([32m"calcula distância entre strings com caracteres repetidos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 57 |[39m     expect(levenshtein([32m"aaaa"[39m[33m,[39m [32m"aa"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 58 |[39m   })[33m;[39m
+     [90m 59 |[39m
+     [90m 60 |[39m   test([32m"calcula distância entre strings de mesmo comprimento totalmente distintas"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:57:39)
+
+  ● levenshtein › calcula distância entre strings anagram-like
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 3
+
+    [0m [90m 63 |[39m
+     [90m 64 |[39m   test([32m"calcula distância entre strings anagram-like"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 65 |[39m     expect(levenshtein([32m"abc"[39m[33m,[39m [32m"bca"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 66 |[39m   })[33m;[39m
+     [90m 67 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/levenshtein.test.ts:65:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 6 passed, 16 total
+Snapshots:   0 total
+Time:        0.691 s, estimated 1 s
+Ran all test suites matching src\claude35\levenshtein.test.ts.
+Test results written to: resultados\runs\claude35\levenshtein\buggy\jest.json

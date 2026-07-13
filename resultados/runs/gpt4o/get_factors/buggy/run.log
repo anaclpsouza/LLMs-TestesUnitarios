@@ -1,0 +1,335 @@
+
+FAIL src/gpt4o/get_factors.test.ts
+  ● get_factors › returns the number itself for prime numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   2,
+    - ]
+    + Array []
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"returns the number itself for prime numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(get_factors([35m2[39m))[33m.[39mtoEqual([[35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 10 |[39m         expect(get_factors([35m3[39m))[33m.[39mtoEqual([[35m3[39m])[33m;[39m
+     [90m 11 |[39m         expect(get_factors([35m5[39m))[33m.[39mtoEqual([[35m5[39m])[33m;[39m
+     [90m 12 |[39m         expect(get_factors([35m13[39m))[33m.[39mtoEqual([[35m13[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:9:32)
+
+  ● get_factors › returns repeated factors for powers of a prime
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   2,
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns repeated factors for powers of a prime"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(get_factors([35m4[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 18 |[39m         expect(get_factors([35m8[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 19 |[39m         expect(get_factors([35m16[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 20 |[39m         expect(get_factors([35m27[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:17:32)
+
+  ● get_factors › returns factors for composite numbers with different prime factors
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   3,
+      ]
+
+    [0m [90m 22 |[39m
+     [90m 23 |[39m     test([32m"returns factors for composite numbers with different prime factors"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 24 |[39m         expect(get_factors([35m6[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 25 |[39m         expect(get_factors([35m10[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 26 |[39m         expect(get_factors([35m12[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 27 |[39m         expect(get_factors([35m18[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:24:32)
+
+  ● get_factors › handles perfect squares
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   3,
+      ]
+
+    [0m [90m 30 |[39m
+     [90m 31 |[39m     test([32m"handles perfect squares"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 32 |[39m         expect(get_factors([35m9[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 33 |[39m         expect(get_factors([35m25[39m))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 34 |[39m         expect(get_factors([35m49[39m))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m 35 |[39m         expect(get_factors([35m121[39m))[33m.[39mtoEqual([[35m11[39m[33m,[39m [35m11[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:32:32)
+
+  ● get_factors › handles composite numbers whose smallest factor is not 2
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   5,
+      ]
+
+    [0m [90m 37 |[39m
+     [90m 38 |[39m     test([32m"handles composite numbers whose smallest factor is not 2"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 39 |[39m         expect(get_factors([35m15[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 40 |[39m         expect(get_factors([35m21[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m 41 |[39m         expect(get_factors([35m35[39m))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m 42 |[39m         expect(get_factors([35m77[39m))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m11[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:39:33)
+
+  ● get_factors › handles larger composite numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+        3,
+    -   7,
+      ]
+
+    [0m [90m 44 |[39m
+     [90m 45 |[39m     test([32m"handles larger composite numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 46 |[39m         expect(get_factors([35m84[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 47 |[39m         expect(get_factors([35m360[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 48 |[39m         expect(get_factors([35m1024[39m))[33m.[39mtoEqual([
+     [90m 49 |[39m             [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:46:33)
+
+  ● get_factors › returns factors whose product equals the original number
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        3,
+        5,
+        7,
+    -   11,
+      ]
+
+    [0m [90m 56 |[39m
+     [90m 57 |[39m
+    [31m[1m>[22m[39m[90m 58 |[39m         expect(factors)[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m7[39m[33m,[39m [35m11[39m])[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 59 |[39m         expect(factors[33m.[39mreduce((product[33m,[39m factor) [33m=>[39m product [33m*[39m factor[33m,[39m [35m1[39m))[33m.[39mtoBe(input)[33m;[39m
+     [90m 60 |[39m
+     [90m 61 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:58:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 1 passed, 8 total
+Snapshots:   0 total
+Time:        0.573 s, estimated 1 s
+Ran all test suites matching src\gpt4o\get_factors.test.ts.
+Test results written to: resultados\runs\gpt4o\get_factors\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\get_factors.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\get_factors\buggy\jest.json
+FAIL src/gpt4o/get_factors.test.ts
+  ● get_factors › returns the number itself for prime numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   2,
+    - ]
+    + Array []
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"returns the number itself for prime numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(get_factors([35m2[39m))[33m.[39mtoEqual([[35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 10 |[39m         expect(get_factors([35m3[39m))[33m.[39mtoEqual([[35m3[39m])[33m;[39m
+     [90m 11 |[39m         expect(get_factors([35m5[39m))[33m.[39mtoEqual([[35m5[39m])[33m;[39m
+     [90m 12 |[39m         expect(get_factors([35m13[39m))[33m.[39mtoEqual([[35m13[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:9:32)
+
+  ● get_factors › returns repeated factors for powers of a prime
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   2,
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns repeated factors for powers of a prime"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(get_factors([35m4[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 18 |[39m         expect(get_factors([35m8[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 19 |[39m         expect(get_factors([35m16[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 20 |[39m         expect(get_factors([35m27[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:17:32)
+
+  ● get_factors › returns factors for composite numbers with different prime factors
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   3,
+      ]
+
+    [0m [90m 22 |[39m
+     [90m 23 |[39m     test([32m"returns factors for composite numbers with different prime factors"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 24 |[39m         expect(get_factors([35m6[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 25 |[39m         expect(get_factors([35m10[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 26 |[39m         expect(get_factors([35m12[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 27 |[39m         expect(get_factors([35m18[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:24:32)
+
+  ● get_factors › handles perfect squares
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   3,
+      ]
+
+    [0m [90m 30 |[39m
+     [90m 31 |[39m     test([32m"handles perfect squares"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 32 |[39m         expect(get_factors([35m9[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 33 |[39m         expect(get_factors([35m25[39m))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 34 |[39m         expect(get_factors([35m49[39m))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m 35 |[39m         expect(get_factors([35m121[39m))[33m.[39mtoEqual([[35m11[39m[33m,[39m [35m11[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:32:32)
+
+  ● get_factors › handles composite numbers whose smallest factor is not 2
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   5,
+      ]
+
+    [0m [90m 37 |[39m
+     [90m 38 |[39m     test([32m"handles composite numbers whose smallest factor is not 2"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 39 |[39m         expect(get_factors([35m15[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 40 |[39m         expect(get_factors([35m21[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m 41 |[39m         expect(get_factors([35m35[39m))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m 42 |[39m         expect(get_factors([35m77[39m))[33m.[39mtoEqual([[35m7[39m[33m,[39m [35m11[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:39:33)
+
+  ● get_factors › handles larger composite numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        2,
+        3,
+    -   7,
+      ]
+
+    [0m [90m 44 |[39m
+     [90m 45 |[39m     test([32m"handles larger composite numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 46 |[39m         expect(get_factors([35m84[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m7[39m])[33m;[39m
+     [90m    |[39m                                 [31m[1m^[22m[39m
+     [90m 47 |[39m         expect(get_factors([35m360[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 48 |[39m         expect(get_factors([35m1024[39m))[33m.[39mtoEqual([
+     [90m 49 |[39m             [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:46:33)
+
+  ● get_factors › returns factors whose product equals the original number
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+        3,
+        5,
+        7,
+    -   11,
+      ]
+
+    [0m [90m 56 |[39m
+     [90m 57 |[39m
+    [31m[1m>[22m[39m[90m 58 |[39m         expect(factors)[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m[33m,[39m [35m7[39m[33m,[39m [35m11[39m])[33m;[39m
+     [90m    |[39m                         [31m[1m^[22m[39m
+     [90m 59 |[39m         expect(factors[33m.[39mreduce((product[33m,[39m factor) [33m=>[39m product [33m*[39m factor[33m,[39m [35m1[39m))[33m.[39mtoBe(input)[33m;[39m
+     [90m 60 |[39m
+     [90m 61 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/get_factors.test.ts:58:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 1 passed, 8 total
+Snapshots:   0 total
+Time:        0.573 s, estimated 1 s
+Ran all test suites matching src\gpt4o\get_factors.test.ts.
+Test results written to: resultados\runs\gpt4o\get_factors\buggy\jest.json

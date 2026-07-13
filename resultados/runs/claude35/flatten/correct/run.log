@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        0.854 s, estimated 1 s
+Ran all test suites matching src\claude35\flatten.test.ts.
+Test results written to: resultados\runs\claude35\flatten\correct\jest.json

@@ -1,0 +1,523 @@
+
+FAIL src/claude35/pascal.test.ts
+  ● pascal › calcula corretamente para n = 2
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+    @@ -2,8 +2,7 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"calcula corretamente para n = 2"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(pascal([35m2[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     test([32m"calcula corretamente para n = 3"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:9:27)
+
+  ● pascal › calcula corretamente para n = 3
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    @@ -2,13 +2,11 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"calcula corretamente para n = 3"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(pascal([35m3[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"calcula corretamente para n = 4"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:13:27)
+
+  ● pascal › calcula corretamente para n = 4
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 3
+
+    @@ -2,19 +2,16 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"calcula corretamente para n = 4"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(pascal([35m4[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 18 |[39m             [[35m1[39m][33m,[39m
+     [90m 19 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 20 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:17:27)
+
+  ● pascal › calcula corretamente para n = 5
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 10
+    + Received  +  6
+
+    @@ -2,26 +2,22 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 24 |[39m
+     [90m 25 |[39m     test([32m"calcula corretamente para n = 5"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 26 |[39m         expect(pascal([35m5[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 27 |[39m             [[35m1[39m][33m,[39m
+     [90m 28 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 29 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:26:27)
+
+  ● pascal › calcula corretamente para n = 6
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 15
+    + Received  + 10
+
+    @@ -2,34 +2,29 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+    -     1,
+    -     5,
+    -     10,
+    -     10,
+    -     5,
+          1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 34 |[39m
+     [90m 35 |[39m     test([32m"calcula corretamente para n = 6"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 36 |[39m         expect(pascal([35m6[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 37 |[39m             [[35m1[39m][33m,[39m
+     [90m 38 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 39 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:36:27)
+
+  ● pascal › cada linha tem o número correto de elementos (r + 1)
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+    [0m [90m 47 |[39m         [36mconst[39m result [33m=[39m pascal([35m7[39m)[33m;[39m
+     [90m 48 |[39m         result[33m.[39mforEach((row[33m,[39m index) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m             expect(row[33m.[39mlength)[33m.[39mtoBe(index [33m+[39m [35m1[39m)[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 50 |[39m         })[33m;[39m
+     [90m 51 |[39m     })[33m;[39m
+     [90m 52 |[39m[0m
+
+      at src/claude35/pascal.test.ts:49:32
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/claude35/pascal.test.ts:48:16)
+
+  ● pascal › cada linha começa e termina com 1
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: NaN
+
+    [0m [90m 55 |[39m         result[33m.[39mforEach((row) [33m=>[39m {
+     [90m 56 |[39m             expect(row[[35m0[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 57 |[39m             expect(row[row[33m.[39mlength [33m-[39m [35m1[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 58 |[39m         })[33m;[39m
+     [90m 59 |[39m     })[33m;[39m
+     [90m 60 |[39m[0m
+
+      at src/claude35/pascal.test.ts:57:41
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/claude35/pascal.test.ts:55:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 3 passed, 10 total
+Snapshots:   0 total
+Time:        0.629 s, estimated 1 s
+Ran all test suites matching src\claude35\pascal.test.ts.
+Test results written to: resultados\runs\claude35\pascal\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\pascal.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\pascal\buggy\jest.json
+FAIL src/claude35/pascal.test.ts
+  ● pascal › calcula corretamente para n = 2
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+    @@ -2,8 +2,7 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"calcula corretamente para n = 2"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(pascal([35m2[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     test([32m"calcula corretamente para n = 3"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:9:27)
+
+  ● pascal › calcula corretamente para n = 3
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    @@ -2,13 +2,11 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"calcula corretamente para n = 3"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(pascal([35m3[39m))[33m.[39mtoEqual([[[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"calcula corretamente para n = 4"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:13:27)
+
+  ● pascal › calcula corretamente para n = 4
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 3
+
+    @@ -2,19 +2,16 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"calcula corretamente para n = 4"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(pascal([35m4[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 18 |[39m             [[35m1[39m][33m,[39m
+     [90m 19 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 20 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:17:27)
+
+  ● pascal › calcula corretamente para n = 5
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 10
+    + Received  +  6
+
+    @@ -2,26 +2,22 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 24 |[39m
+     [90m 25 |[39m     test([32m"calcula corretamente para n = 5"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 26 |[39m         expect(pascal([35m5[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 27 |[39m             [[35m1[39m][33m,[39m
+     [90m 28 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 29 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:26:27)
+
+  ● pascal › calcula corretamente para n = 6
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 15
+    + Received  + 10
+
+    @@ -2,34 +2,29 @@
+        Array [
+          1,
+        ],
+        Array [
+          1,
+    -     1,
+        ],
+        Array [
+          1,
+    -     2,
+    -     1,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     3,
+    -     3,
+    -     1,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+          1,
+    -     4,
+    -     6,
+    -     4,
+    -     1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+        Array [
+    -     1,
+    -     5,
+    -     10,
+    -     10,
+    -     5,
+          1,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+    +     NaN,
+        ],
+      ]
+
+    [0m [90m 34 |[39m
+     [90m 35 |[39m     test([32m"calcula corretamente para n = 6"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 36 |[39m         expect(pascal([35m6[39m))[33m.[39mtoEqual([
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 37 |[39m             [[35m1[39m][33m,[39m
+     [90m 38 |[39m             [[35m1[39m[33m,[39m [35m1[39m][33m,[39m
+     [90m 39 |[39m             [[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/pascal.test.ts:36:27)
+
+  ● pascal › cada linha tem o número correto de elementos (r + 1)
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+    [0m [90m 47 |[39m         [36mconst[39m result [33m=[39m pascal([35m7[39m)[33m;[39m
+     [90m 48 |[39m         result[33m.[39mforEach((row[33m,[39m index) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m             expect(row[33m.[39mlength)[33m.[39mtoBe(index [33m+[39m [35m1[39m)[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 50 |[39m         })[33m;[39m
+     [90m 51 |[39m     })[33m;[39m
+     [90m 52 |[39m[0m
+
+      at src/claude35/pascal.test.ts:49:32
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/claude35/pascal.test.ts:48:16)
+
+  ● pascal › cada linha começa e termina com 1
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: NaN
+
+    [0m [90m 55 |[39m         result[33m.[39mforEach((row) [33m=>[39m {
+     [90m 56 |[39m             expect(row[[35m0[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 57 |[39m             expect(row[row[33m.[39mlength [33m-[39m [35m1[39m])[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 58 |[39m         })[33m;[39m
+     [90m 59 |[39m     })[33m;[39m
+     [90m 60 |[39m[0m
+
+      at src/claude35/pascal.test.ts:57:41
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/claude35/pascal.test.ts:55:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 3 passed, 10 total
+Snapshots:   0 total
+Time:        0.629 s, estimated 1 s
+Ran all test suites matching src\claude35\pascal.test.ts.
+Test results written to: resultados\runs\claude35\pascal\buggy\jest.json

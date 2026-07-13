@@ -1,0 +1,381 @@
+
+FAIL src/claude35/flatten.test.ts
+  ● flatten › achata array plano sem elementos aninhados
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"achata array plano sem elementos aninhados"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                     [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"achata array com um nível de aninhamento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:9:37)
+
+  ● flatten › achata array com um nível de aninhamento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m   test([32m"achata array com um nível de aninhamento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m][33m,[39m [35m4[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 14 |[39m   })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m   test([32m"achata array com múltiplos níveis de aninhamento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:13:42)
+
+  ● flatten › achata array com múltiplos níveis de aninhamento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"achata array com múltiplos níveis de aninhamento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [[35m3[39m[33m,[39m [[35m4[39m[33m,[39m [35m5[39m]][33m,[39m [35m6[39m][33m,[39m [35m7[39m])])[33m.[39mtoEqual([
+     [90m    |[39m                                                       [31m[1m^[22m[39m
+     [90m 18 |[39m       [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m7[39m[33m,[39m
+     [90m 19 |[39m     ])[33m;[39m
+     [90m 20 |[39m   })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:17:55)
+
+  ● flatten › achata array com arrays vazios misturados a valores
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 25 |[39m
+     [90m 26 |[39m   test([32m"achata array com arrays vazios misturados a valores"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 27 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [][33m,[39m [35m2[39m[33m,[39m [][33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 28 |[39m   })[33m;[39m
+     [90m 29 |[39m
+     [90m 30 |[39m   test([32m"achata array profundamente aninhado com um único elemento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:27:45)
+
+  ● flatten › achata array profundamente aninhado com um único elemento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 29 |[39m
+     [90m 30 |[39m   test([32m"achata array profundamente aninhado com um único elemento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 31 |[39m     expect([[33m...[39mflatten([[[[[[35m42[39m]]]]])])[33m.[39mtoEqual([[35m42[39m])[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 32 |[39m   })[33m;[39m
+     [90m 33 |[39m
+     [90m 34 |[39m   test([32m"achata array contendo strings"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:31:40)
+
+  ● flatten › achata array contendo strings
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 33 |[39m
+     [90m 34 |[39m   test([32m"achata array contendo strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 35 |[39m     expect([[33m...[39mflatten([[32m"a"[39m[33m,[39m [[32m"b"[39m[33m,[39m [32m"c"[39m][33m,[39m [32m"d"[39m])])[33m.[39mtoEqual([[32m"a"[39m[33m,[39m [32m"b"[39m[33m,[39m [32m"c"[39m[33m,[39m [32m"d"[39m])[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 36 |[39m   })[33m;[39m
+     [90m 37 |[39m
+     [90m 38 |[39m   test([32m"achata array contendo valores mistos de tipos diferentes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:35:50)
+
+  ● flatten › achata array contendo valores mistos de tipos diferentes
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 37 |[39m
+     [90m 38 |[39m   test([32m"achata array contendo valores mistos de tipos diferentes"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 39 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [32m"a"[39m[33m,[39m [[36mtrue[39m[33m,[39m [[36mnull[39m[33m,[39m undefined]][33m,[39m [35m2[39m])])[33m.[39mtoEqual([
+     [90m    |[39m                                                                  [31m[1m^[22m[39m
+     [90m 40 |[39m       [35m1[39m[33m,[39m
+     [90m 41 |[39m       [32m"a"[39m[33m,[39m
+     [90m 42 |[39m       [36mtrue[39m[33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:39:66)
+
+  ● flatten › achata array contendo objetos sem desmontá-los
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 49 |[39m   test([32m"achata array contendo objetos sem desmontá-los"[39m[33m,[39m () [33m=>[39m {
+     [90m 50 |[39m     [36mconst[39m obj [33m=[39m { a[33m:[39m [35m1[39m }[33m;[39m
+    [31m[1m>[22m[39m[90m 51 |[39m     expect([[33m...[39mflatten([obj[33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])])[33m.[39mtoEqual([obj[33m,[39m [35m1[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 52 |[39m   })[33m;[39m
+     [90m 53 |[39m
+     [90m 54 |[39m   test([32m"achata array com elemento único não-array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:51:41)
+
+  ● flatten › achata array com elemento único não-array
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 53 |[39m
+     [90m 54 |[39m   test([32m"achata array com elemento único não-array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m     expect([[33m...[39mflatten([[35m5[39m])])[33m.[39mtoEqual([[35m5[39m])[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 56 |[39m   })[33m;[39m
+     [90m 57 |[39m
+     [90m 58 |[39m   test([32m"achata array aninhado com arrays vazios intercalados em profundidade"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:55:31)
+
+  ● flatten › achata array aninhado com arrays vazios intercalados em profundidade
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 57 |[39m
+     [90m 58 |[39m   test([32m"achata array aninhado com arrays vazios intercalados em profundidade"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 59 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[][33m,[39m [[35m2[39m[33m,[39m []][33m,[39m [35m3[39m]])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                                 [31m[1m^[22m[39m
+     [90m 60 |[39m   })[33m;[39m
+     [90m 61 |[39m
+     [90m 62 |[39m   test([32m"preserva a ordem dos elementos após achatamento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:59:49)
+
+  ● flatten › preserva a ordem dos elementos após achatamento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 61 |[39m
+     [90m 62 |[39m   test([32m"preserva a ordem dos elementos após achatamento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 63 |[39m     expect([[33m...[39mflatten([[[35m3[39m[33m,[39m [35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m0[39m]])])[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 64 |[39m   })[33m;[39m
+     [90m 65 |[39m
+     [90m 66 |[39m   test([32m"retorna um iterável que pode ser convertido em array via Array.from"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:63:46)
+
+  ● flatten › retorna um iterável que pode ser convertido em array via Array.from
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 65 |[39m
+     [90m 66 |[39m   test([32m"retorna um iterável que pode ser convertido em array via Array.from"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 67 |[39m     expect([33mArray[39m[33m.[39m[36mfrom[39m(flatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m]])))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 68 |[39m   })[33m;[39m
+     [90m 69 |[39m
+     [90m 70 |[39m   test([32m"é iterável manualmente via next()"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:67:46)
+
+  ● flatten › é iterável manualmente via next()
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 70 |[39m   test([32m"é iterável manualmente via next()"[39m[33m,[39m () [33m=>[39m {
+     [90m 71 |[39m     [36mconst[39m gen [33m=[39m flatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m]])[33m;[39m
+    [31m[1m>[22m[39m[90m 72 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m1[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 73 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m2[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 74 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m3[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 75 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m undefined[33m,[39m done[33m:[39m [36mtrue[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:72:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       13 failed, 2 passed, 15 total
+Snapshots:   0 total
+Time:        0.636 s, estimated 1 s
+Ran all test suites matching src\claude35\flatten.test.ts.
+Test results written to: resultados\runs\claude35\flatten\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\flatten.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\flatten\buggy\jest.json
+FAIL src/claude35/flatten.test.ts
+  ● flatten › achata array plano sem elementos aninhados
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"achata array plano sem elementos aninhados"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                     [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"achata array com um nível de aninhamento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:9:37)
+
+  ● flatten › achata array com um nível de aninhamento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m   test([32m"achata array com um nível de aninhamento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m][33m,[39m [35m4[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 14 |[39m   })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m   test([32m"achata array com múltiplos níveis de aninhamento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:13:42)
+
+  ● flatten › achata array com múltiplos níveis de aninhamento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"achata array com múltiplos níveis de aninhamento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [[35m3[39m[33m,[39m [[35m4[39m[33m,[39m [35m5[39m]][33m,[39m [35m6[39m][33m,[39m [35m7[39m])])[33m.[39mtoEqual([
+     [90m    |[39m                                                       [31m[1m^[22m[39m
+     [90m 18 |[39m       [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m7[39m[33m,[39m
+     [90m 19 |[39m     ])[33m;[39m
+     [90m 20 |[39m   })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:17:55)
+
+  ● flatten › achata array com arrays vazios misturados a valores
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 25 |[39m
+     [90m 26 |[39m   test([32m"achata array com arrays vazios misturados a valores"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 27 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [][33m,[39m [35m2[39m[33m,[39m [][33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 28 |[39m   })[33m;[39m
+     [90m 29 |[39m
+     [90m 30 |[39m   test([32m"achata array profundamente aninhado com um único elemento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:27:45)
+
+  ● flatten › achata array profundamente aninhado com um único elemento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 29 |[39m
+     [90m 30 |[39m   test([32m"achata array profundamente aninhado com um único elemento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 31 |[39m     expect([[33m...[39mflatten([[[[[[35m42[39m]]]]])])[33m.[39mtoEqual([[35m42[39m])[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 32 |[39m   })[33m;[39m
+     [90m 33 |[39m
+     [90m 34 |[39m   test([32m"achata array contendo strings"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:31:40)
+
+  ● flatten › achata array contendo strings
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 33 |[39m
+     [90m 34 |[39m   test([32m"achata array contendo strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 35 |[39m     expect([[33m...[39mflatten([[32m"a"[39m[33m,[39m [[32m"b"[39m[33m,[39m [32m"c"[39m][33m,[39m [32m"d"[39m])])[33m.[39mtoEqual([[32m"a"[39m[33m,[39m [32m"b"[39m[33m,[39m [32m"c"[39m[33m,[39m [32m"d"[39m])[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 36 |[39m   })[33m;[39m
+     [90m 37 |[39m
+     [90m 38 |[39m   test([32m"achata array contendo valores mistos de tipos diferentes"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:35:50)
+
+  ● flatten › achata array contendo valores mistos de tipos diferentes
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 37 |[39m
+     [90m 38 |[39m   test([32m"achata array contendo valores mistos de tipos diferentes"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 39 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [32m"a"[39m[33m,[39m [[36mtrue[39m[33m,[39m [[36mnull[39m[33m,[39m undefined]][33m,[39m [35m2[39m])])[33m.[39mtoEqual([
+     [90m    |[39m                                                                  [31m[1m^[22m[39m
+     [90m 40 |[39m       [35m1[39m[33m,[39m
+     [90m 41 |[39m       [32m"a"[39m[33m,[39m
+     [90m 42 |[39m       [36mtrue[39m[33m,[39m[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:39:66)
+
+  ● flatten › achata array contendo objetos sem desmontá-los
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 49 |[39m   test([32m"achata array contendo objetos sem desmontá-los"[39m[33m,[39m () [33m=>[39m {
+     [90m 50 |[39m     [36mconst[39m obj [33m=[39m { a[33m:[39m [35m1[39m }[33m;[39m
+    [31m[1m>[22m[39m[90m 51 |[39m     expect([[33m...[39mflatten([obj[33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])])[33m.[39mtoEqual([obj[33m,[39m [35m1[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 52 |[39m   })[33m;[39m
+     [90m 53 |[39m
+     [90m 54 |[39m   test([32m"achata array com elemento único não-array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:51:41)
+
+  ● flatten › achata array com elemento único não-array
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 53 |[39m
+     [90m 54 |[39m   test([32m"achata array com elemento único não-array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m     expect([[33m...[39mflatten([[35m5[39m])])[33m.[39mtoEqual([[35m5[39m])[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 56 |[39m   })[33m;[39m
+     [90m 57 |[39m
+     [90m 58 |[39m   test([32m"achata array aninhado com arrays vazios intercalados em profundidade"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:55:31)
+
+  ● flatten › achata array aninhado com arrays vazios intercalados em profundidade
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 57 |[39m
+     [90m 58 |[39m   test([32m"achata array aninhado com arrays vazios intercalados em profundidade"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 59 |[39m     expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[][33m,[39m [[35m2[39m[33m,[39m []][33m,[39m [35m3[39m]])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                                 [31m[1m^[22m[39m
+     [90m 60 |[39m   })[33m;[39m
+     [90m 61 |[39m
+     [90m 62 |[39m   test([32m"preserva a ordem dos elementos após achatamento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:59:49)
+
+  ● flatten › preserva a ordem dos elementos após achatamento
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 61 |[39m
+     [90m 62 |[39m   test([32m"preserva a ordem dos elementos após achatamento"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 63 |[39m     expect([[33m...[39mflatten([[[35m3[39m[33m,[39m [35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m0[39m]])])[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m0[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 64 |[39m   })[33m;[39m
+     [90m 65 |[39m
+     [90m 66 |[39m   test([32m"retorna um iterável que pode ser convertido em array via Array.from"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:63:46)
+
+  ● flatten › retorna um iterável que pode ser convertido em array via Array.from
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 65 |[39m
+     [90m 66 |[39m   test([32m"retorna um iterável que pode ser convertido em array via Array.from"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 67 |[39m     expect([33mArray[39m[33m.[39m[36mfrom[39m(flatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m]])))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 68 |[39m   })[33m;[39m
+     [90m 69 |[39m
+     [90m 70 |[39m   test([32m"é iterável manualmente via next()"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:67:46)
+
+  ● flatten › é iterável manualmente via next()
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 70 |[39m   test([32m"é iterável manualmente via next()"[39m[33m,[39m () [33m=>[39m {
+     [90m 71 |[39m     [36mconst[39m gen [33m=[39m flatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m]])[33m;[39m
+    [31m[1m>[22m[39m[90m 72 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m1[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 73 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m2[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 74 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m3[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 75 |[39m     expect(gen[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m undefined[33m,[39m done[33m:[39m [36mtrue[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/claude35/flatten.test.ts:72:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       13 failed, 2 passed, 15 total
+Snapshots:   0 total
+Time:        0.636 s, estimated 1 s
+Ran all test suites matching src\claude35\flatten.test.ts.
+Test results written to: resultados\runs\claude35\flatten\buggy\jest.json

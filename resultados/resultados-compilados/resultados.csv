@@ -1,0 +1,61 @@
+Modelo,ModeloSlug,Algoritmo,Arquivo,Status,StatusBug,DetectouBug,Total,Passou,Falhou,Statements,Branches,Functions,Lines
+GPT-4o,gpt4o,bitcount,src/gpt4o/bitcount.test.ts,OK,TIMEOUT,true,7,7,0,100,,100,100
+GPT-4o,gpt4o,bucketsort,src/gpt4o/bucketsort.test.ts,OK,ASSERTION_FAILURE,true,11,11,0,100,,100,100
+GPT-4o,gpt4o,find_first_in_sorted,src/gpt4o/find_first_in_sorted.test.ts,OK,TIMEOUT,true,15,15,0,100,100,100,100
+GPT-4o,gpt4o,find_in_sorted,src/gpt4o/find_in_sorted.test.ts,OK,RUNTIME_ERROR,true,18,18,0,100,100,100,100
+GPT-4o,gpt4o,flatten,src/gpt4o/flatten.test.ts,OK,ASSERTION_FAILURE,true,12,12,0,100,100,100,100
+GPT-4o,gpt4o,gcd,src/gpt4o/gcd.test.ts,OK,RUNTIME_ERROR,true,10,10,0,100,100,100,100
+GPT-4o,gpt4o,get_factors,src/gpt4o/get_factors.test.ts,OK,ASSERTION_FAILURE,true,8,8,0,100,100,100,100
+GPT-4o,gpt4o,is_valid_parenthesization,src/gpt4o/is_valid_parenthesization.test.ts,OK,ASSERTION_FAILURE,true,12,12,0,100,100,100,100
+GPT-4o,gpt4o,knapsack,src/gpt4o/knapsack.test.ts,OK,ASSERTION_FAILURE,true,15,15,0,100,100,100,100
+GPT-4o,gpt4o,levenshtein,src/gpt4o/levenshtein.test.ts,OK,ASSERTION_FAILURE,true,13,13,0,100,100,100,100
+GPT-4o,gpt4o,lis,src/gpt4o/lis.test.ts,OK,ASSERTION_FAILURE,true,15,15,0,100,100,100,100
+GPT-4o,gpt4o,max_sublist_sum,src/gpt4o/max_sublist_sum.test.ts,OK,ASSERTION_FAILURE,true,14,14,0,100,,100,100
+GPT-4o,gpt4o,mergesort,src/gpt4o/mergesort.test.ts,OK,RUNTIME_ERROR,true,14,14,0,100,100,100,100
+GPT-4o,gpt4o,next_palindrome,src/gpt4o/next_palindrome.test.ts,OK,ASSERTION_FAILURE,true,10,10,0,100,100,100,100
+GPT-4o,gpt4o,next_permutation,src/gpt4o/next_permutation.test.ts,OK,ASSERTION_FAILURE,true,16,16,0,100,100,100,100
+GPT-4o,gpt4o,pascal,src/gpt4o/pascal.test.ts,OK,ASSERTION_FAILURE,true,12,12,0,100,100,100,100
+GPT-4o,gpt4o,possible_change,src/gpt4o/possible_change.test.ts,OK,RUNTIME_ERROR,true,13,13,0,100,100,100,100
+GPT-4o,gpt4o,powerset,src/gpt4o/powerset.test.ts,OK,ASSERTION_FAILURE,true,12,12,0,100,100,100,100
+GPT-4o,gpt4o,quicksort,src/gpt4o/quicksort.test.ts,OK,ASSERTION_FAILURE,true,14,14,0,100,100,100,100
+GPT-4o,gpt4o,shortest_path_lengths,src/gpt4o/shortest_path_lengths.test.ts,ASSERTION_FAILURE,,,15,14,1,100,100,100,100
+Gemini 1.5 Pro,gemini15,bitcount,src/gemini15/bitcount.test.ts,OK,TIMEOUT,true,5,5,0,100,,100,100
+Gemini 1.5 Pro,gemini15,bucketsort,src/gemini15/bucketsort.test.ts,OK,ASSERTION_FAILURE,true,9,9,0,100,,100,100
+Gemini 1.5 Pro,gemini15,find_first_in_sorted,src/gemini15/find_first_in_sorted.test.ts,OK,TIMEOUT,true,7,7,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,find_in_sorted,src/gemini15/find_in_sorted.test.ts,OK,RUNTIME_ERROR,true,8,8,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,flatten,src/gemini15/flatten.test.ts,OK,ASSERTION_FAILURE,true,7,7,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,gcd,src/gemini15/gcd.test.ts,OK,RUNTIME_ERROR,true,6,6,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,get_factors,src/gemini15/get_factors.test.ts,OK,ASSERTION_FAILURE,true,5,5,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,is_valid_parenthesization,src/gemini15/is_valid_parenthesization.test.ts,OK,ASSERTION_FAILURE,true,7,7,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,knapsack,src/gemini15/knapsack.test.ts,ASSERTION_FAILURE,,,10,9,1,100,100,100,100
+Gemini 1.5 Pro,gemini15,levenshtein,src/gemini15/levenshtein.test.ts,OK,ASSERTION_FAILURE,true,8,8,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,lis,src/gemini15/lis.test.ts,OK,ASSERTION_FAILURE,true,8,8,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,max_sublist_sum,src/gemini15/max_sublist_sum.test.ts,OK,ASSERTION_FAILURE,true,8,8,0,100,,100,100
+Gemini 1.5 Pro,gemini15,mergesort,src/gemini15/mergesort.test.ts,OK,RUNTIME_ERROR,true,9,9,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,next_palindrome,src/gemini15/next_palindrome.test.ts,RUNTIME_ERROR,,,8,7,1,100,100,100,100
+Gemini 1.5 Pro,gemini15,next_permutation,src/gemini15/next_permutation.test.ts,OK,ASSERTION_FAILURE,true,8,8,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,pascal,src/gemini15/pascal.test.ts,OK,ASSERTION_FAILURE,true,6,6,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,possible_change,src/gemini15/possible_change.test.ts,ASSERTION_FAILURE,,,7,6,1,100,100,100,100
+Gemini 1.5 Pro,gemini15,powerset,src/gemini15/powerset.test.ts,OK,ASSERTION_FAILURE,true,6,6,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,quicksort,src/gemini15/quicksort.test.ts,OK,ASSERTION_FAILURE,true,8,8,0,100,100,100,100
+Gemini 1.5 Pro,gemini15,shortest_path_lengths,src/gemini15/shortest_path_lengths.test.ts,OK,ASSERTION_FAILURE,true,8,8,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,bitcount,src/claude35/bitcount.test.ts,OK,TIMEOUT,true,18,18,0,100,,100,100
+Claude 3.5 Sonnet,claude35,bucketsort,src/claude35/bucketsort.test.ts,OK,ASSERTION_FAILURE,true,13,13,0,100,,100,100
+Claude 3.5 Sonnet,claude35,find_first_in_sorted,src/claude35/find_first_in_sorted.test.ts,OK,TIMEOUT,true,19,19,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,find_in_sorted,src/claude35/find_in_sorted.test.ts,OK,RUNTIME_ERROR,true,20,20,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,flatten,src/claude35/flatten.test.ts,OK,ASSERTION_FAILURE,true,15,15,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,gcd,src/claude35/gcd.test.ts,OK,RUNTIME_ERROR,true,15,15,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,get_factors,src/claude35/get_factors.test.ts,OK,ASSERTION_FAILURE,true,15,15,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,is_valid_parenthesization,src/claude35/is_valid_parenthesization.test.ts,OK,ASSERTION_FAILURE,true,16,16,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,knapsack,src/claude35/knapsack.test.ts,ASSERTION_FAILURE,,,16,15,1,100,100,100,100
+Claude 3.5 Sonnet,claude35,levenshtein,src/claude35/levenshtein.test.ts,OK,ASSERTION_FAILURE,true,16,16,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,lis,src/claude35/lis.test.ts,OK,ASSERTION_FAILURE,true,15,15,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,max_sublist_sum,src/claude35/max_sublist_sum.test.ts,ASSERTION_FAILURE,,,15,13,2,100,,100,100
+Claude 3.5 Sonnet,claude35,mergesort,src/claude35/mergesort.test.ts,OK,RUNTIME_ERROR,true,15,15,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,next_palindrome,src/claude35/next_palindrome.test.ts,OK,ASSERTION_FAILURE,true,16,16,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,next_permutation,src/claude35/next_permutation.test.ts,OK,ASSERTION_FAILURE,true,15,15,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,pascal,src/claude35/pascal.test.ts,OK,ASSERTION_FAILURE,true,10,10,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,possible_change,src/claude35/possible_change.test.ts,ASSERTION_FAILURE,,,15,12,3,100,100,100,100
+Claude 3.5 Sonnet,claude35,powerset,src/claude35/powerset.test.ts,OK,ASSERTION_FAILURE,true,12,12,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,quicksort,src/claude35/quicksort.test.ts,OK,ASSERTION_FAILURE,true,15,15,0,100,100,100,100
+Claude 3.5 Sonnet,claude35,shortest_path_lengths,src/claude35/shortest_path_lengths.test.ts,ASSERTION_FAILURE,,,14,11,3,100,100,100,100

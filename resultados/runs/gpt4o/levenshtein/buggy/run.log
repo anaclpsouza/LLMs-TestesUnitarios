@@ -1,0 +1,357 @@
+
+FAIL src/gpt4o/levenshtein.test.ts
+  ● levenshtein › returns 0 for equal single-character strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+    [0m [90m 12 |[39m
+     [90m 13 |[39m     test([32m"returns 0 for equal single-character strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 14 |[39m         expect(levenshtein([32m"a"[39m[33m,[39m [32m"a"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 15 |[39m     })[33m;[39m
+     [90m 16 |[39m
+     [90m 17 |[39m     test([32m"returns 0 for equal multi-character strings"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:14:39)
+
+  ● levenshtein › returns 0 for equal multi-character strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 4
+
+    [0m [90m 16 |[39m
+     [90m 17 |[39m     test([32m"returns 0 for equal multi-character strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 18 |[39m         expect(levenshtein([32m"test"[39m[33m,[39m [32m"test"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 19 |[39m         expect(levenshtein([32m"abcde"[39m[33m,[39m [32m"abcde"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m 20 |[39m     })[33m;[39m
+     [90m 21 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:18:45)
+
+  ● levenshtein › computes distance for single-character substitution
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 22 |[39m     test([32m"computes distance for single-character substitution"[39m[33m,[39m () [33m=>[39m {
+     [90m 23 |[39m         expect(levenshtein([32m"a"[39m[33m,[39m [32m"b"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cut"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 25 |[39m     })[33m;[39m
+     [90m 26 |[39m
+     [90m 27 |[39m     test([32m"computes distance for single-character insertion"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:24:43)
+
+  ● levenshtein › computes distance for single-character insertion
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 26 |[39m
+     [90m 27 |[39m     test([32m"computes distance for single-character insertion"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 28 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cart"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 29 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"abdc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:28:44)
+
+  ● levenshtein › computes distance for single-character deletion
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"computes distance for single-character deletion"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(levenshtein([32m"cart"[39m[33m,[39m [32m"cat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 34 |[39m         expect(levenshtein([32m"abdc"[39m[33m,[39m [32m"abc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 35 |[39m     })[33m;[39m
+     [90m 36 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:33:44)
+
+  ● levenshtein › computes distance when first characters match and recursion advances both strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m     test([32m"computes distance when first characters match and recursion advances both strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(levenshtein([32m"same"[39m[33m,[39m [32m"sale"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 39 |[39m         expect(levenshtein([32m"prefix"[39m[33m,[39m [32m"prefox"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 40 |[39m     })[33m;[39m
+     [90m 41 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:38:45)
+
+  ● levenshtein › computes distance when first characters differ and all edit branches are reachable
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 41 |[39m
+     [90m 42 |[39m     test([32m"computes distance when first characters differ and all edit branches are reachable"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 43 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"yabc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 44 |[39m         expect(levenshtein([32m"yabc"[39m[33m,[39m [32m"abc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 45 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"xbc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 46 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:43:44)
+
+  ● levenshtein › computes distance for multiple edits
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 47 |[39m
+     [90m 48 |[39m     test([32m"computes distance for multiple edits"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m         expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"sitting"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 50 |[39m         expect(levenshtein([32m"flaw"[39m[33m,[39m [32m"lawn"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m 51 |[39m     })[33m;[39m
+     [90m 52 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:49:50)
+
+  ● levenshtein › is symmetric for representative valid inputs
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 6
+
+    [0m [90m 52 |[39m
+     [90m 53 |[39m     test([32m"is symmetric for representative valid inputs"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 54 |[39m         expect(levenshtein([32m"gumbo"[39m[33m,[39m [32m"gambol"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 55 |[39m         expect(levenshtein([32m"gambol"[39m[33m,[39m [32m"gumbo"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m 56 |[39m     })[33m;[39m
+     [90m 57 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:54:48)
+
+  ● levenshtein › handles strings with repeated characters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 57 |[39m
+     [90m 58 |[39m     test([32m"handles strings with repeated characters"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 59 |[39m         expect(levenshtein([32m"aaa"[39m[33m,[39m [32m"aa"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 60 |[39m         expect(levenshtein([32m"aaaa"[39m[33m,[39m [32m"aaab"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 61 |[39m     })[33m;[39m
+     [90m 62 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:59:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 3 passed, 13 total
+Snapshots:   0 total
+Time:        0.618 s, estimated 1 s
+Ran all test suites matching src\gpt4o\levenshtein.test.ts.
+Test results written to: resultados\runs\gpt4o\levenshtein\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\levenshtein.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\levenshtein\buggy\jest.json
+FAIL src/gpt4o/levenshtein.test.ts
+  ● levenshtein › returns 0 for equal single-character strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+    [0m [90m 12 |[39m
+     [90m 13 |[39m     test([32m"returns 0 for equal single-character strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 14 |[39m         expect(levenshtein([32m"a"[39m[33m,[39m [32m"a"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 15 |[39m     })[33m;[39m
+     [90m 16 |[39m
+     [90m 17 |[39m     test([32m"returns 0 for equal multi-character strings"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:14:39)
+
+  ● levenshtein › returns 0 for equal multi-character strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 4
+
+    [0m [90m 16 |[39m
+     [90m 17 |[39m     test([32m"returns 0 for equal multi-character strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 18 |[39m         expect(levenshtein([32m"test"[39m[33m,[39m [32m"test"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 19 |[39m         expect(levenshtein([32m"abcde"[39m[33m,[39m [32m"abcde"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m 20 |[39m     })[33m;[39m
+     [90m 21 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:18:45)
+
+  ● levenshtein › computes distance for single-character substitution
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 22 |[39m     test([32m"computes distance for single-character substitution"[39m[33m,[39m () [33m=>[39m {
+     [90m 23 |[39m         expect(levenshtein([32m"a"[39m[33m,[39m [32m"b"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cut"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 25 |[39m     })[33m;[39m
+     [90m 26 |[39m
+     [90m 27 |[39m     test([32m"computes distance for single-character insertion"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:24:43)
+
+  ● levenshtein › computes distance for single-character insertion
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 26 |[39m
+     [90m 27 |[39m     test([32m"computes distance for single-character insertion"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 28 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cart"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 29 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"abdc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:28:44)
+
+  ● levenshtein › computes distance for single-character deletion
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"computes distance for single-character deletion"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(levenshtein([32m"cart"[39m[33m,[39m [32m"cat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 34 |[39m         expect(levenshtein([32m"abdc"[39m[33m,[39m [32m"abc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 35 |[39m     })[33m;[39m
+     [90m 36 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:33:44)
+
+  ● levenshtein › computes distance when first characters match and recursion advances both strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m     test([32m"computes distance when first characters match and recursion advances both strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(levenshtein([32m"same"[39m[33m,[39m [32m"sale"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                             [31m[1m^[22m[39m
+     [90m 39 |[39m         expect(levenshtein([32m"prefix"[39m[33m,[39m [32m"prefox"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 40 |[39m     })[33m;[39m
+     [90m 41 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:38:45)
+
+  ● levenshtein › computes distance when first characters differ and all edit branches are reachable
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 41 |[39m
+     [90m 42 |[39m     test([32m"computes distance when first characters differ and all edit branches are reachable"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 43 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"yabc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 44 |[39m         expect(levenshtein([32m"yabc"[39m[33m,[39m [32m"abc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 45 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"xbc"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 46 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:43:44)
+
+  ● levenshtein › computes distance for multiple edits
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 47 |[39m
+     [90m 48 |[39m     test([32m"computes distance for multiple edits"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m         expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"sitting"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 50 |[39m         expect(levenshtein([32m"flaw"[39m[33m,[39m [32m"lawn"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m 51 |[39m     })[33m;[39m
+     [90m 52 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:49:50)
+
+  ● levenshtein › is symmetric for representative valid inputs
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 6
+
+    [0m [90m 52 |[39m
+     [90m 53 |[39m     test([32m"is symmetric for representative valid inputs"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 54 |[39m         expect(levenshtein([32m"gumbo"[39m[33m,[39m [32m"gambol"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 55 |[39m         expect(levenshtein([32m"gambol"[39m[33m,[39m [32m"gumbo"[39m))[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m 56 |[39m     })[33m;[39m
+     [90m 57 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:54:48)
+
+  ● levenshtein › handles strings with repeated characters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 57 |[39m
+     [90m 58 |[39m     test([32m"handles strings with repeated characters"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 59 |[39m         expect(levenshtein([32m"aaa"[39m[33m,[39m [32m"aa"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                          [31m[1m^[22m[39m
+     [90m 60 |[39m         expect(levenshtein([32m"aaaa"[39m[33m,[39m [32m"aaab"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 61 |[39m     })[33m;[39m
+     [90m 62 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/levenshtein.test.ts:59:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 3 passed, 13 total
+Snapshots:   0 total
+Time:        0.618 s, estimated 1 s
+Ran all test suites matching src\gpt4o\levenshtein.test.ts.
+Test results written to: resultados\runs\gpt4o\levenshtein\buggy\jest.json

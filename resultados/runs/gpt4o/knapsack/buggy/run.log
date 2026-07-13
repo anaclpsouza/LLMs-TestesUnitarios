@@ -1,0 +1,221 @@
+
+FAIL src/gpt4o/knapsack.test.ts
+  ● knapsack › selects a single item that fits exactly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 0
+
+    [0m [90m 29 |[39m
+     [90m 30 |[39m     test([32m"selects a single item that fits exactly"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 31 |[39m         expect(knapsack([35m5[39m[33m,[39m [[[35m5[39m[33m,[39m [35m10[39m]]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 32 |[39m     })[33m;[39m
+     [90m 33 |[39m
+     [90m 34 |[39m     test([32m"does not select a single item that exceeds capacity"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:31:40)
+
+  ● knapsack › selects multiple items when their combined value is optimal
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 7
+    Received: 5
+
+    [0m [90m 53 |[39m                 [[35m4[39m[33m,[39m [35m5[39m][33m,[39m
+     [90m 54 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 55 |[39m         )[33m.[39mtoBe([35m7[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 56 |[39m     })[33m;[39m
+     [90m 57 |[39m
+     [90m 58 |[39m     test([32m"chooses the higher-value combination instead of the highest individual value"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:55:11)
+
+  ● knapsack › chooses the higher-value combination instead of the highest individual value
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 14
+    Received: 13
+
+    [0m [90m 64 |[39m                 [[35m2[39m[33m,[39m [35m4[39m][33m,[39m
+     [90m 65 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 66 |[39m         )[33m.[39mtoBe([35m14[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 67 |[39m     })[33m;[39m
+     [90m 68 |[39m
+     [90m 69 |[39m     test([32m"handles items with the same weight and different values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:66:11)
+
+  ● knapsack › handles items with the same value and different weights
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 16
+    Received: 10
+
+    [0m [90m 84 |[39m                 [[35m2[39m[33m,[39m [35m6[39m][33m,[39m
+     [90m 85 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 86 |[39m         )[33m.[39mtoBe([35m16[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 87 |[39m     })[33m;[39m
+     [90m 88 |[39m
+     [90m 89 |[39m     test([32m"does not reuse the same item more than once"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:86:11)
+
+  ● knapsack › handles zero-value items
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 9
+    Received: 5
+
+    [0m [90m  98 |[39m                 [[35m3[39m[33m,[39m [35m5[39m][33m,[39m
+     [90m  99 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 100 |[39m         )[33m.[39mtoBe([35m9[39m)[33m;[39m
+     [90m     |[39m           [31m[1m^[22m[39m
+     [90m 101 |[39m     })[33m;[39m
+     [90m 102 |[39m
+     [90m 103 |[39m     test([32m"handles zero-weight items within the implemented loop contract"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:100:11)
+
+  ● knapsack › handles a standard larger example
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 220
+    Received: 180
+
+    [0m [90m 117 |[39m                 [[35m30[39m[33m,[39m [35m120[39m][33m,[39m
+     [90m 118 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 119 |[39m         )[33m.[39mtoBe([35m220[39m)[33m;[39m
+     [90m     |[39m           [31m[1m^[22m[39m
+     [90m 120 |[39m     })[33m;[39m
+     [90m 121 |[39m
+     [90m 122 |[39m     test([32m"does not mutate the items array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:119:11)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 9 passed, 15 total
+Snapshots:   0 total
+Time:        0.666 s, estimated 1 s
+Ran all test suites matching src\gpt4o\knapsack.test.ts.
+Test results written to: resultados\runs\gpt4o\knapsack\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\knapsack.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\knapsack\buggy\jest.json
+FAIL src/gpt4o/knapsack.test.ts
+  ● knapsack › selects a single item that fits exactly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 0
+
+    [0m [90m 29 |[39m
+     [90m 30 |[39m     test([32m"selects a single item that fits exactly"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 31 |[39m         expect(knapsack([35m5[39m[33m,[39m [[[35m5[39m[33m,[39m [35m10[39m]]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 32 |[39m     })[33m;[39m
+     [90m 33 |[39m
+     [90m 34 |[39m     test([32m"does not select a single item that exceeds capacity"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:31:40)
+
+  ● knapsack › selects multiple items when their combined value is optimal
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 7
+    Received: 5
+
+    [0m [90m 53 |[39m                 [[35m4[39m[33m,[39m [35m5[39m][33m,[39m
+     [90m 54 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 55 |[39m         )[33m.[39mtoBe([35m7[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 56 |[39m     })[33m;[39m
+     [90m 57 |[39m
+     [90m 58 |[39m     test([32m"chooses the higher-value combination instead of the highest individual value"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:55:11)
+
+  ● knapsack › chooses the higher-value combination instead of the highest individual value
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 14
+    Received: 13
+
+    [0m [90m 64 |[39m                 [[35m2[39m[33m,[39m [35m4[39m][33m,[39m
+     [90m 65 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 66 |[39m         )[33m.[39mtoBe([35m14[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 67 |[39m     })[33m;[39m
+     [90m 68 |[39m
+     [90m 69 |[39m     test([32m"handles items with the same weight and different values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:66:11)
+
+  ● knapsack › handles items with the same value and different weights
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 16
+    Received: 10
+
+    [0m [90m 84 |[39m                 [[35m2[39m[33m,[39m [35m6[39m][33m,[39m
+     [90m 85 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 86 |[39m         )[33m.[39mtoBe([35m16[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 87 |[39m     })[33m;[39m
+     [90m 88 |[39m
+     [90m 89 |[39m     test([32m"does not reuse the same item more than once"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:86:11)
+
+  ● knapsack › handles zero-value items
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 9
+    Received: 5
+
+    [0m [90m  98 |[39m                 [[35m3[39m[33m,[39m [35m5[39m][33m,[39m
+     [90m  99 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 100 |[39m         )[33m.[39mtoBe([35m9[39m)[33m;[39m
+     [90m     |[39m           [31m[1m^[22m[39m
+     [90m 101 |[39m     })[33m;[39m
+     [90m 102 |[39m
+     [90m 103 |[39m     test([32m"handles zero-weight items within the implemented loop contract"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:100:11)
+
+  ● knapsack › handles a standard larger example
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 220
+    Received: 180
+
+    [0m [90m 117 |[39m                 [[35m30[39m[33m,[39m [35m120[39m][33m,[39m
+     [90m 118 |[39m             ])[33m,[39m
+    [31m[1m>[22m[39m[90m 119 |[39m         )[33m.[39mtoBe([35m220[39m)[33m;[39m
+     [90m     |[39m           [31m[1m^[22m[39m
+     [90m 120 |[39m     })[33m;[39m
+     [90m 121 |[39m
+     [90m 122 |[39m     test([32m"does not mutate the items array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/knapsack.test.ts:119:11)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 9 passed, 15 total
+Snapshots:   0 total
+Time:        0.666 s, estimated 1 s
+Ran all test suites matching src\gpt4o\knapsack.test.ts.
+Test results written to: resultados\runs\gpt4o\knapsack\buggy\jest.json

@@ -1,0 +1,183 @@
+
+FAIL src/gemini15/flatten.test.ts
+  ● flatten › should yield all elements unchanged for a flat array
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 10 |[39m         [36mconst[39m input [33m=[39m [[35m1[39m[33m,[39m [32m"two"[39m[33m,[39m [36mtrue[39m[33m,[39m [36mnull[39m[33m,[39m undefined][33m;[39m
+     [90m 11 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 12 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [32m"two"[39m[33m,[39m [36mtrue[39m[33m,[39m [36mnull[39m[33m,[39m undefined])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 13 |[39m     })[33m;[39m
+     [90m 14 |[39m
+     [90m 15 |[39m     it([32m"should flatten nested arrays of depth 1"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:12:24)
+
+  ● flatten › should flatten nested arrays of depth 1
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 16 |[39m         [36mconst[39m input [33m=[39m [[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m][33m,[39m [35m4[39m[33m,[39m [[35m5[39m]][33m;[39m
+     [90m 17 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 19 |[39m     })[33m;[39m
+     [90m 20 |[39m
+     [90m 21 |[39m     it([32m"should flatten deeply nested arrays"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:18:24)
+
+  ● flatten › should flatten deeply nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 22 |[39m         [36mconst[39m input [33m=[39m [[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [[35m3[39m[33m,[39m [[35m4[39m[33m,[39m [[35m5[39m]]]]][33m;[39m
+     [90m 23 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 25 |[39m     })[33m;[39m
+     [90m 26 |[39m
+     [90m 27 |[39m     it([32m"should handle empty sub-arrays correctly"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:24:24)
+
+  ● flatten › should handle empty sub-arrays correctly
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 28 |[39m         [36mconst[39m input [33m=[39m [[][33m,[39m [35m1[39m[33m,[39m [[][33m,[39m [35m2[39m][33m,[39m []][33m;[39m
+     [90m 29 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m     it([32m"should preserve non-array objects and other data types"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:30:24)
+
+  ● flatten › should preserve non-array objects and other data types
+
+    TypeError: arr is not iterable
+
+    [0m [90m 36 |[39m         [36mconst[39m input [33m=[39m [obj[33m,[39m [func[33m,[39m [[33mSymbol[39m([32m"sym"[39m)]]][33m;[39m
+     [90m 37 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(result)[33m.[39mtoEqual([obj[33m,[39m func[33m,[39m result[[35m2[39m]])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 39 |[39m     })[33m;[39m
+     [90m 40 |[39m
+     [90m 41 |[39m     it([32m"should work as an iterable in a for...of loop"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:38:24)
+
+  ● flatten › should work as an iterable in a for...of loop
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 45 |[39m             collected[33m.[39mpush(item)[33m;[39m
+     [90m 46 |[39m         }
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(collected)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 48 |[39m     })[33m;[39m
+     [90m 49 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:47:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 1 passed, 7 total
+Snapshots:   0 total
+Time:        0.589 s, estimated 1 s
+Ran all test suites matching src\gemini15\flatten.test.ts.
+Test results written to: resultados\runs\gemini15\flatten\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\flatten.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\flatten\buggy\jest.json
+FAIL src/gemini15/flatten.test.ts
+  ● flatten › should yield all elements unchanged for a flat array
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 10 |[39m         [36mconst[39m input [33m=[39m [[35m1[39m[33m,[39m [32m"two"[39m[33m,[39m [36mtrue[39m[33m,[39m [36mnull[39m[33m,[39m undefined][33m;[39m
+     [90m 11 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 12 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [32m"two"[39m[33m,[39m [36mtrue[39m[33m,[39m [36mnull[39m[33m,[39m undefined])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 13 |[39m     })[33m;[39m
+     [90m 14 |[39m
+     [90m 15 |[39m     it([32m"should flatten nested arrays of depth 1"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:12:24)
+
+  ● flatten › should flatten nested arrays of depth 1
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 16 |[39m         [36mconst[39m input [33m=[39m [[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m][33m,[39m [35m4[39m[33m,[39m [[35m5[39m]][33m;[39m
+     [90m 17 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 19 |[39m     })[33m;[39m
+     [90m 20 |[39m
+     [90m 21 |[39m     it([32m"should flatten deeply nested arrays"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:18:24)
+
+  ● flatten › should flatten deeply nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 22 |[39m         [36mconst[39m input [33m=[39m [[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [[35m3[39m[33m,[39m [[35m4[39m[33m,[39m [[35m5[39m]]]]][33m;[39m
+     [90m 23 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 25 |[39m     })[33m;[39m
+     [90m 26 |[39m
+     [90m 27 |[39m     it([32m"should handle empty sub-arrays correctly"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:24:24)
+
+  ● flatten › should handle empty sub-arrays correctly
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 28 |[39m         [36mconst[39m input [33m=[39m [[][33m,[39m [35m1[39m[33m,[39m [[][33m,[39m [35m2[39m][33m,[39m []][33m;[39m
+     [90m 29 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m     it([32m"should preserve non-array objects and other data types"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:30:24)
+
+  ● flatten › should preserve non-array objects and other data types
+
+    TypeError: arr is not iterable
+
+    [0m [90m 36 |[39m         [36mconst[39m input [33m=[39m [obj[33m,[39m [func[33m,[39m [[33mSymbol[39m([32m"sym"[39m)]]][33m;[39m
+     [90m 37 |[39m         [36mconst[39m result [33m=[39m [33mArray[39m[33m.[39m[36mfrom[39m(flatten(input))[33m;[39m
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(result)[33m.[39mtoEqual([obj[33m,[39m func[33m,[39m result[[35m2[39m]])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 39 |[39m     })[33m;[39m
+     [90m 40 |[39m
+     [90m 41 |[39m     it([32m"should work as an iterable in a for...of loop"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:38:24)
+
+  ● flatten › should work as an iterable in a for...of loop
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 45 |[39m             collected[33m.[39mpush(item)[33m;[39m
+     [90m 46 |[39m         }
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(collected)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                           [31m[1m^[22m[39m
+     [90m 48 |[39m     })[33m;[39m
+     [90m 49 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/flatten.test.ts:47:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 1 passed, 7 total
+Snapshots:   0 total
+Time:        0.589 s, estimated 1 s
+Ran all test suites matching src\gemini15\flatten.test.ts.
+Test results written to: resultados\runs\gemini15\flatten\buggy\jest.json

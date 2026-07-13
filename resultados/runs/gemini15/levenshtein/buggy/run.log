@@ -1,0 +1,151 @@
+
+FAIL src/gemini15/levenshtein.test.ts
+  ● levenshtein › should return 0 for identical strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 5
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     it([32m"should return 0 for identical strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(levenshtein([32m"hello"[39m[33m,[39m [32m"hello"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 18 |[39m         expect(levenshtein([32m"a"[39m[33m,[39m [32m"a"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m 19 |[39m     })[33m;[39m
+     [90m 20 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:17:47)
+
+  ● levenshtein › should return correct distance for single character insertion, deletion, and substitution
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 20 |[39m
+     [90m 21 |[39m     it([32m"should return correct distance for single character insertion, deletion, and substitution"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 22 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cats"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 23 |[39m         expect(levenshtein([32m"cats"[39m[33m,[39m [32m"cat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 24 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"bat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 25 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:22:44)
+
+  ● levenshtein › should return correct distance when characters match at the beginning
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 26 |[39m
+     [90m 27 |[39m     it([32m"should return correct distance when characters match at the beginning"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 28 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"abx"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 29 |[39m         expect(levenshtein([32m"testing"[39m[33m,[39m [32m"tester"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:28:43)
+
+  ● levenshtein › should handle strings of different lengths with mixed operations
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m     it([32m"should handle strings of different lengths with mixed operations"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"sitting"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 38 |[39m     })[33m;[39m
+     [90m 39 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:37:50)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 passed, 8 total
+Snapshots:   0 total
+Time:        0.586 s, estimated 1 s
+Ran all test suites matching src\gemini15\levenshtein.test.ts.
+Test results written to: resultados\runs\gemini15\levenshtein\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\levenshtein.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\levenshtein\buggy\jest.json
+FAIL src/gemini15/levenshtein.test.ts
+  ● levenshtein › should return 0 for identical strings
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 5
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     it([32m"should return 0 for identical strings"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(levenshtein([32m"hello"[39m[33m,[39m [32m"hello"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 18 |[39m         expect(levenshtein([32m"a"[39m[33m,[39m [32m"a"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m 19 |[39m     })[33m;[39m
+     [90m 20 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:17:47)
+
+  ● levenshtein › should return correct distance for single character insertion, deletion, and substitution
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 4
+
+    [0m [90m 20 |[39m
+     [90m 21 |[39m     it([32m"should return correct distance for single character insertion, deletion, and substitution"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 22 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"cats"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 23 |[39m         expect(levenshtein([32m"cats"[39m[33m,[39m [32m"cat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 24 |[39m         expect(levenshtein([32m"cat"[39m[33m,[39m [32m"bat"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 25 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:22:44)
+
+  ● levenshtein › should return correct distance when characters match at the beginning
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 3
+
+    [0m [90m 26 |[39m
+     [90m 27 |[39m     it([32m"should return correct distance when characters match at the beginning"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 28 |[39m         expect(levenshtein([32m"abc"[39m[33m,[39m [32m"abx"[39m))[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 29 |[39m         expect(levenshtein([32m"testing"[39m[33m,[39m [32m"tester"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:28:43)
+
+  ● levenshtein › should handle strings of different lengths with mixed operations
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 7
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m     it([32m"should handle strings of different lengths with mixed operations"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(levenshtein([32m"kitten"[39m[33m,[39m [32m"sitting"[39m))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                                  [31m[1m^[22m[39m
+     [90m 38 |[39m     })[33m;[39m
+     [90m 39 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/levenshtein.test.ts:37:50)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 passed, 8 total
+Snapshots:   0 total
+Time:        0.586 s, estimated 1 s
+Ran all test suites matching src\gemini15\levenshtein.test.ts.
+Test results written to: resultados\runs\gemini15\levenshtein\buggy\jest.json

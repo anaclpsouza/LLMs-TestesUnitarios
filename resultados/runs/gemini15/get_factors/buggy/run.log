@@ -1,0 +1,199 @@
+
+FAIL src/gemini15/get_factors.test.ts
+  ● get_factors › should return an array containing only the number itself when n is a prime number
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   2,
+    - ]
+    + Array []
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     it([32m"should return an array containing only the number itself when n is a prime number"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(get_factors([35m2[39m))[33m.[39mtoEqual([[35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 10 |[39m         expect(get_factors([35m3[39m))[33m.[39mtoEqual([[35m3[39m])[33m;[39m
+     [90m 11 |[39m         expect(get_factors([35m7[39m))[33m.[39mtoEqual([[35m7[39m])[33m;[39m
+     [90m 12 |[39m         expect(get_factors([35m13[39m))[33m.[39mtoEqual([[35m13[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:9:32)
+
+  ● get_factors › should return correct prime factors for composite numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   2,
+      ]
+
+    [0m [90m 14 |[39m
+     [90m 15 |[39m     it([32m"should return correct prime factors for composite numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 16 |[39m         expect(get_factors([35m4[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 17 |[39m         expect(get_factors([35m6[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 18 |[39m         expect(get_factors([35m12[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 19 |[39m         expect(get_factors([35m100[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:16:32)
+
+  ● get_factors › should handle perfect squares
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   3,
+      ]
+
+    [0m [90m 21 |[39m
+     [90m 22 |[39m     it([32m"should handle perfect squares"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 23 |[39m         expect(get_factors([35m9[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 24 |[39m         expect(get_factors([35m25[39m))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 25 |[39m         expect(get_factors([35m16[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 26 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:23:32)
+
+  ● get_factors › should handle larger composite numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+    @@ -2,7 +2,6 @@
+        2,
+        2,
+        2,
+        3,
+        3,
+    -   5,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should handle larger composite numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(get_factors([35m360[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:29:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.596 s, estimated 1 s
+Ran all test suites matching src\gemini15\get_factors.test.ts.
+Test results written to: resultados\runs\gemini15\get_factors\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\get_factors.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\get_factors\buggy\jest.json
+FAIL src/gemini15/get_factors.test.ts
+  ● get_factors › should return an array containing only the number itself when n is a prime number
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   2,
+    - ]
+    + Array []
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     it([32m"should return an array containing only the number itself when n is a prime number"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(get_factors([35m2[39m))[33m.[39mtoEqual([[35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 10 |[39m         expect(get_factors([35m3[39m))[33m.[39mtoEqual([[35m3[39m])[33m;[39m
+     [90m 11 |[39m         expect(get_factors([35m7[39m))[33m.[39mtoEqual([[35m7[39m])[33m;[39m
+     [90m 12 |[39m         expect(get_factors([35m13[39m))[33m.[39mtoEqual([[35m13[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:9:32)
+
+  ● get_factors › should return correct prime factors for composite numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        2,
+    -   2,
+      ]
+
+    [0m [90m 14 |[39m
+     [90m 15 |[39m     it([32m"should return correct prime factors for composite numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 16 |[39m         expect(get_factors([35m4[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 17 |[39m         expect(get_factors([35m6[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 18 |[39m         expect(get_factors([35m12[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 19 |[39m         expect(get_factors([35m100[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:16:32)
+
+  ● get_factors › should handle perfect squares
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        3,
+    -   3,
+      ]
+
+    [0m [90m 21 |[39m
+     [90m 22 |[39m     it([32m"should handle perfect squares"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 23 |[39m         expect(get_factors([35m9[39m))[33m.[39mtoEqual([[35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 24 |[39m         expect(get_factors([35m25[39m))[33m.[39mtoEqual([[35m5[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m 25 |[39m         expect(get_factors([35m16[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m])[33m;[39m
+     [90m 26 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:23:32)
+
+  ● get_factors › should handle larger composite numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+    @@ -2,7 +2,6 @@
+        2,
+        2,
+        2,
+        3,
+        3,
+    -   5,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should handle larger composite numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(get_factors([35m360[39m))[33m.[39mtoEqual([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/get_factors.test.ts:29:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.596 s, estimated 1 s
+Ran all test suites matching src\gemini15\get_factors.test.ts.
+Test results written to: resultados\runs\gemini15\get_factors\buggy\jest.json

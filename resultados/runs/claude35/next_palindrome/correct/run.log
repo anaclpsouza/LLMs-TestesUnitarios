@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       16 passed, 16 total
+Snapshots:   0 total
+Time:        0.963 s, estimated 1 s
+Ran all test suites matching src\claude35\next_palindrome.test.ts.
+Test results written to: resultados\runs\claude35\next_palindrome\correct\jest.json

@@ -1,0 +1,85 @@
+
+FAIL src/claude35/max_sublist_sum.test.ts
+  ● max_sublist_sum › calcula corretamente quando a sublista máxima está no final
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 11
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m   test([32m"calcula corretamente quando a sublista máxima está no final"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m     expect(max_sublist_sum([[33m-[39m[35m10[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula corretamente quando a sublista máxima está no meio"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/max_sublist_sum.test.ts:37:48)
+
+  ● max_sublist_sum › calcula corretamente para array com zeros intercalados com positivos e negativos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 4
+
+    [0m [90m 47 |[39m
+     [90m 48 |[39m   test([32m"calcula corretamente para array com zeros intercalados com positivos e negativos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m     expect(max_sublist_sum([[35m0[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m2[39m[33m,[39m [35m0[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m0[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m    |[39m                                                         [31m[1m^[22m[39m
+     [90m 50 |[39m   })[33m;[39m
+     [90m 51 |[39m
+     [90m 52 |[39m   test([32m"calcula corretamente para array com um único valor positivo grande cercado de negativos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/max_sublist_sum.test.ts:49:57)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 13 passed, 15 total
+Snapshots:   0 total
+Time:        0.904 s, estimated 1 s
+Ran all test suites matching src\claude35\max_sublist_sum.test.ts.
+Test results written to: resultados\runs\claude35\max_sublist_sum\correct\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\max_sublist_sum.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\max_sublist_sum\correct\jest.json
+FAIL src/claude35/max_sublist_sum.test.ts
+  ● max_sublist_sum › calcula corretamente quando a sublista máxima está no final
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 11
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m   test([32m"calcula corretamente quando a sublista máxima está no final"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 37 |[39m     expect(max_sublist_sum([[33m-[39m[35m10[39m[33m,[39m [35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 38 |[39m   })[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m   test([32m"calcula corretamente quando a sublista máxima está no meio"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/max_sublist_sum.test.ts:37:48)
+
+  ● max_sublist_sum › calcula corretamente para array com zeros intercalados com positivos e negativos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 4
+
+    [0m [90m 47 |[39m
+     [90m 48 |[39m   test([32m"calcula corretamente para array com zeros intercalados com positivos e negativos"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 49 |[39m     expect(max_sublist_sum([[35m0[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m2[39m[33m,[39m [35m0[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m0[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m    |[39m                                                         [31m[1m^[22m[39m
+     [90m 50 |[39m   })[33m;[39m
+     [90m 51 |[39m
+     [90m 52 |[39m   test([32m"calcula corretamente para array com um único valor positivo grande cercado de negativos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/max_sublist_sum.test.ts:49:57)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 13 passed, 15 total
+Snapshots:   0 total
+Time:        0.904 s, estimated 1 s
+Ran all test suites matching src\claude35\max_sublist_sum.test.ts.
+Test results written to: resultados\runs\claude35\max_sublist_sum\correct\jest.json

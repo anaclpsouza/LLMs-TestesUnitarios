@@ -1,0 +1,1915 @@
+{
+  "generatedAt": "2026-07-13T20:05:38.342Z",
+  "definitions": {
+    "missingCoverage": "null; nunca convertido em zero",
+    "zeroCoverage": "incluído nas estatísticas",
+    "standardDeviation": "amostral (n-1)",
+    "confidenceInterval95": "aproximação normal da média; análise confirmatória deve usar o plano estatístico do protocolo"
+  },
+  "global": {
+    "n": 60,
+    "statuses": {
+      "OK": 52,
+      "ASSERTION_FAILURE": 7,
+      "COMPILE_ERROR": 0,
+      "IMPORT_ERROR": 0,
+      "RUNTIME_ERROR": 1,
+      "NO_TESTS": 0,
+      "TIMEOUT": 0,
+      "INFRA_ERROR": 0
+    },
+    "executableRate": 86.67,
+    "knownBugDetection": {
+      "detected": 52,
+      "n": 52,
+      "rate": 100
+    },
+    "coverage": {
+      "statements": {
+        "n": 60,
+        "mean": 100,
+        "median": 100,
+        "standardDeviation": 0,
+        "q1": 100,
+        "q3": 100,
+        "iqr": 0,
+        "min": 100,
+        "max": 100,
+        "confidenceInterval95": [
+          100,
+          100
+        ]
+      },
+      "branches": {
+        "n": 51,
+        "mean": 100,
+        "median": 100,
+        "standardDeviation": 0,
+        "q1": 100,
+        "q3": 100,
+        "iqr": 0,
+        "min": 100,
+        "max": 100,
+        "confidenceInterval95": [
+          100,
+          100
+        ]
+      },
+      "functions": {
+        "n": 60,
+        "mean": 100,
+        "median": 100,
+        "standardDeviation": 0,
+        "q1": 100,
+        "q3": 100,
+        "iqr": 0,
+        "min": 100,
+        "max": 100,
+        "confidenceInterval95": [
+          100,
+          100
+        ]
+      },
+      "lines": {
+        "n": 60,
+        "mean": 100,
+        "median": 100,
+        "standardDeviation": 0,
+        "q1": 100,
+        "q3": 100,
+        "iqr": 0,
+        "min": 100,
+        "max": 100,
+        "confidenceInterval95": [
+          100,
+          100
+        ]
+      }
+    }
+  },
+  "byModel": {
+    "GPT-4o": {
+      "n": 20,
+      "statuses": {
+        "OK": 19,
+        "ASSERTION_FAILURE": 1,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 95,
+      "knownBugDetection": {
+        "detected": 19,
+        "n": 19,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 17,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "Gemini 1.5 Pro": {
+      "n": 20,
+      "statuses": {
+        "OK": 17,
+        "ASSERTION_FAILURE": 2,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 1,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 85,
+      "knownBugDetection": {
+        "detected": 17,
+        "n": 17,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 17,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "Claude 3.5 Sonnet": {
+      "n": 20,
+      "statuses": {
+        "OK": 16,
+        "ASSERTION_FAILURE": 4,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 80,
+      "knownBugDetection": {
+        "detected": 16,
+        "n": 16,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 17,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 20,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    }
+  },
+  "byAlgorithm": {
+    "bitcount": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": null,
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "bucketsort": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": null,
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "find_first_in_sorted": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "find_in_sorted": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "flatten": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "gcd": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "get_factors": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "is_valid_parenthesization": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "knapsack": {
+      "n": 3,
+      "statuses": {
+        "OK": 1,
+        "ASSERTION_FAILURE": 2,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 33.33,
+      "knownBugDetection": {
+        "detected": 1,
+        "n": 1,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "levenshtein": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "lis": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "max_sublist_sum": {
+      "n": 3,
+      "statuses": {
+        "OK": 2,
+        "ASSERTION_FAILURE": 1,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 66.67,
+      "knownBugDetection": {
+        "detected": 2,
+        "n": 2,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": null,
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "mergesort": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "next_palindrome": {
+      "n": 3,
+      "statuses": {
+        "OK": 2,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 1,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 66.67,
+      "knownBugDetection": {
+        "detected": 2,
+        "n": 2,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "next_permutation": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "pascal": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "possible_change": {
+      "n": 3,
+      "statuses": {
+        "OK": 1,
+        "ASSERTION_FAILURE": 2,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 33.33,
+      "knownBugDetection": {
+        "detected": 1,
+        "n": 1,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "powerset": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "quicksort": {
+      "n": 3,
+      "statuses": {
+        "OK": 3,
+        "ASSERTION_FAILURE": 0,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 100,
+      "knownBugDetection": {
+        "detected": 3,
+        "n": 3,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "shortest_path_lengths": {
+      "n": 3,
+      "statuses": {
+        "OK": 1,
+        "ASSERTION_FAILURE": 2,
+        "COMPILE_ERROR": 0,
+        "IMPORT_ERROR": 0,
+        "RUNTIME_ERROR": 0,
+        "NO_TESTS": 0,
+        "TIMEOUT": 0,
+        "INFRA_ERROR": 0
+      },
+      "executableRate": 33.33,
+      "knownBugDetection": {
+        "detected": 1,
+        "n": 1,
+        "rate": 100
+      },
+      "coverage": {
+        "statements": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "branches": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "functions": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        },
+        "lines": {
+          "n": 3,
+          "mean": 100,
+          "median": 100,
+          "standardDeviation": 0,
+          "q1": 100,
+          "q3": 100,
+          "iqr": 0,
+          "min": 100,
+          "max": 100,
+          "confidenceInterval95": [
+            100,
+            100
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+
+FAIL src/gpt4o/next_palindrome.test.ts
+  ● next_palindrome › returns the next palindrome for a single nine digit
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+    +   0,
+        1,
+      ]
+
+    [0m [90m  9 |[39m
+     [90m 10 |[39m     test([32m"returns the next palindrome for a single nine digit"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 11 |[39m         expect(next_palindrome([[35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                      [31m[1m^[22m[39m
+     [90m 12 |[39m     })[33m;[39m
+     [90m 13 |[39m
+     [90m 14 |[39m     test([32m"increments the middle pair for even-length palindromes without carry"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_palindrome.test.ts:11:38)
+
+  ● next_palindrome › returns a longer palindrome when every processed pair is nine
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m     test([32m"returns a longer palindrome when every processed pair is nine"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 39 |[39m         expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m 40 |[39m         expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m 41 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_palindrome.test.ts:38:41)
+
+  ● next_palindrome › returns a new array when full overflow occurs
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 66 |[39m
+     [90m 67 |[39m         expect(result)[33m.[39mnot[33m.[39mtoBe(input)[33m;[39m
+    [31m[1m>[22m[39m[90m 68 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 69 |[39m
+     [90m 70 |[39m     })[33m;[39m
+     [90m 71 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_palindrome.test.ts:68:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 7 passed, 10 total
+Snapshots:   0 total
+Time:        0.588 s, estimated 1 s
+Ran all test suites matching src\gpt4o\next_palindrome.test.ts.
+Test results written to: resultados\runs\gpt4o\next_palindrome\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\next_palindrome.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\next_palindrome\buggy\jest.json
+FAIL src/gpt4o/next_palindrome.test.ts
+  ● next_palindrome › returns the next palindrome for a single nine digit
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+    +   0,
+        1,
+      ]
+
+    [0m [90m  9 |[39m
+     [90m 10 |[39m     test([32m"returns the next palindrome for a single nine digit"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 11 |[39m         expect(next_palindrome([[35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                      [31m[1m^[22m[39m
+     [90m 12 |[39m     })[33m;[39m
+     [90m 13 |[39m
+     [90m 14 |[39m     test([32m"increments the middle pair for even-length palindromes without carry"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/next_palindrome.test.ts:11:38)
+
+  ● next_palindrome › returns a longer palindrome when every processed pair is nine
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 36 |[39m
+     [90m 37 |[39m     test([32m"returns a longer palindrome when every processed pair is nine"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 39 |[39m         expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m 40 |[39m         expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m 41 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_palindrome.test.ts:38:41)
+
+  ● next_palindrome › returns a new array when full overflow occurs
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 66 |[39m
+     [90m 67 |[39m         expect(result)[33m.[39mnot[33m.[39mtoBe(input)[33m;[39m
+    [31m[1m>[22m[39m[90m 68 |[39m         expect(result)[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 69 |[39m
+     [90m 70 |[39m     })[33m;[39m
+     [90m 71 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/next_palindrome.test.ts:68:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 7 passed, 10 total
+Snapshots:   0 total
+Time:        0.588 s, estimated 1 s
+Ran all test suites matching src\gpt4o\next_palindrome.test.ts.
+Test results written to: resultados\runs\gpt4o\next_palindrome\buggy\jest.json

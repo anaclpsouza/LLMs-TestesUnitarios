@@ -1,0 +1,545 @@
+
+FAIL src/gpt4o/powerset.test.ts
+  ● powerset › returns all subsets for a single-element array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+    -   Array [],
+        Array [
+          1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"returns all subsets for a single-element array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(powerset([[35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m]])[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     test([32m"returns all subsets for a two-element array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:9:31)
+
+  ● powerset › returns all subsets for a two-element array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          2,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"returns all subsets for a two-element array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns all subsets for a three-element array in implementation order"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:13:34)
+
+  ● powerset › returns all subsets for a three-element array in implementation order
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 22
+    + Received  +  0
+
+    @@ -1,28 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     3,
+    -   ],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -   ],
+        Array [
+          1,
+          2,
+          3,
+        ],
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns all subsets for a three-element array in implementation order"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                     [31m[1m^[22m[39m
+     [90m 18 |[39m             [][33m,[39m
+     [90m 19 |[39m             [[35m3[39m][33m,[39m
+     [90m 20 |[39m             [[35m2[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:17:37)
+
+  ● powerset › returns the correct number of subsets
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 16
+    Received length: 1
+    Received array:  [[1, 2, 3, 4]]
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m     test([32m"returns the correct number of subsets"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m]))[33m.[39mtoHaveLength([35m16[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m     test([32m"includes the empty subset and the original full subset"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:30:40)
+
+  ● powerset › includes the empty subset and the original full subset
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: []
+    Received array: [["a", "b", "c"]]
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(result)[33m.[39mtoContainEqual([])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 38 |[39m         expect(result)[33m.[39mtoContainEqual([[32m"a"[39m[33m,[39m [32m"b"[39m[33m,[39m [32m"c"[39m])[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:37:24)
+
+  ● powerset › includes representative subsets of different lengths
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: [1]
+    Received array: [[1, 2, 3]]
+
+    [0m [90m 45 |[39m
+     [90m 46 |[39m
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(result)[33m.[39mtoContainEqual([[35m1[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 48 |[39m         expect(result)[33m.[39mtoContainEqual([[35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 49 |[39m         expect(result)[33m.[39mtoContainEqual([[35m1[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 50 |[39m         expect(result)[33m.[39mtoContainEqual([[35m1[39m[33m,[39m [35m2[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:47:24)
+
+  ● powerset › preserves duplicate input values as distinct positions in generated subsets
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          1,
+        ],
+      ]
+
+    [0m [90m 54 |[39m
+     [90m 55 |[39m     test([32m"preserves duplicate input values as distinct positions in generated subsets"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 56 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 57 |[39m     })[33m;[39m
+     [90m 58 |[39m
+     [90m 59 |[39m     test([32m"works with string values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:56:34)
+
+  ● powerset › works with string values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     "y",
+    -   ],
+    -   Array [
+    -     "x",
+    -   ],
+        Array [
+          "x",
+          "y",
+        ],
+      ]
+
+    [0m [90m 58 |[39m
+     [90m 59 |[39m     test([32m"works with string values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 60 |[39m         expect(powerset([[32m"x"[39m[33m,[39m [32m"y"[39m]))[33m.[39mtoEqual([[][33m,[39m [[32m"y"[39m][33m,[39m [[32m"x"[39m][33m,[39m [[32m"x"[39m[33m,[39m [32m"y"[39m]])[33m;[39m
+     [90m    |[39m                                      [31m[1m^[22m[39m
+     [90m 61 |[39m     })[33m;[39m
+     [90m 62 |[39m
+     [90m 63 |[39m     test([32m"works with boolean values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:60:38)
+
+  ● powerset › works with boolean values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     false,
+    -   ],
+    -   Array [
+    -     true,
+    -   ],
+        Array [
+          true,
+          false,
+        ],
+      ]
+
+    [0m [90m 62 |[39m
+     [90m 63 |[39m     test([32m"works with boolean values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 64 |[39m         expect(powerset([[36mtrue[39m[33m,[39m [36mfalse[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 65 |[39m             [][33m,[39m
+     [90m 66 |[39m             [[36mfalse[39m][33m,[39m
+     [90m 67 |[39m             [[36mtrue[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:64:41)
+
+  ● powerset › preserves object references inside subsets
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: [{"id": 1}]
+    Received array: [[{"id": 1}, {"id": 2}]]
+
+    [0m [90m 76 |[39m
+     [90m 77 |[39m
+    [31m[1m>[22m[39m[90m 78 |[39m         expect(result)[33m.[39mtoContainEqual([first])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 79 |[39m         expect(result)[33m.[39mtoContainEqual([second])[33m;[39m
+     [90m 80 |[39m         expect(result)[33m.[39mtoContainEqual([first[33m,[39m second])[33m;[39m
+     [90m 81 |[39m         expect(result[33m.[39mfind((subset) [33m=>[39m subset[33m.[39mlength [33m===[39m [35m1[39m [33m&&[39m subset[[35m0[39m] [33m===[39m first))[33m.[39mtoBeDefined()[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:78:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 2 passed, 12 total
+Snapshots:   0 total
+Time:        0.63 s, estimated 1 s
+Ran all test suites matching src\gpt4o\powerset.test.ts.
+Test results written to: resultados\runs\gpt4o\powerset\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\powerset.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\powerset\buggy\jest.json
+FAIL src/gpt4o/powerset.test.ts
+  ● powerset › returns all subsets for a single-element array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+    -   Array [],
+        Array [
+          1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"returns all subsets for a single-element array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(powerset([[35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m]])[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     test([32m"returns all subsets for a two-element array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:9:31)
+
+  ● powerset › returns all subsets for a two-element array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          2,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"returns all subsets for a two-element array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns all subsets for a three-element array in implementation order"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:13:34)
+
+  ● powerset › returns all subsets for a three-element array in implementation order
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 22
+    + Received  +  0
+
+    @@ -1,28 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     3,
+    -   ],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     2,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -     3,
+    -   ],
+    -   Array [
+    -     1,
+    -     2,
+    -   ],
+        Array [
+          1,
+          2,
+          3,
+        ],
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"returns all subsets for a three-element array in implementation order"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                     [31m[1m^[22m[39m
+     [90m 18 |[39m             [][33m,[39m
+     [90m 19 |[39m             [[35m3[39m][33m,[39m
+     [90m 20 |[39m             [[35m2[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:17:37)
+
+  ● powerset › returns the correct number of subsets
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 16
+    Received length: 1
+    Received array:  [[1, 2, 3, 4]]
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m     test([32m"returns the correct number of subsets"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m]))[33m.[39mtoHaveLength([35m16[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 31 |[39m     })[33m;[39m
+     [90m 32 |[39m
+     [90m 33 |[39m     test([32m"includes the empty subset and the original full subset"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:30:40)
+
+  ● powerset › includes the empty subset and the original full subset
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: []
+    Received array: [["a", "b", "c"]]
+
+    [0m [90m 35 |[39m
+     [90m 36 |[39m
+    [31m[1m>[22m[39m[90m 37 |[39m         expect(result)[33m.[39mtoContainEqual([])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 38 |[39m         expect(result)[33m.[39mtoContainEqual([[32m"a"[39m[33m,[39m [32m"b"[39m[33m,[39m [32m"c"[39m])[33m;[39m
+     [90m 39 |[39m
+     [90m 40 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:37:24)
+
+  ● powerset › includes representative subsets of different lengths
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: [1]
+    Received array: [[1, 2, 3]]
+
+    [0m [90m 45 |[39m
+     [90m 46 |[39m
+    [31m[1m>[22m[39m[90m 47 |[39m         expect(result)[33m.[39mtoContainEqual([[35m1[39m])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 48 |[39m         expect(result)[33m.[39mtoContainEqual([[35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 49 |[39m         expect(result)[33m.[39mtoContainEqual([[35m1[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m 50 |[39m         expect(result)[33m.[39mtoContainEqual([[35m1[39m[33m,[39m [35m2[39m])[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:47:24)
+
+  ● powerset › preserves duplicate input values as distinct positions in generated subsets
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          1,
+        ],
+      ]
+
+    [0m [90m 54 |[39m
+     [90m 55 |[39m     test([32m"preserves duplicate input values as distinct positions in generated subsets"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 56 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 57 |[39m     })[33m;[39m
+     [90m 58 |[39m
+     [90m 59 |[39m     test([32m"works with string values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:56:34)
+
+  ● powerset › works with string values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     "y",
+    -   ],
+    -   Array [
+    -     "x",
+    -   ],
+        Array [
+          "x",
+          "y",
+        ],
+      ]
+
+    [0m [90m 58 |[39m
+     [90m 59 |[39m     test([32m"works with string values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 60 |[39m         expect(powerset([[32m"x"[39m[33m,[39m [32m"y"[39m]))[33m.[39mtoEqual([[][33m,[39m [[32m"y"[39m][33m,[39m [[32m"x"[39m][33m,[39m [[32m"x"[39m[33m,[39m [32m"y"[39m]])[33m;[39m
+     [90m    |[39m                                      [31m[1m^[22m[39m
+     [90m 61 |[39m     })[33m;[39m
+     [90m 62 |[39m
+     [90m 63 |[39m     test([32m"works with boolean values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:60:38)
+
+  ● powerset › works with boolean values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     false,
+    -   ],
+    -   Array [
+    -     true,
+    -   ],
+        Array [
+          true,
+          false,
+        ],
+      ]
+
+    [0m [90m 62 |[39m
+     [90m 63 |[39m     test([32m"works with boolean values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 64 |[39m         expect(powerset([[36mtrue[39m[33m,[39m [36mfalse[39m]))[33m.[39mtoEqual([
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 65 |[39m             [][33m,[39m
+     [90m 66 |[39m             [[36mfalse[39m][33m,[39m
+     [90m 67 |[39m             [[36mtrue[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:64:41)
+
+  ● powerset › preserves object references inside subsets
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: [{"id": 1}]
+    Received array: [[{"id": 1}, {"id": 2}]]
+
+    [0m [90m 76 |[39m
+     [90m 77 |[39m
+    [31m[1m>[22m[39m[90m 78 |[39m         expect(result)[33m.[39mtoContainEqual([first])[33m;[39m
+     [90m    |[39m                        [31m[1m^[22m[39m
+     [90m 79 |[39m         expect(result)[33m.[39mtoContainEqual([second])[33m;[39m
+     [90m 80 |[39m         expect(result)[33m.[39mtoContainEqual([first[33m,[39m second])[33m;[39m
+     [90m 81 |[39m         expect(result[33m.[39mfind((subset) [33m=>[39m subset[33m.[39mlength [33m===[39m [35m1[39m [33m&&[39m subset[[35m0[39m] [33m===[39m first))[33m.[39mtoBeDefined()[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/powerset.test.ts:78:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 2 passed, 12 total
+Snapshots:   0 total
+Time:        0.63 s, estimated 1 s
+Ran all test suites matching src\gpt4o\powerset.test.ts.
+Test results written to: resultados\runs\gpt4o\powerset\buggy\jest.json

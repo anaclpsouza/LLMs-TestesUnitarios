@@ -1,0 +1,119 @@
+
+FAIL src/gemini15/max_sublist_sum.test.ts
+  ● max_sublist_sum › should calculate correct max sum for mixed positive and negative numbers
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 2
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m     it([32m"should calculate correct max sum for mixed positive and negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [35m1[39m[33m,[39m [33m-[39m[35m3[39m[33m,[39m [35m4[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [33m-[39m[35m5[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                                  [31m[1m^[22m[39m
+     [90m 26 |[39m     })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should reset running sum to 0 when encountering a sublist with a negative sum"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/max_sublist_sum.test.ts:25:66)
+
+  ● max_sublist_sum › should reset running sum to 0 when encountering a sublist with a negative sum
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 7
+    Received: 6
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should reset running sum to 0 when encountering a sublist with a negative sum"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(max_sublist_sum([[35m3[39m[33m,[39m [33m-[39m[35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m2[39m]))[33m.[39mtoBe([35m7[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     it([32m"should handle contiguous sublists at the beginning, middle, or end of array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/max_sublist_sum.test.ts:29:48)
+
+  ● max_sublist_sum › should handle contiguous sublists at the beginning, middle, or end of array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 8
+
+    [0m [90m 32 |[39m     it([32m"should handle contiguous sublists at the beginning, middle, or end of array"[39m[33m,[39m () [33m=>[39m {
+     [90m 33 |[39m         expect(max_sublist_sum([[35m10[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m3[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 34 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [35m10[39m[33m,[39m [33m-[39m[35m3[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 35 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m3[39m[33m,[39m [35m10[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m 36 |[39m     })[33m;[39m
+     [90m 37 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/max_sublist_sum.test.ts:34:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 5 passed, 8 total
+Snapshots:   0 total
+Time:        0.578 s, estimated 1 s
+Ran all test suites matching src\gemini15\max_sublist_sum.test.ts.
+Test results written to: resultados\runs\gemini15\max_sublist_sum\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\max_sublist_sum.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\max_sublist_sum\buggy\jest.json
+FAIL src/gemini15/max_sublist_sum.test.ts
+  ● max_sublist_sum › should calculate correct max sum for mixed positive and negative numbers
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 2
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m     it([32m"should calculate correct max sum for mixed positive and negative numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [35m1[39m[33m,[39m [33m-[39m[35m3[39m[33m,[39m [35m4[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [33m-[39m[35m5[39m[33m,[39m [35m4[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                                  [31m[1m^[22m[39m
+     [90m 26 |[39m     })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should reset running sum to 0 when encountering a sublist with a negative sum"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/max_sublist_sum.test.ts:25:66)
+
+  ● max_sublist_sum › should reset running sum to 0 when encountering a sublist with a negative sum
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 7
+    Received: 6
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should reset running sum to 0 when encountering a sublist with a negative sum"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(max_sublist_sum([[35m3[39m[33m,[39m [33m-[39m[35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m2[39m]))[33m.[39mtoBe([35m7[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     it([32m"should handle contiguous sublists at the beginning, middle, or end of array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/max_sublist_sum.test.ts:29:48)
+
+  ● max_sublist_sum › should handle contiguous sublists at the beginning, middle, or end of array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: 8
+
+    [0m [90m 32 |[39m     it([32m"should handle contiguous sublists at the beginning, middle, or end of array"[39m[33m,[39m () [33m=>[39m {
+     [90m 33 |[39m         expect(max_sublist_sum([[35m10[39m[33m,[39m [33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m3[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 34 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [35m10[39m[33m,[39m [33m-[39m[35m3[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 35 |[39m         expect(max_sublist_sum([[33m-[39m[35m2[39m[33m,[39m [33m-[39m[35m3[39m[33m,[39m [35m10[39m]))[33m.[39mtoBe([35m10[39m)[33m;[39m
+     [90m 36 |[39m     })[33m;[39m
+     [90m 37 |[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/max_sublist_sum.test.ts:34:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 5 passed, 8 total
+Snapshots:   0 total
+Time:        0.578 s, estimated 1 s
+Ran all test suites matching src\gemini15\max_sublist_sum.test.ts.
+Test results written to: resultados\runs\gemini15\max_sublist_sum\buggy\jest.json

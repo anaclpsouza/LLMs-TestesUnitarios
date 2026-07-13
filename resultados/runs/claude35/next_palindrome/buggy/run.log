@@ -1,0 +1,267 @@
+
+FAIL src/claude35/next_palindrome.test.ts
+  ● next_palindrome › retorna overflow para lista de um único dígito igual a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+    +   0,
+        1,
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"retorna overflow para lista de um único dígito igual a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(next_palindrome([[35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"incrementa par central para lista de dois dígitos sem overflow"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:9:34)
+
+  ● next_palindrome › retorna overflow para lista de dois dígitos todos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"retorna overflow para lista de dois dígitos todos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                     [31m[1m^[22m[39m
+     [90m 18 |[39m   })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m   test([32m"incrementa dígito central para lista de três dígitos ímpar sem overflow"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:17:37)
+
+  ● next_palindrome › retorna overflow para lista de três dígitos todos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m   test([32m"retorna overflow para lista de três dígitos todos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 30 |[39m   })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m   test([32m"incrementa par central para lista de quatro dígitos sem overflow"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:29:40)
+
+  ● next_palindrome › retorna overflow para lista de quatro dígitos todos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"retorna overflow para lista de quatro dígitos todos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"propaga carry parcialmente através de dígitos 9 em lista maior"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:41:43)
+
+  ● next_palindrome › retorna overflow para lista longa de todos os dígitos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+    @@ -2,7 +2,8 @@
+        1,
+        0,
+        0,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 55 |[39m
+     [90m 56 |[39m   test([32m"retorna overflow para lista longa de todos os dígitos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 57 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 58 |[39m   })[33m;[39m
+     [90m 59 |[39m
+     [90m 60 |[39m   test([32m"incrementa corretamente lista de cinco dígitos com dígito central não-9"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:57:46)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 11 passed, 16 total
+Snapshots:   0 total
+Time:        0.668 s, estimated 1 s
+Ran all test suites matching src\claude35\next_palindrome.test.ts.
+Test results written to: resultados\runs\claude35\next_palindrome\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\next_palindrome.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\next_palindrome\buggy\jest.json
+FAIL src/claude35/next_palindrome.test.ts
+  ● next_palindrome › retorna overflow para lista de um único dígito igual a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+    +   0,
+        1,
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m   test([32m"retorna overflow para lista de um único dígito igual a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(next_palindrome([[35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"incrementa par central para lista de dois dígitos sem overflow"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:9:34)
+
+  ● next_palindrome › retorna overflow para lista de dois dígitos todos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"retorna overflow para lista de dois dígitos todos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                     [31m[1m^[22m[39m
+     [90m 18 |[39m   })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m   test([32m"incrementa dígito central para lista de três dígitos ímpar sem overflow"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:17:37)
+
+  ● next_palindrome › retorna overflow para lista de três dígitos todos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m   test([32m"retorna overflow para lista de três dígitos todos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 30 |[39m   })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m   test([32m"incrementa par central para lista de quatro dígitos sem overflow"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:29:40)
+
+  ● next_palindrome › retorna overflow para lista de quatro dígitos todos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+      Array [
+        1,
+        0,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 39 |[39m
+     [90m 40 |[39m   test([32m"retorna overflow para lista de quatro dígitos todos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 41 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 42 |[39m   })[33m;[39m
+     [90m 43 |[39m
+     [90m 44 |[39m   test([32m"propaga carry parcialmente através de dígitos 9 em lista maior"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:41:43)
+
+  ● next_palindrome › retorna overflow para lista longa de todos os dígitos iguais a 9
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 1
+
+    @@ -2,7 +2,8 @@
+        1,
+        0,
+        0,
+        0,
+        0,
+    +   0,
+        1,
+      ]
+
+    [0m [90m 55 |[39m
+     [90m 56 |[39m   test([32m"retorna overflow para lista longa de todos os dígitos iguais a 9"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 57 |[39m     expect(next_palindrome([[35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m[33m,[39m [35m9[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m0[39m[33m,[39m [35m1[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 58 |[39m   })[33m;[39m
+     [90m 59 |[39m
+     [90m 60 |[39m   test([32m"incrementa corretamente lista de cinco dígitos com dígito central não-9"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/next_palindrome.test.ts:57:46)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 11 passed, 16 total
+Snapshots:   0 total
+Time:        0.668 s, estimated 1 s
+Ran all test suites matching src\claude35\next_palindrome.test.ts.
+Test results written to: resultados\runs\claude35\next_palindrome\buggy\jest.json

@@ -1,0 +1,51 @@
+
+FAIL src/gemini15/is_valid_parenthesization.test.ts
+  ● is_valid_parenthesization › should return false when there are unclosed opening parentheses
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should return false when there are unclosed opening parentheses"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(is_valid_parenthesization([32m"("[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 30 |[39m         expect(is_valid_parenthesization([32m"((()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 31 |[39m         expect(is_valid_parenthesization([32m"(()()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 32 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/is_valid_parenthesization.test.ts:29:48)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.575 s, estimated 1 s
+Ran all test suites matching src\gemini15\is_valid_parenthesization.test.ts.
+Test results written to: resultados\runs\gemini15\is_valid_parenthesization\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\is_valid_parenthesization.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\is_valid_parenthesization\buggy\jest.json
+FAIL src/gemini15/is_valid_parenthesization.test.ts
+  ● is_valid_parenthesization › should return false when there are unclosed opening parentheses
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should return false when there are unclosed opening parentheses"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(is_valid_parenthesization([32m"("[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m    |[39m                                                [31m[1m^[22m[39m
+     [90m 30 |[39m         expect(is_valid_parenthesization([32m"((()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 31 |[39m         expect(is_valid_parenthesization([32m"(()()"[39m))[33m.[39mtoBe([36mfalse[39m)[33m;[39m
+     [90m 32 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gemini15/is_valid_parenthesization.test.ts:29:48)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.575 s, estimated 1 s
+Ran all test suites matching src\gemini15\is_valid_parenthesization.test.ts.
+Test results written to: resultados\runs\gemini15\is_valid_parenthesization\buggy\jest.json

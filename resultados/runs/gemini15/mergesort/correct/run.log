@@ -1,0 +1,7 @@
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        0.863 s, estimated 1 s
+Ran all test suites matching src\gemini15\mergesort.test.ts.
+Test results written to: resultados\runs\gemini15\mergesort\correct\jest.json

@@ -1,0 +1,127 @@
+
+FAIL src/gemini15/quicksort.test.ts
+  ● quicksort › should sort an unsorted array of numbers in ascending order
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+    -   1,
+        2,
+        3,
+        4,
+    -   5,
+        5,
+        6,
+        9,
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     it([32m"should sort an unsorted array of numbers in ascending order"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(quicksort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m4[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m9[39m[33m,[39m [35m2[39m[33m,[39m [35m6[39m[33m,[39m [35m5[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m9[39m])[33m;[39m
+     [90m    |[39m                                                        [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     it([32m"should return the same values when given an already sorted array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/quicksort.test.ts:13:56)
+
+  ● quicksort › should handle arrays with duplicate values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+    -   2,
+        3,
+    -   4,
+        4,
+      ]
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m     it([32m"should handle arrays with duplicate values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m         expect(quicksort([[35m4[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 26 |[39m     })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should handle arrays with negative numbers and zero"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/quicksort.test.ts:25:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 6 passed, 8 total
+Snapshots:   0 total
+Time:        0.643 s, estimated 1 s
+Ran all test suites matching src\gemini15\quicksort.test.ts.
+Test results written to: resultados\runs\gemini15\quicksort\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\quicksort.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\quicksort\buggy\jest.json
+FAIL src/gemini15/quicksort.test.ts
+  ● quicksort › should sort an unsorted array of numbers in ascending order
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+    -   1,
+        2,
+        3,
+        4,
+    -   5,
+        5,
+        6,
+        9,
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     it([32m"should sort an unsorted array of numbers in ascending order"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(quicksort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m4[39m[33m,[39m [35m1[39m[33m,[39m [35m5[39m[33m,[39m [35m9[39m[33m,[39m [35m2[39m[33m,[39m [35m6[39m[33m,[39m [35m5[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m[33m,[39m [35m9[39m])[33m;[39m
+     [90m    |[39m                                                        [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     it([32m"should return the same values when given an already sorted array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/quicksort.test.ts:13:56)
+
+  ● quicksort › should handle arrays with duplicate values
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+    -   2,
+        3,
+    -   4,
+        4,
+      ]
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m     it([32m"should handle arrays with duplicate values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m         expect(quicksort([[35m4[39m[33m,[39m [35m2[39m[33m,[39m [35m4[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 26 |[39m     })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m     it([32m"should handle arrays with negative numbers and zero"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/quicksort.test.ts:25:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 6 passed, 8 total
+Snapshots:   0 total
+Time:        0.643 s, estimated 1 s
+Ran all test suites matching src\gemini15\quicksort.test.ts.
+Test results written to: resultados\runs\gemini15\quicksort\buggy\jest.json

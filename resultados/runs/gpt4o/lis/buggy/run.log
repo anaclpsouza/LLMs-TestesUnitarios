@@ -1,0 +1,153 @@
+
+FAIL src/gpt4o/lis.test.ts
+  ● lis › computes LIS length for mixed unsorted arrays
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 2
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m     test([32m"computes LIS length for mixed unsorted arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(lis([[35m3[39m[33m,[39m [35m10[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m20[39m]))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 31 |[39m         expect(lis([[35m10[39m[33m,[39m [35m22[39m[33m,[39m [35m9[39m[33m,[39m [35m33[39m[33m,[39m [35m21[39m[33m,[39m [35m50[39m[33m,[39m [35m41[39m[33m,[39m [35m60[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m 32 |[39m     })[33m;[39m
+     [90m 33 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:30:40)
+
+  ● lis › handles arrays where smaller values replace existing subsequence ends
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 3
+
+    [0m [90m 33 |[39m
+     [90m 34 |[39m     test([32m"handles arrays where smaller values replace existing subsequence ends"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 35 |[39m         expect(lis([[35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m3[39m[33m,[39m [35m7[39m[33m,[39m [35m11[39m[33m,[39m [35m8[39m[33m,[39m [35m10[39m[33m,[39m [35m13[39m[33m,[39m [35m6[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                     [31m[1m^[22m[39m
+     [90m 36 |[39m     })[33m;[39m
+     [90m 37 |[39m
+     [90m 38 |[39m     test([32m"handles negative numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:35:53)
+
+  ● lis › handles arrays where the LIS ends before the last element
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4
+    Received: 1
+
+    [0m [90m 50 |[39m
+     [90m 51 |[39m     test([32m"handles arrays where the LIS ends before the last element"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 52 |[39m         expect(lis([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m]))[33m.[39mtoBe([35m4[39m)[33m;[39m
+     [90m    |[39m                                      [31m[1m^[22m[39m
+     [90m 53 |[39m     })[33m;[39m
+     [90m 54 |[39m
+     [90m 55 |[39m     test([32m"handles alternating high and low values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:52:38)
+
+  ● lis › handles a standard larger example
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 5
+
+    [0m [90m 58 |[39m
+     [90m 59 |[39m     test([32m"handles a standard larger example"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 60 |[39m         expect(lis([[35m0[39m[33m,[39m [35m8[39m[33m,[39m [35m4[39m[33m,[39m [35m12[39m[33m,[39m [35m2[39m[33m,[39m [35m10[39m[33m,[39m [35m6[39m[33m,[39m [35m14[39m[33m,[39m [35m1[39m[33m,[39m [35m9[39m[33m,[39m [35m5[39m[33m,[39m [35m13[39m[33m,[39m [35m3[39m[33m,[39m [35m11[39m[33m,[39m [35m7[39m[33m,[39m [35m15[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                                             [31m[1m^[22m[39m
+     [90m 61 |[39m     })[33m;[39m
+     [90m 62 |[39m
+     [90m 63 |[39m     test([32m"does not mutate the original array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:60:77)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 11 passed, 15 total
+Snapshots:   0 total
+Time:        0.584 s, estimated 1 s
+Ran all test suites matching src\gpt4o\lis.test.ts.
+Test results written to: resultados\runs\gpt4o\lis\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\lis.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\lis\buggy\jest.json
+FAIL src/gpt4o/lis.test.ts
+  ● lis › computes LIS length for mixed unsorted arrays
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 2
+
+    [0m [90m 28 |[39m
+     [90m 29 |[39m     test([32m"computes LIS length for mixed unsorted arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 30 |[39m         expect(lis([[35m3[39m[33m,[39m [35m10[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m20[39m]))[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 31 |[39m         expect(lis([[35m10[39m[33m,[39m [35m22[39m[33m,[39m [35m9[39m[33m,[39m [35m33[39m[33m,[39m [35m21[39m[33m,[39m [35m50[39m[33m,[39m [35m41[39m[33m,[39m [35m60[39m]))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m 32 |[39m     })[33m;[39m
+     [90m 33 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:30:40)
+
+  ● lis › handles arrays where smaller values replace existing subsequence ends
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 3
+
+    [0m [90m 33 |[39m
+     [90m 34 |[39m     test([32m"handles arrays where smaller values replace existing subsequence ends"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 35 |[39m         expect(lis([[35m2[39m[33m,[39m [35m5[39m[33m,[39m [35m3[39m[33m,[39m [35m7[39m[33m,[39m [35m11[39m[33m,[39m [35m8[39m[33m,[39m [35m10[39m[33m,[39m [35m13[39m[33m,[39m [35m6[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                     [31m[1m^[22m[39m
+     [90m 36 |[39m     })[33m;[39m
+     [90m 37 |[39m
+     [90m 38 |[39m     test([32m"handles negative numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:35:53)
+
+  ● lis › handles arrays where the LIS ends before the last element
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4
+    Received: 1
+
+    [0m [90m 50 |[39m
+     [90m 51 |[39m     test([32m"handles arrays where the LIS ends before the last element"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 52 |[39m         expect(lis([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m0[39m]))[33m.[39mtoBe([35m4[39m)[33m;[39m
+     [90m    |[39m                                      [31m[1m^[22m[39m
+     [90m 53 |[39m     })[33m;[39m
+     [90m 54 |[39m
+     [90m 55 |[39m     test([32m"handles alternating high and low values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:52:38)
+
+  ● lis › handles a standard larger example
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 6
+    Received: 5
+
+    [0m [90m 58 |[39m
+     [90m 59 |[39m     test([32m"handles a standard larger example"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 60 |[39m         expect(lis([[35m0[39m[33m,[39m [35m8[39m[33m,[39m [35m4[39m[33m,[39m [35m12[39m[33m,[39m [35m2[39m[33m,[39m [35m10[39m[33m,[39m [35m6[39m[33m,[39m [35m14[39m[33m,[39m [35m1[39m[33m,[39m [35m9[39m[33m,[39m [35m5[39m[33m,[39m [35m13[39m[33m,[39m [35m3[39m[33m,[39m [35m11[39m[33m,[39m [35m7[39m[33m,[39m [35m15[39m]))[33m.[39mtoBe([35m6[39m)[33m;[39m
+     [90m    |[39m                                                                             [31m[1m^[22m[39m
+     [90m 61 |[39m     })[33m;[39m
+     [90m 62 |[39m
+     [90m 63 |[39m     test([32m"does not mutate the original array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/lis.test.ts:60:77)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 11 passed, 15 total
+Snapshots:   0 total
+Time:        0.584 s, estimated 1 s
+Ran all test suites matching src\gpt4o\lis.test.ts.
+Test results written to: resultados\runs\gpt4o\lis\buggy\jest.json

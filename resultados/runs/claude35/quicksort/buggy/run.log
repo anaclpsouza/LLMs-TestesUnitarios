@@ -1,0 +1,167 @@
+
+FAIL src/claude35/quicksort.test.ts
+  ● quicksort › ordena array com elementos duplicados
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+    -   1,
+        2,
+    -   3,
+        3,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"ordena array com elementos duplicados"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(quicksort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"ordena array com todos os elementos iguais"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/quicksort.test.ts:29:44)
+
+  ● quicksort › ordena array com todos os elementos iguais
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        4,
+    -   4,
+    -   4,
+    -   4,
+      ]
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"ordena array com todos os elementos iguais"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(quicksort([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"ordena array com números negativos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/quicksort.test.ts:33:41)
+
+  ● quicksort › ordena array com pivô repetido múltiplas vezes
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+    -   2,
+    -   2,
+    -   2,
+        3,
+      ]
+
+    [0m [90m 49 |[39m
+     [90m 50 |[39m     test([32m"ordena array com pivô repetido múltiplas vezes"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 51 |[39m         expect(quicksort([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 52 |[39m     })[33m;[39m
+     [90m 53 |[39m
+     [90m 54 |[39m     test([32m"ordena array onde o pivô inicial é o menor elemento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/quicksort.test.ts:51:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 12 passed, 15 total
+Snapshots:   0 total
+Time:        0.606 s, estimated 1 s
+Ran all test suites matching src\claude35\quicksort.test.ts.
+Test results written to: resultados\runs\claude35\quicksort\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\quicksort.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\quicksort\buggy\jest.json
+FAIL src/claude35/quicksort.test.ts
+  ● quicksort › ordena array com elementos duplicados
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 0
+
+      Array [
+        1,
+    -   1,
+        2,
+    -   3,
+        3,
+      ]
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"ordena array com elementos duplicados"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect(quicksort([[35m3[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"ordena array com todos os elementos iguais"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/quicksort.test.ts:29:44)
+
+  ● quicksort › ordena array com todos os elementos iguais
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        4,
+    -   4,
+    -   4,
+    -   4,
+      ]
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"ordena array com todos os elementos iguais"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect(quicksort([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m]))[33m.[39mtoEqual([[35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 34 |[39m     })[33m;[39m
+     [90m 35 |[39m
+     [90m 36 |[39m     test([32m"ordena array com números negativos"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/quicksort.test.ts:33:41)
+
+  ● quicksort › ordena array com pivô repetido múltiplas vezes
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        1,
+        2,
+    -   2,
+    -   2,
+    -   2,
+        3,
+      ]
+
+    [0m [90m 49 |[39m
+     [90m 50 |[39m     test([32m"ordena array com pivô repetido múltiplas vezes"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 51 |[39m         expect(quicksort([[35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m1[39m[33m,[39m [35m3[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                               [31m[1m^[22m[39m
+     [90m 52 |[39m     })[33m;[39m
+     [90m 53 |[39m
+     [90m 54 |[39m     test([32m"ordena array onde o pivô inicial é o menor elemento"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/quicksort.test.ts:51:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 12 passed, 15 total
+Snapshots:   0 total
+Time:        0.606 s, estimated 1 s
+Ran all test suites matching src\claude35\quicksort.test.ts.
+Test results written to: resultados\runs\claude35\quicksort\buggy\jest.json

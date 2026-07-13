@@ -1,0 +1,51 @@
+
+FAIL src/claude35/knapsack.test.ts
+  ● knapsack › caso clássico de mochila 0/1 com solução conhecida
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 9
+    Received: 13
+
+    [0m [90m 51 |[39m         ]
+     [90m 52 |[39m       )
+    [31m[1m>[22m[39m[90m 53 |[39m     )[33m.[39mtoBe([35m9[39m)[33m;[39m
+     [90m    |[39m       [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"lida com itens de valor zero"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/knapsack.test.ts:53:7)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 15 passed, 16 total
+Snapshots:   0 total
+Time:        0.906 s, estimated 1 s
+Ran all test suites matching src\claude35\knapsack.test.ts.
+Test results written to: resultados\runs\claude35\knapsack\correct\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\claude35\knapsack.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\claude35\knapsack\correct\jest.json
+FAIL src/claude35/knapsack.test.ts
+  ● knapsack › caso clássico de mochila 0/1 com solução conhecida
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 9
+    Received: 13
+
+    [0m [90m 51 |[39m         ]
+     [90m 52 |[39m       )
+    [31m[1m>[22m[39m[90m 53 |[39m     )[33m.[39mtoBe([35m9[39m)[33m;[39m
+     [90m    |[39m       [31m[1m^[22m[39m
+     [90m 54 |[39m   })[33m;[39m
+     [90m 55 |[39m
+     [90m 56 |[39m   test([32m"lida com itens de valor zero"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/claude35/knapsack.test.ts:53:7)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 15 passed, 16 total
+Snapshots:   0 total
+Time:        0.906 s, estimated 1 s
+Ran all test suites matching src\claude35\knapsack.test.ts.
+Test results written to: resultados\runs\claude35\knapsack\correct\jest.json

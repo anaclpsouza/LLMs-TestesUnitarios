@@ -1,0 +1,45 @@
+
+FAIL src/gemini15/next_palindrome.test.ts
+  ● next_palindrome › should handle empty array input
+
+    RangeError: Invalid array length
+
+    [0m [90m 15 |[39m         }
+     [90m 16 |[39m     }
+    [31m[1m>[22m[39m[90m 17 |[39m     [36mreturn[39m [[35m1[39m[33m,[39m [33m...[39m[33mArray[39m[33m<[39m[33mnumber[39m[33m>[39m(digitList[33m.[39mlength [33m-[39m [35m1[39m)[33m.[39mfill([35m0[39m)[33m,[39m [35m1[39m][33m;[39m
+     [90m    |[39m                   [31m[1m^[22m[39m
+     [90m 18 |[39m }
+     [90m 19 |[39m[0m
+
+      at Array (src/functions/next_palindrome.ts:17:19)
+      at Object.<anonymous> (src/gemini15/next_palindrome.test.ts:40:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 7 passed, 8 total
+Snapshots:   0 total
+Time:        0.835 s, estimated 1 s
+Ran all test suites matching src\gemini15\next_palindrome.test.ts.
+Test results written to: resultados\runs\gemini15\next_palindrome\correct\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\next_palindrome.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\next_palindrome\correct\jest.json
+FAIL src/gemini15/next_palindrome.test.ts
+  ● next_palindrome › should handle empty array input
+
+    RangeError: Invalid array length
+
+    [0m [90m 15 |[39m         }
+     [90m 16 |[39m     }
+    [31m[1m>[22m[39m[90m 17 |[39m     [36mreturn[39m [[35m1[39m[33m,[39m [33m...[39m[33mArray[39m[33m<[39m[33mnumber[39m[33m>[39m(digitList[33m.[39mlength [33m-[39m [35m1[39m)[33m.[39mfill([35m0[39m)[33m,[39m [35m1[39m][33m;[39m
+     [90m    |[39m                   [31m[1m^[22m[39m
+     [90m 18 |[39m }
+     [90m 19 |[39m[0m
+
+      at Array (src/functions/next_palindrome.ts:17:19)
+      at Object.<anonymous> (src/gemini15/next_palindrome.test.ts:40:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 7 passed, 8 total
+Snapshots:   0 total
+Time:        0.835 s, estimated 1 s
+Ran all test suites matching src\gemini15\next_palindrome.test.ts.
+Test results written to: resultados\runs\gemini15\next_palindrome\correct\jest.json

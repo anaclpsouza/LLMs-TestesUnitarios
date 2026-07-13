@@ -1,0 +1,297 @@
+
+FAIL src/gpt4o/flatten.test.ts
+  ● flatten › yields the same values for an array without nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"yields the same values for an array without nested arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     test([32m"flattens a single nested array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:9:41)
+
+  ● flatten › flattens a single nested array
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"flattens a single nested array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect([[33m...[39mflatten([[[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"flattens nested arrays mixed with top-level values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:13:43)
+
+  ● flatten › flattens nested arrays mixed with top-level values
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"flattens nested arrays mixed with top-level values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m][33m,[39m [35m4[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 18 |[39m     })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m     test([32m"flattens deeply nested arrays"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:17:46)
+
+  ● flatten › flattens deeply nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m     test([32m"flattens deeply nested arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [[35m3[39m[33m,[39m [[35m4[39m[33m,[39m [[35m5[39m]]]]])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                                       [31m[1m^[22m[39m
+     [90m 22 |[39m     })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     test([32m"preserves the order of values while flattening"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:21:55)
+
+  ● flatten › preserves the order of values while flattening
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m     test([32m"preserves the order of values while flattening"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m         expect([[33m...[39mflatten([[[35m1[39m[33m,[39m [35m2[39m][33m,[39m [35m3[39m[33m,[39m [[[35m4[39m][33m,[39m [35m5[39m][33m,[39m [35m6[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m])[33m;[39m
+     [90m    |[39m                                                        [31m[1m^[22m[39m
+     [90m 26 |[39m     })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m     test([32m"skips empty nested arrays"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:25:56)
+
+  ● flatten › skips empty nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"skips empty nested arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect([[33m...[39mflatten([[][33m,[39m [[35m1[39m[33m,[39m [][33m,[39m [[35m2[39m[33m,[39m []]][33m,[39m [][33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing different primitive value types"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:29:61)
+
+  ● flatten › handles arrays containing different primitive value types
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing different primitive value types"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[32m"a"[39m[33m,[39m [36mtrue[39m][33m,[39m [36mnull[39m[33m,[39m [undefined[33m,[39m [36mfalse[39m]])])[33m.[39mtoEqual([
+     [90m    |[39m                                                                          [31m[1m^[22m[39m
+     [90m 34 |[39m             [35m1[39m[33m,[39m
+     [90m 35 |[39m             [32m"a"[39m[33m,[39m
+     [90m 36 |[39m             [36mtrue[39m[33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:33:74)
+
+  ● flatten › preserves object references
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 46 |[39m
+     [90m 47 |[39m
+    [31m[1m>[22m[39m[90m 48 |[39m         expect([[33m...[39mflatten([arrayValue])])[33m.[39mtoEqual([objectValue])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 49 |[39m         expect([[33m...[39mflatten([arrayValue])][[35m0[39m])[33m.[39mtoBe(objectValue)[33m;[39m
+     [90m 50 |[39m
+     [90m 51 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:48:44)
+
+  ● flatten › treats non-array iterable values as values, not as nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 57 |[39m
+     [90m 58 |[39m
+    [31m[1m>[22m[39m[90m 59 |[39m         expect([[33m...[39mflatten([setValue[33m,[39m [stringValue]])])[33m.[39mtoEqual([setValue[33m,[39m stringValue])[33m;[39m
+     [90m    |[39m                                                         [31m[1m^[22m[39m
+     [90m 60 |[39m
+     [90m 61 |[39m
+     [90m 62 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:59:57)
+
+  ● flatten › allows partial iteration because the function returns a generator
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 66 |[39m
+     [90m 67 |[39m
+    [31m[1m>[22m[39m[90m 68 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m1[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 69 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m2[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 70 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m3[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 71 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m undefined[33m,[39m done[33m:[39m [36mtrue[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:68:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 2 passed, 12 total
+Snapshots:   0 total
+Time:        0.568 s, estimated 1 s
+Ran all test suites matching src\gpt4o\flatten.test.ts.
+Test results written to: resultados\runs\gpt4o\flatten\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gpt4o\flatten.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gpt4o\flatten\buggy\jest.json
+FAIL src/gpt4o/flatten.test.ts
+  ● flatten › yields the same values for an array without nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     test([32m"yields the same values for an array without nested arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     test([32m"flattens a single nested array"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:9:41)
+
+  ● flatten › flattens a single nested array
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     test([32m"flattens a single nested array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect([[33m...[39mflatten([[[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m]])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                           [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     test([32m"flattens nested arrays mixed with top-level values"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:13:43)
+
+  ● flatten › flattens nested arrays mixed with top-level values
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m     test([32m"flattens nested arrays mixed with top-level values"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [35m3[39m][33m,[39m [35m4[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m])[33m;[39m
+     [90m    |[39m                                              [31m[1m^[22m[39m
+     [90m 18 |[39m     })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m     test([32m"flattens deeply nested arrays"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:17:46)
+
+  ● flatten › flattens deeply nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 19 |[39m
+     [90m 20 |[39m     test([32m"flattens deeply nested arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 21 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[35m2[39m[33m,[39m [[35m3[39m[33m,[39m [[35m4[39m[33m,[39m [[35m5[39m]]]]])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m])[33m;[39m
+     [90m    |[39m                                                       [31m[1m^[22m[39m
+     [90m 22 |[39m     })[33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     test([32m"preserves the order of values while flattening"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:21:55)
+
+  ● flatten › preserves the order of values while flattening
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 23 |[39m
+     [90m 24 |[39m     test([32m"preserves the order of values while flattening"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 25 |[39m         expect([[33m...[39mflatten([[[35m1[39m[33m,[39m [35m2[39m][33m,[39m [35m3[39m[33m,[39m [[[35m4[39m][33m,[39m [35m5[39m][33m,[39m [35m6[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m[33m,[39m [35m4[39m[33m,[39m [35m5[39m[33m,[39m [35m6[39m])[33m;[39m
+     [90m    |[39m                                                        [31m[1m^[22m[39m
+     [90m 26 |[39m     })[33m;[39m
+     [90m 27 |[39m
+     [90m 28 |[39m     test([32m"skips empty nested arrays"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:25:56)
+
+  ● flatten › skips empty nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 27 |[39m
+     [90m 28 |[39m     test([32m"skips empty nested arrays"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m         expect([[33m...[39mflatten([[][33m,[39m [[35m1[39m[33m,[39m [][33m,[39m [[35m2[39m[33m,[39m []]][33m,[39m [][33m,[39m [35m3[39m])])[33m.[39mtoEqual([[35m1[39m[33m,[39m [35m2[39m[33m,[39m [35m3[39m])[33m;[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 30 |[39m     })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing different primitive value types"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:29:61)
+
+  ● flatten › handles arrays containing different primitive value types
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 31 |[39m
+     [90m 32 |[39m     test([32m"handles arrays containing different primitive value types"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m         expect([[33m...[39mflatten([[35m1[39m[33m,[39m [[32m"a"[39m[33m,[39m [36mtrue[39m][33m,[39m [36mnull[39m[33m,[39m [undefined[33m,[39m [36mfalse[39m]])])[33m.[39mtoEqual([
+     [90m    |[39m                                                                          [31m[1m^[22m[39m
+     [90m 34 |[39m             [35m1[39m[33m,[39m
+     [90m 35 |[39m             [32m"a"[39m[33m,[39m
+     [90m 36 |[39m             [36mtrue[39m[33m,[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:33:74)
+
+  ● flatten › preserves object references
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 46 |[39m
+     [90m 47 |[39m
+    [31m[1m>[22m[39m[90m 48 |[39m         expect([[33m...[39mflatten([arrayValue])])[33m.[39mtoEqual([objectValue])[33m;[39m
+     [90m    |[39m                                            [31m[1m^[22m[39m
+     [90m 49 |[39m         expect([[33m...[39mflatten([arrayValue])][[35m0[39m])[33m.[39mtoBe(objectValue)[33m;[39m
+     [90m 50 |[39m
+     [90m 51 |[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:48:44)
+
+  ● flatten › treats non-array iterable values as values, not as nested arrays
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 57 |[39m
+     [90m 58 |[39m
+    [31m[1m>[22m[39m[90m 59 |[39m         expect([[33m...[39mflatten([setValue[33m,[39m [stringValue]])])[33m.[39mtoEqual([setValue[33m,[39m stringValue])[33m;[39m
+     [90m    |[39m                                                         [31m[1m^[22m[39m
+     [90m 60 |[39m
+     [90m 61 |[39m
+     [90m 62 |[39m     })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:59:57)
+
+  ● flatten › allows partial iteration because the function returns a generator
+
+    TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+
+    [0m [90m 66 |[39m
+     [90m 67 |[39m
+    [31m[1m>[22m[39m[90m 68 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m1[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 69 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m2[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 70 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m [35m3[39m[33m,[39m done[33m:[39m [36mfalse[39m })[33m;[39m
+     [90m 71 |[39m         expect(generator[33m.[39mnext())[33m.[39mtoEqual({ value[33m:[39m undefined[33m,[39m done[33m:[39m [36mtrue[39m })[33m;[39m[0m
+
+      at Object.<anonymous> (src/gpt4o/flatten.test.ts:68:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       10 failed, 2 passed, 12 total
+Snapshots:   0 total
+Time:        0.568 s, estimated 1 s
+Ran all test suites matching src\gpt4o\flatten.test.ts.
+Test results written to: resultados\runs\gpt4o\flatten\buggy\jest.json

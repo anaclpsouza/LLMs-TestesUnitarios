@@ -1,0 +1,295 @@
+
+FAIL src/gemini15/powerset.test.ts
+  ● powerset › should return the powerset for a single element array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+    -   Array [],
+        Array [
+          1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     it([32m"should return the powerset for a single element array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(powerset([[35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m]])[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     it([32m"should return all subsets in expected order for a multi-element array of numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:9:31)
+
+  ● powerset › should return all subsets in expected order for a multi-element array of numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          2,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     it([32m"should return all subsets in expected order for a multi-element array of numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     it([32m"should return correct number of subsets (2^n) and correct elements for 3 items"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:13:34)
+
+  ● powerset › should return correct number of subsets (2^n) and correct elements for 3 items
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 1
+
+    [0m [90m 16 |[39m     it([32m"should return correct number of subsets (2^n) and correct elements for 3 items"[39m[33m,[39m () [33m=>[39m {
+     [90m 17 |[39m         [36mconst[39m result [33m=[39m powerset([[32m"a"[39m[33m,[39m [32m"b"[39m[33m,[39m [32m"c"[39m])[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m         expect(result[33m.[39mlength)[33m.[39mtoBe([35m8[39m)[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 19 |[39m         expect(result)[33m.[39mtoEqual([
+     [90m 20 |[39m             [][33m,[39m
+     [90m 21 |[39m             [[32m"c"[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:18:31)
+
+  ● powerset › should handle arrays with duplicate values correctly according to the algorithm logic
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          1,
+        ],
+      ]
+
+    [0m [90m 30 |[39m
+     [90m 31 |[39m     it([32m"should handle arrays with duplicate values correctly according to the algorithm logic"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 32 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 33 |[39m     })[33m;[39m
+     [90m 34 |[39m
+     [90m 35 |[39m     it([32m"should preserve element references when operating on arrays of objects"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:32:34)
+
+  ● powerset › should preserve element references when operating on arrays of objects
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 11
+    + Received  +  0
+
+    @@ -1,17 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     Object {
+    -       "id": 2,
+    -     },
+    -   ],
+    -   Array [
+    -     Object {
+    -       "id": 1,
+    -     },
+    -   ],
+        Array [
+          Object {
+            "id": 1,
+          },
+          Object {
+
+    [0m [90m 36 |[39m         [36mconst[39m obj1 [33m=[39m { id[33m:[39m [35m1[39m }[33m;[39m
+     [90m 37 |[39m         [36mconst[39m obj2 [33m=[39m { id[33m:[39m [35m2[39m }[33m;[39m
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(powerset([obj1[33m,[39m obj2]))[33m.[39mtoEqual([
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 39 |[39m             [][33m,[39m
+     [90m 40 |[39m             [obj2][33m,[39m
+     [90m 41 |[39m             [obj1][33m,[39m[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:38:40)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.592 s, estimated 1 s
+Ran all test suites matching src\gemini15\powerset.test.ts.
+Test results written to: resultados\runs\gemini15\powerset\buggy\jest.json
+
+Command failed: C:\Program Files\nodejs\node.exe C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\node_modules\jest\bin\jest.js src\gemini15\powerset.test.ts --runInBand --json --outputFile C:\IF\7°PE\ENG. SOFTWARE III\PROJETO-FINAL-ESWIII\resultados\runs\gemini15\powerset\buggy\jest.json
+FAIL src/gemini15/powerset.test.ts
+  ● powerset › should return the powerset for a single element array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+    -   Array [],
+        Array [
+          1,
+        ],
+      ]
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m     it([32m"should return the powerset for a single element array"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m         expect(powerset([[35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m]])[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 10 |[39m     })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m     it([32m"should return all subsets in expected order for a multi-element array of numbers"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:9:31)
+
+  ● powerset › should return all subsets in expected order for a multi-element array of numbers
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     2,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          2,
+        ],
+      ]
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m     it([32m"should return all subsets in expected order for a multi-element array of numbers"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m2[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m2[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m2[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 14 |[39m     })[33m;[39m
+     [90m 15 |[39m
+     [90m 16 |[39m     it([32m"should return correct number of subsets (2^n) and correct elements for 3 items"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:13:34)
+
+  ● powerset › should return correct number of subsets (2^n) and correct elements for 3 items
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: 1
+
+    [0m [90m 16 |[39m     it([32m"should return correct number of subsets (2^n) and correct elements for 3 items"[39m[33m,[39m () [33m=>[39m {
+     [90m 17 |[39m         [36mconst[39m result [33m=[39m powerset([[32m"a"[39m[33m,[39m [32m"b"[39m[33m,[39m [32m"c"[39m])[33m;[39m
+    [31m[1m>[22m[39m[90m 18 |[39m         expect(result[33m.[39mlength)[33m.[39mtoBe([35m8[39m)[33m;[39m
+     [90m    |[39m                               [31m[1m^[22m[39m
+     [90m 19 |[39m         expect(result)[33m.[39mtoEqual([
+     [90m 20 |[39m             [][33m,[39m
+     [90m 21 |[39m             [[32m"c"[39m][33m,[39m[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:18:31)
+
+  ● powerset › should handle arrays with duplicate values correctly according to the algorithm logic
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 7
+    + Received  + 0
+
+      Array [
+    -   Array [],
+    -   Array [
+    -     1,
+    -   ],
+    -   Array [
+    -     1,
+    -   ],
+        Array [
+          1,
+          1,
+        ],
+      ]
+
+    [0m [90m 30 |[39m
+     [90m 31 |[39m     it([32m"should handle arrays with duplicate values correctly according to the algorithm logic"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 32 |[39m         expect(powerset([[35m1[39m[33m,[39m [35m1[39m]))[33m.[39mtoEqual([[][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m][33m,[39m [[35m1[39m[33m,[39m [35m1[39m]])[33m;[39m
+     [90m    |[39m                                  [31m[1m^[22m[39m
+     [90m 33 |[39m     })[33m;[39m
+     [90m 34 |[39m
+     [90m 35 |[39m     it([32m"should preserve element references when operating on arrays of objects"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:32:34)
+
+  ● powerset › should preserve element references when operating on arrays of objects
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 11
+    + Received  +  0
+
+    @@ -1,17 +1,6 @@
+      Array [
+    -   Array [],
+    -   Array [
+    -     Object {
+    -       "id": 2,
+    -     },
+    -   ],
+    -   Array [
+    -     Object {
+    -       "id": 1,
+    -     },
+    -   ],
+        Array [
+          Object {
+            "id": 1,
+          },
+          Object {
+
+    [0m [90m 36 |[39m         [36mconst[39m obj1 [33m=[39m { id[33m:[39m [35m1[39m }[33m;[39m
+     [90m 37 |[39m         [36mconst[39m obj2 [33m=[39m { id[33m:[39m [35m2[39m }[33m;[39m
+    [31m[1m>[22m[39m[90m 38 |[39m         expect(powerset([obj1[33m,[39m obj2]))[33m.[39mtoEqual([
+     [90m    |[39m                                        [31m[1m^[22m[39m
+     [90m 39 |[39m             [][33m,[39m
+     [90m 40 |[39m             [obj2][33m,[39m
+     [90m 41 |[39m             [obj1][33m,[39m[0m
+
+      at Object.<anonymous> (src/gemini15/powerset.test.ts:38:40)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.592 s, estimated 1 s
+Ran all test suites matching src\gemini15\powerset.test.ts.
+Test results written to: resultados\runs\gemini15\powerset\buggy\jest.json
