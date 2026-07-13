@@ -41,12 +41,12 @@ O mapeamento entre os arquivos Python oficiais e as traduções TypeScript está
 
 Para replicar o experimento, é necessário ter Node.js e npm instalados. As versões exatas das dependências JavaScript ficam registradas em `package-lock.json`.
 
-Instale as dependências com:
+Instale exatamente as versões registradas no arquivo de bloqueio com:
 
 ```powershell
 git clone https://github.com/anaclpsouza/LLMs-TestesUnitarios.git
 cd LLMs-TestesUnitarios
-npm install
+npm ci
 ```
 
 Antes de executar as suítes geradas, valide as traduções do corpus:
@@ -102,6 +102,10 @@ import { edgeKey, shortest_path_lengths } from "../functions/shortest_path_lengt
 ```
 
 Uma resposta integral pode ser preservada em `artifacts/raw-responses/<modelo>/<algoritmo>.txt`. Não devem ser combinados snapshots diferentes sob o mesmo nome de modelo.
+
+### Limitações da replicação
+
+A execução das 60 suítes arquivadas é reproduzível pelo pipeline. A etapa de geração, porém, não é integralmente replicável: respostas brutas, datas, parâmetros de amostragem e snapshots exatos dos modelos não foram preservados. Por esse motivo, `artifacts/generation-metadata.csv` contém somente o esquema das colunas, sem registros experimentais. O delineamento também possui apenas uma geração por combinação de modelo e algoritmo, portanto não mede a variabilidade entre respostas independentes.
 
 ## Execução e replicabilidade
 
@@ -168,7 +172,7 @@ Cobertura indisponível é registrada como `null`. Uma cobertura observada de `0
 .
 ├── artifacts/
 │   ├── corpus-manifest.csv          # origem e correspondência das 20 funções
-│   ├── generation-metadata.csv      # metadados das gerações das LLMs
+│   ├── generation-metadata.csv      # esquema vazio; metadados não foram preservados
 │   ├── prompt/
 │   │   └── prompt.txt               # prompt padronizado do experimento
 ├── docs/

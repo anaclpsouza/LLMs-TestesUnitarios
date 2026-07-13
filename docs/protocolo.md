@@ -15,6 +15,8 @@ Uma unidade é a combinação `modelo × algoritmo`. Cada geração deve ocorrer
 
 ## Geração
 
+Os itens abaixo definem o procedimento recomendado para uma nova replicação. Na execução arquivada, foram preservados o prompt e os arquivos de teste extraídos, mas não as respostas brutas, datas, parâmetros de amostragem ou snapshots exatos dos modelos. O arquivo `artifacts/generation-metadata.csv` registra apenas o esquema esperado e não possui linhas de dados.
+
 1. Registre fornecedor, nome/snapshot exato do modelo, data/hora, parâmetros e algoritmo.
 2. Calcule e registre o SHA-256 de `artifacts/prompt/prompt.txt` depois de substituir o marcador pelo código da função.
 3. Preserve a resposta bruta, mesmo se vazia ou inválida.

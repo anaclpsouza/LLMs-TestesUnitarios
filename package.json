@@ -1,8 +1,8 @@
 {
   "name": "projeto-final-eswiii",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Experimento acadêmico sobre geração de testes unitários para programas do QuixBugs com LLMs.",
+  "private": true,
   "scripts": {
     "experimento":  "ts-node scripts/pipeline.ts",
     "testes":       "ts-node scripts/coletarResultados.ts",
@@ -13,7 +13,7 @@
     "graficos":     "ts-node scripts/gerarGraficos.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ana Clara Pereira de Souza",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {

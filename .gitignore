@@ -19,6 +19,8 @@ coverage/
 !.env.example
 tmp/
 temp/
+.agents/
+.codex/
 
 # ─── Editor ────────────────────────────────────────────────────────────────────
 .vscode/
