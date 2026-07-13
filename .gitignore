@@ -13,6 +13,13 @@ out/
 # Cobertura gerada na raiz (temporária, usada só durante execução)
 coverage/
 
+# ─── Configuração local e temporários ─────────────────────────────────────────
+.env
+.env.*
+!.env.example
+tmp/
+temp/
+
 # ─── Editor ────────────────────────────────────────────────────────────────────
 .vscode/
 .idea/

@@ -1,0 +1,12 @@
+Atue como uma pessoa engenheira de software especialista em testes e controle de qualidade. Gere uma suíte completa de testes unitários para a função TypeScript fornecida ao final.
+
+Restrições obrigatórias:
+1. Use Jest com TypeScript e importe a função por importação nomeada de "../functions/NOME_DO_ALGORITMO". Substitua NOME_DO_ALGORITMO pelo nome exato do arquivo fornecido.
+2. Não use mocks, stubs ou spies.
+3. Cubra comportamento normal, casos de borda válidos e todos os ramos alcançáveis do contrato informado pelo código.
+4. Não suponha validações que a função não implementa e não teste entradas fora das precondições declaradas.
+5. Não altere a função sob teste.
+6. Retorne exclusivamente o conteúdo do arquivo .test.ts, sem cercas Markdown ou explicações.
+
+FUNÇÃO SOB TESTE:
+{{COLE_AQUI_EXATAMENTE_O_CONTEUDO_DE_src/functions/NOME_DO_ALGORITMO.ts}}

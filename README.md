@@ -1,180 +1,195 @@
-# Estudo Empírico: Avaliação de LLMs na Geração Automatizada de Testes Unitários
+# LLMs e geração de testes unitários sobre o QuixBugs
 
-Este repositório contém o projeto prático e o estudo empírico desenvolvido para a disciplina de **Engenharia de Software III** do curso de Bacharelado em Sistemas de Informação no **Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais (IF Sudeste MG) – Campus Manhuaçu**.
+Este repositório contém um experimento sobre geração automatizada de testes unitários por modelos de linguagem. O corpus possui 20 programas do [QuixBugs](https://github.com/jkoppel/QuixBugs), traduzidos de Python para TypeScript a partir do commit `4257f44b0ff1181dedaedee6a447e133219fcebf`.
 
----
+Os resultados da primeira execução foram removidos porque usavam um corpus parcialmente externo ao QuixBugs e uma coleta de cobertura inadequada. Todas as suítes devem ser geradas novamente com o protocolo desta versão.
 
-## 🎯 Objetivo do Estudo
+## Corpus experimental
 
-Avaliar de forma quantitativa a capacidade de três LLMs comerciais na geração automatizada de suítes de testes unitários, medindo:
+As implementações corretas estão em `src/functions/`, uma por arquivo. As versões com o defeito original do benchmark estão em `src/functions-buggy/` e são usadas somente pelo pipeline para avaliar a detecção do defeito conhecido.
 
-1. **Compilabilidade:** Se o código gerado executa sem erros sintáticos.
-2. **Corretude:** Testes passados × falhos por algoritmo.
-3. **Cobertura de Código:** Percentual de statements, branches, functions e lines cobertos pelo Jest.
+Os 20 programas são:
 
----
-
-## 📊 Amostra e Metodologia
-
-**20 algoritmos clássicos** em TypeScript, extraídos do benchmark **QuixBugs**, agrupados por complexidade ciclomática:
-
-| Complexidade | Algoritmos |
-|---|---|
-| **Baixa** | `factorial`, `fibonacci`, `reverse_string`, `max_sublist_sum`, `flatten`, `is_palindrome` |
-| **Média** | `gcd`, `binary_search`, `bubblesort`, `find_in_sorted`, `shortest_path_lengths`, `pascal`, `next_permutation` |
-| **Alta** | `levenshtein`, `lis`, `quicksort`, `mergesort`, `knapsack`, `shortest_path_step`, `topological_sort` |
-
-### 🤖 LLMs Avaliadas
-
-| Provedor | Modelo |
-|---|---|
-| OpenAI | `GPT-4o` |
-| Anthropic | `Claude 3.5 Sonnet` |
-| Google | `Gemini 1.5 Pro` |
-
-### 💬 Prompt Base Utilizado
-
-Para garantir justiça na comparação, o mesmo prompt exato foi fornecido em contextos limpos (zero-shot) para todos os modelos:
-
-> Atue como um Engenheiro de Software especialista em testes de software e controle de qualidade. Sua tarefa é escrever a suíte de testes unitários completa para a função em TypeScript fornecida ao final.
-> 
-> Restrições obrigatórias:
-> 1. Utilize o framework Jest e garanta compatibilidade estrita com TypeScript (@jest/globals);
-> 2. Utilize importação nomeada da função testada;
-> 3. Não utilize mocks, stubs ou spies;
-> 4. Busque máxima cobertura de linhas e ramos;
-> 5. Inclua testes para casos de borda pertinentes ao algoritmo;
-> 6. Retorne exclusivamente o código TypeScript da suíte de testes.
-
-*Após o prompt, era fornecido apenas o código-fonte da função correspondente.*
-
----
-
-## 📂 Estrutura do Repositório
-
-```
-├── src/
-│   ├── funcoes.ts                     # Os 20 algoritmos do QuixBugs em TypeScript
-│   ├── gpt4o/                         # Testes gerados pelo GPT-4o
-│   ├── claude35/                      # Testes gerados pelo Claude 3.5 Sonnet
-│   └── gemini15/                      # Testes gerados pelo Gemini 1.5 Pro
-│
-├── scripts/
-│   ├── pipeline.ts                    # Orquestrador principal (chamado por npm run experimento)
-│   ├── coletarResultados.ts           # Executa os 60 testes e coleta dados
-│   ├── gerarEstatisticas.ts           # Calcula estatísticas descritivas
-│   ├── gerarTabelaLatex.ts            # Gera tabelas LaTeX
-│   ├── gerarGraficos.ts               # Gera gráficos SVG
-│   └── gerarRelatorio.ts              # Gera relatório em Markdown
-│
-├── resultados/
-│   ├── json/                          # JSONs do Jest — um por execução (60 arquivos)
-│   ├── coverage/                      # coverage-final.json individual (60 arquivos)
-│   ├── logs/                          # Logs stdout+stderr de cada execução (60 arquivos)
-│   ├── resultados-compilados/
-│   │   ├── resultados.json            # Todos os resultados consolidados
-│   │   └── resultados.csv             # Planilha completa
-│   ├── estatisticas/
-│   │   ├── estatisticas.json          # Estatísticas descritivas (média, mediana, desvio, min, max)
-│   │   └── estatisticas.md            # Idem, em Markdown
-│   ├── latex/
-│   │   ├── tabelas.tex                # Documento LaTeX standalone completo
-│   │   ├── tabela-resumo.tex          # Fragmento: resumo por modelo
-│   │   ├── tabela-testes.tex          # Fragmento: resultados dos testes
-│   │   └── tabela-cobertura.tex       # Fragmento: métricas de cobertura
-│   ├── graficos/
-│   │   ├── heatmap.svg                # Algoritmo × Modelo (OK / FAIL / TIMEOUT)
-│   │   ├── taxa-sucesso.svg           # Taxa de sucesso por modelo
-│   │   ├── testes.svg                 # Testes passados × falhos por modelo
-│   │   ├── cobertura.svg              # Cobertura média por modelo
-│   │   └── algoritmos.svg             # Sucesso por algoritmo
-│   └── relatorio.md                   # Relatório completo em Markdown
-│
-├── jest.config.js
-├── package.json
-├── tsconfig.json
-└── README.md
+```text
+bitcount                     bucketsort
+find_first_in_sorted         find_in_sorted
+flatten                      gcd
+get_factors                  is_valid_parenthesization
+knapsack                     levenshtein
+lis                          max_sublist_sum
+mergesort                    next_palindrome
+next_permutation             pascal
+possible_change              powerset
+quicksort                    shortest_path_lengths
 ```
 
----
+O mapeamento entre cada arquivo Python oficial e sua tradução está em `artifacts/corpus-manifest.csv`. O aviso da licença MIT do QuixBugs foi preservado em `docs/QUIXBUGS-LICENSE.txt`.
 
-## 🛠️ Como Executar
+## Validação das traduções
 
-### Pré-requisitos
-
-- **Node.js LTS** instalado
-
-### 1. Clone e instale
+Instale as dependências e execute os 20 testes de referência antes de iniciar as gerações:
 
 ```powershell
 git clone https://github.com/anaclpsouza/LLMs-TestesUnitarios.git
 cd LLMs-TestesUnitarios
 npm install
+npm run validar-traducao
 ```
 
-### 2. Execute o pipeline completo
+Particularidades herdadas do QuixBugs:
+
+- `flatten` retorna um gerador; use `Array.from(flatten(valor))` para materializar o resultado;
+- `next_permutation` retorna `undefined` quando não existe próxima permutação;
+- `shortest_path_lengths` representa pares ordenados em um `Map<string, number>` e exporta `edgeKey(origem, destino)` para construir as chaves.
+
+## Prompt e caminho de importação
+
+Use exatamente o modelo disponível em `artifacts/prompt/prompt.txt`. Para cada geração:
+
+1. substitua `NOME_DO_ALGORITMO` pelo nome do arquivo, sem a extensão `.ts`;
+2. substitua o marcador final pelo conteúdo integral de `src/functions/<algoritmo>.ts`;
+3. inicie uma conversa ou contexto limpo;
+4. não forneça implementações de outros algoritmos;
+5. preserve a resposta bruta antes de extrair o arquivo TypeScript;
+6. não corrija manualmente o código gerado.
+
+A suíte deve importar diretamente o módulo da função:
+
+```ts
+import { gcd } from "../functions/gcd";
+```
+
+Para `shortest_path_lengths`, quando necessário:
+
+```ts
+import { edgeKey, shortest_path_lengths } from "../functions/shortest_path_lengths";
+```
+
+Não use mais `../funcoes` nas novas gerações. O agregador `src/funcoes.ts` permanece apenas para compatibilidade interna e para os testes de referência.
+
+## Modelos, repetições e nomes dos arquivos
+
+As pastas dos modelos são:
+
+| Modelo do estudo | Pasta |
+|---|---|
+| GPT-4o | `src/gpt4o/` |
+| Gemini 1.5 Pro | `src/gemini15/` |
+| Claude 3.5 Sonnet | `src/claude35/` |
+
+Devem ser realizadas três gerações independentes para cada combinação de modelo e algoritmo. O experimento completo possui `3 modelos × 20 algoritmos × 3 repetições = 180 suítes`.
+
+Use obrigatoriamente os nomes:
+
+```text
+<algoritmo>.rep01.test.ts
+<algoritmo>.rep02.test.ts
+<algoritmo>.rep03.test.ts
+```
+
+Exemplo para GPT-4o e `gcd`:
+
+```text
+src/gpt4o/gcd.rep01.test.ts
+src/gpt4o/gcd.rep02.test.ts
+src/gpt4o/gcd.rep03.test.ts
+```
+
+O formato antigo `<algoritmo>.test.ts` não é aceito pelo novo coletor. Uma repetição ausente é registrada explicitamente como `NO_TESTS`.
+
+Para cada geração, preencha uma linha de `artifacts/generation-metadata.csv` com modelo/snapshot, data e hora, parâmetros disponíveis, arquivos e hash do prompt. Salve a resposta integral em `artifacts/raw-responses/<modelo>/<algoritmo>.repNN.txt`.
+
+Não misture snapshots diferentes sob o mesmo nome de modelo. Se algum modelo original não estiver disponível, redefina formalmente os modelos do experimento e gere todas as 180 suítes com a nova seleção.
+
+## Execução do experimento
+
+Depois de inserir todas as suítes, execute:
 
 ```powershell
 npm run experimento
 ```
 
-Este único comando executa **automaticamente** as 5 etapas em sequência:
+O pipeline:
 
-| Etapa | Ação |
-|---|---|
-| 1/5 | Executa os 60 testes (20 algoritmos × 3 modelos) com timeout automático |
-| 2/5 | Calcula estatísticas descritivas por modelo e por algoritmo |
-| 3/5 | Gera tabelas LaTeX prontas para monografia |
-| 4/5 | Gera 5 gráficos SVG dos resultados |
-| 5/5 | Gera relatório completo em Markdown |
+1. mede e registra a complexidade ciclomática de cada função;
+2. verifica as 180 combinações planejadas;
+3. executa cada suíte contra a versão correta;
+4. calcula cobertura exclusivamente sobre `src/functions/<algoritmo>.ts` em um diretório novo por execução;
+5. executa as suítes válidas contra a versão defeituosa correspondente;
+6. registra se o defeito conhecido foi detectado;
+7. consolida resultados e estatísticas descritivas.
 
-Ao final, todos os artefatos estarão disponíveis na pasta `resultados/`.
+Os estados possíveis são:
 
-### Scripts individuais
-
-```powershell
-npm run testes        # Só executa os testes e coleta dados
-npm run estatisticas  # Só recalcula as estatísticas
-npm run latex         # Só regera as tabelas LaTeX
-npm run graficos      # Só regera os gráficos SVG
-npm run relatorio     # Só regera o relatório Markdown
+```text
+OK
+ASSERTION_FAILURE
+COMPILE_ERROR
+IMPORT_ERROR
+RUNTIME_ERROR
+NO_TESTS
+TIMEOUT
+INFRA_ERROR
 ```
 
----
+Cobertura indisponível é registrada como `null`. Uma cobertura observada de 0% é mantida e incluída nas estatísticas.
 
-## 📋 Saídas Geradas
+Para diagnósticos, é possível restringir a execução:
 
-### `resultados/resultados-compilados/resultados.json`
+```powershell
+$env:EXPERIMENT_MODELS="gpt4o"
+$env:EXPERIMENT_ALGORITHMS="gcd"
+$env:EXPERIMENT_REPETITIONS="3"
+npm run testes
+```
 
-Objeto JSON com todos os 60 resultados, incluindo status, testes passados/falhos e métricas de cobertura.
+## Artefatos produzidos
 
-### `resultados/estatisticas/estatisticas.json`
+```text
+resultados/
+  runs/<modelo>/<algoritmo>/repNN/
+    correct/
+      jest.json
+      run.log
+      coverage/coverage-final.json
+    buggy/
+      jest.json
+      run.log
+  resultados-compilados/
+    resultados.json
+    resultados.csv
+  complexidade/
+    complexidade.csv
+    complexidade.json
+  estatisticas/
+    estatisticas.json
+```
 
-Estatísticas descritivas completas por modelo (média, mediana, desvio-padrão, mínimo e máximo de cobertura e tempo de execução) e por algoritmo (taxa de sucesso entre modelos).
+Esses artefatos não são ignorados pelo Git porque constituem evidência experimental e devem acompanhar a versão final do estudo.
 
-### `resultados/latex/`
+## Estrutura relevante
 
-Tabelas prontas para inclusão em monografia via `\input{resultados/latex/tabela-resumo.tex}`. Requer os pacotes LaTeX: `booktabs`, `longtable`, `xcolor`, `geometry`.
+```text
+artifacts/
+  corpus-manifest.csv
+  generation-metadata.csv
+  prompt/prompt.txt
+  raw-responses/
+docs/
+  protocolo.md
+  QUIXBUGS-LICENSE.txt
+scripts/
+  coletarResultados.ts
+  gerarEstatisticas.ts
+  medirComplexidade.ts
+  pipeline.ts
+src/
+  functions/
+  functions-buggy/
+  reference/
+  gpt4o/
+  gemini15/
+  claude35/
+```
 
-### `resultados/graficos/`
-
-Cinco gráficos SVG gerados sem dependências externas, incluindo um heatmap colorido (verde = OK, vermelho = FAIL, laranja = TIMEOUT) para visualização rápida dos resultados.
-
-### `resultados/relatorio.md`
-
-Relatório autocontido com resumo executivo, tabelas detalhadas por modelo, análise por algoritmo e estatísticas descritivas — com os gráficos SVG embutidos.
-
----
-
-## 🔗 Referências
-
-- **Benchmark:** [QuixBugs GitHub Repository](https://github.com/jkoppel/QuixBugs)
-- **Estudo de Referência:** *"Um estudo sobre a aplicação de LLMs no teste de software"* (UFERSA, 2025)
-
----
-
-**Desenvolvido por:** Ana Clara Pereira de Souza
-
-**Professor:** Filipe Fernandes PhD
-
-**Instituição:** IF Sudeste MG – Campus Manhuaçu
+Consulte `docs/protocolo.md` para as definições das unidades experimentais, estados, rastreabilidade, complexidade e tratamento de dados ausentes.
