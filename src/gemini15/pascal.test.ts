@@ -1,45 +1,44 @@
-import { next_permutation } from "../functions/next_permutation";
+import { pascal } from "../functions/pascal";
 
-describe("next_permutation", () => {
-    it("should return undefined for an empty array", () => {
-        expect(next_permutation([])).toBeUndefined();
+describe("pascal", () => {
+    it("should return [[1]] when n is 0 or 1", () => {
+        expect(pascal(0)).toEqual([[1]]);
+        expect(pascal(1)).toEqual([[1]]);
     });
 
-    it("should return undefined for a single-element array", () => {
-        expect(next_permutation([1])).toBeUndefined();
+    it("should return [[1]] when n is negative", () => {
+        expect(pascal(-1)).toEqual([[1]]);
+        expect(pascal(-5)).toEqual([[1]]);
     });
 
-    it("should return undefined when array is in strictly descending order (last permutation)", () => {
-        expect(next_permutation([3, 2, 1])).toBeUndefined();
-        expect(next_permutation([5, 4, 3, 2, 1])).toBeUndefined();
+    it("should return 2 rows for n = 2", () => {
+        expect(pascal(2)).toEqual([[1], [1, 1]]);
     });
 
-    it("should return undefined when all elements are equal", () => {
-        expect(next_permutation([2, 2, 2])).toBeUndefined();
+    it("should return 3 rows for n = 3", () => {
+        expect(pascal(3)).toEqual([[1], [1, 1], [1, 2, 1]]);
     });
 
-    it("should generate the next lexicographical permutation for standard inputs", () => {
-        expect(next_permutation([1, 2, 3])).toEqual([1, 3, 2]);
-        expect(next_permutation([1, 3, 2])).toEqual([2, 1, 3]);
-        expect(next_permutation([2, 1, 3])).toEqual([2, 3, 1]);
-        expect(next_permutation([2, 3, 1])).toEqual([3, 1, 2]);
-        expect(next_permutation([3, 1, 2])).toEqual([3, 2, 1]);
+    it("should generate Pascal's triangle correctly for n = 5", () => {
+        const expected = [
+            [1],
+            [1, 1],
+            [1, 2, 1],
+            [1, 3, 3, 1],
+            [1, 4, 6, 4, 1],
+        ];
+        expect(pascal(5)).toEqual(expected);
     });
 
-    it("should handle larger arrays with partial descending suffixes", () => {
-        expect(next_permutation([1, 2, 5, 4, 3])).toEqual([1, 3, 2, 4, 5]);
-    });
-
-    it("should handle arrays with duplicate values", () => {
-        expect(next_permutation([1, 1, 5])).toEqual([1, 5, 1]);
-        expect(next_permutation([1, 5, 1])).toEqual([5, 1, 1]);
-        expect(next_permutation([2, 3, 1, 3, 3])).toEqual([2, 3, 3, 1, 3]);
-    });
-
-    it("should not mutate the original array", () => {
-        const input = [1, 2, 3];
-        const result = next_permutation(input);
-        expect(input).toEqual([1, 2, 3]);
-        expect(result).toEqual([1, 3, 2]);
+    it("should generate Pascal's triangle correctly for n = 6", () => {
+        const expected = [
+            [1],
+            [1, 1],
+            [1, 2, 1],
+            [1, 3, 3, 1],
+            [1, 4, 6, 4, 1],
+            [1, 5, 10, 10, 5, 1],
+        ];
+        expect(pascal(6)).toEqual(expected);
     });
 });
