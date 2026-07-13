@@ -6,10 +6,9 @@
   "scripts": {
     "experimento":  "ts-node scripts/pipeline.ts",
     "testes":       "ts-node scripts/coletarResultados.ts",
-    "estatisticas": "ts-node scripts/gerarEstatisticas.ts",
-    "latex":        "ts-node scripts/gerarTabelaLatex.ts",
-    "graficos":     "ts-node scripts/gerarGraficos.ts",
-    "relatorio":    "ts-node scripts/gerarRelatorio.ts"
+    "validar-traducao": "jest src/reference/quixbugs-reference.test.ts --runInBand --coverage=false",
+    "complexidade": "ts-node scripts/medirComplexidade.ts",
+    "estatisticas": "ts-node scripts/gerarEstatisticas.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,202 @@
+[
+  {
+    "algorithm": "bitcount",
+    "file": "src/functions/bitcount.ts",
+    "function": "bitcount",
+    "complexity": 2,
+    "group": "baixa",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "bucketsort",
+    "file": "src/functions/bucketsort.ts",
+    "function": "bucketsort",
+    "complexity": 3,
+    "group": "media",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "find_first_in_sorted",
+    "file": "src/functions/find_first_in_sorted.ts",
+    "function": "find_first_in_sorted",
+    "complexity": 6,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "find_in_sorted",
+    "file": "src/functions/find_in_sorted.ts",
+    "function": "find_in_sorted",
+    "complexity": 4,
+    "group": "media",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "flatten",
+    "file": "src/functions/flatten.ts",
+    "function": "flatten",
+    "complexity": 3,
+    "group": "media",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "gcd",
+    "file": "src/functions/gcd.ts",
+    "function": "gcd",
+    "complexity": 2,
+    "group": "baixa",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "get_factors",
+    "file": "src/functions/get_factors.ts",
+    "function": "get_factors",
+    "complexity": 4,
+    "group": "media",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "is_valid_parenthesization",
+    "file": "src/functions/is_valid_parenthesization.ts",
+    "function": "is_valid_parenthesization",
+    "complexity": 4,
+    "group": "media",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "knapsack",
+    "file": "src/functions/knapsack.ts",
+    "function": "knapsack",
+    "complexity": 4,
+    "group": "media",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "levenshtein",
+    "file": "src/functions/levenshtein.ts",
+    "function": "levenshtein",
+    "complexity": 5,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "lis",
+    "file": "src/functions/lis.ts",
+    "function": "lis",
+    "complexity": 7,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "max_sublist_sum",
+    "file": "src/functions/max_sublist_sum.ts",
+    "function": "max_sublist_sum",
+    "complexity": 2,
+    "group": "baixa",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "mergesort",
+    "file": "src/functions/mergesort.ts",
+    "function": "mergesort",
+    "complexity": 6,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "next_palindrome",
+    "file": "src/functions/next_palindrome.ts",
+    "function": "next_palindrome",
+    "complexity": 5,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "next_permutation",
+    "file": "src/functions/next_permutation.ts",
+    "function": "next_permutation",
+    "complexity": 5,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "pascal",
+    "file": "src/functions/pascal.ts",
+    "function": "pascal",
+    "complexity": 5,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "possible_change",
+    "file": "src/functions/possible_change.ts",
+    "function": "possible_change",
+    "complexity": 4,
+    "group": "media",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "powerset",
+    "file": "src/functions/powerset.ts",
+    "function": "powerset",
+    "complexity": 2,
+    "group": "baixa",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "quicksort",
+    "file": "src/functions/quicksort.ts",
+    "function": "quicksort",
+    "complexity": 2,
+    "group": "baixa",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  },
+  {
+    "algorithm": "shortest_path_lengths",
+    "file": "src/functions/shortest_path_lengths.ts",
+    "function": "shortest_path_lengths",
+    "complexity": 7,
+    "group": "alta",
+    "tool": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "rule": "McCabe: 1 + if/loops/case/catch/?:/&&/||/??; grupos: baixa 1-2, media 3-4, alta >=5"
+  }
+]

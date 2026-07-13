@@ -1,314 +1,172 @@
 /// <reference types="node" />
 
-import { exec } from "child_process";
+import { execFile } from "child_process";
 import { promisify } from "util";
 import fs from "fs";
 import path from "path";
 
-const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
+const TIMEOUT_MS = Number(process.env.EXPERIMENT_TIMEOUT_MS ?? 30_000);
+const REPETITION_COUNT = Number(process.env.EXPERIMENT_REPETITIONS ?? 3);
+const ROOT = process.cwd();
+const OUTPUT_ROOT = path.join(ROOT, "resultados", "runs");
+const COMPILED_ROOT = path.join(ROOT, "resultados", "resultados-compilados");
+const JEST_BIN = path.join(ROOT, "node_modules", "jest", "bin", "jest.js");
 
-const TIMEOUT = 30000;
-
-// Garante que os diretórios de saída existam
-fs.mkdirSync("resultados/json",                  { recursive: true });
-fs.mkdirSync("resultados/coverage",              { recursive: true });
-fs.mkdirSync("resultados/logs",                  { recursive: true });
-fs.mkdirSync("resultados/resultados-compilados", { recursive: true });
-
-const modelos = [
-    {
-        nome: "GPT-4o",
-        pasta: "src/gpt4o"
-    },
-    {
-        nome: "Gemini",
-        pasta: "src/gemini15"
-    },
-    {
-        nome: "Claude",
-        pasta: "src/claude35"
-    }
+const ALL_MODELS = [
+    { name: "GPT-4o", slug: "gpt4o", dir: "src/gpt4o" },
+    { name: "Gemini 1.5 Pro", slug: "gemini15", dir: "src/gemini15" },
+    { name: "Claude 3.5 Sonnet", slug: "claude35", dir: "src/claude35" },
 ];
 
-const algoritmos = [
-"factorial",
-"fibonacci",
-"reverse_string",
-"max_sublist_sum",
-"flatten",
-"is_palindrome",
-"gcd",
-"binary_search",
-"bubblesort",
-"find_in_sorted",
-"shortest_path_lengths",
-"pascal",
-"next_permutation",
-"levenshtein",
-"lis",
-"quicksort",
-"mergesort",
-"knapsack",
-"shortest_path_step",
-"topological_sort"
+const ALL_ALGORITHMS = [
+    "bitcount", "bucketsort", "find_first_in_sorted", "find_in_sorted", "flatten",
+    "gcd", "get_factors", "is_valid_parenthesization", "knapsack", "levenshtein",
+    "lis", "max_sublist_sum", "mergesort", "next_palindrome", "next_permutation",
+    "pascal", "possible_change", "powerset", "quicksort", "shortest_path_lengths",
 ];
 
-const resultados: any[] = [];
+const requestedModels = new Set((process.env.EXPERIMENT_MODELS ?? "").split(",").map(v => v.trim()).filter(Boolean));
+const requestedAlgorithms = new Set((process.env.EXPERIMENT_ALGORITHMS ?? "").split(",").map(v => v.trim()).filter(Boolean));
+const MODELS = ALL_MODELS.filter(model => requestedModels.size === 0 || requestedModels.has(model.slug));
+const ALGORITHMS = ALL_ALGORITHMS.filter(algorithm => requestedAlgorithms.size === 0 || requestedAlgorithms.has(algorithm));
 
-/** Lê passed/failed/total direto do JSON gerado pelo Jest (--json) */
-function parseTestsFromJson(jsonPath: string): { passed: number; failed: number; total: number } {
+type Status = "OK" | "ASSERTION_FAILURE" | "COMPILE_ERROR" | "IMPORT_ERROR" |
+    "RUNTIME_ERROR" | "NO_TESTS" | "TIMEOUT" | "INFRA_ERROR";
 
-    try {
+interface TestCounts { passed: number; failed: number; total: number }
+interface Coverage { statements: number | null; branches: number | null; functions: number | null; lines: number | null }
 
-        const raw = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
-
-        const passed = raw.numPassedTests  ?? 0;
-        const failed = raw.numFailedTests  ?? 0;
-
-        return { passed, failed, total: passed + failed };
-
-    } catch {
-
-        return { passed: 0, failed: 0, total: 0 };
-
-    }
+function resetOutputs(): void {
+    fs.rmSync(OUTPUT_ROOT, { recursive: true, force: true });
+    fs.rmSync(COMPILED_ROOT, { recursive: true, force: true });
+    fs.mkdirSync(OUTPUT_ROOT, { recursive: true });
+    fs.mkdirSync(COMPILED_ROOT, { recursive: true });
 }
 
-/** Lê as métricas de cobertura do coverage-final.json gerado pelo Jest */
-function parseCoverageFromFile(coveragePath: string) {
+function findTestFile(modelDir: string, algorithm: string, repetition: number): string | null {
+    const dir = path.join(ROOT, modelDir);
+    if (!fs.existsSync(dir)) return null;
+    const file = `${algorithm}.rep${String(repetition).padStart(2, "0")}.test.ts`;
+    return fs.existsSync(path.join(dir, file)) ? path.join(modelDir, file) : null;
+}
 
+function parseCounts(jsonFile: string): TestCounts {
+    if (!fs.existsSync(jsonFile)) return { passed: 0, failed: 0, total: 0 };
     try {
+        const data = JSON.parse(fs.readFileSync(jsonFile, "utf8"));
+        return { passed: data.numPassedTests ?? 0, failed: data.numFailedTests ?? 0, total: data.numTotalTests ?? 0 };
+    } catch { return { passed: 0, failed: 0, total: 0 }; }
+}
 
-        const raw = JSON.parse(fs.readFileSync(coveragePath, "utf8"));
+function percent(covered: number, total: number): number | null {
+    return total === 0 ? null : Number(((covered / total) * 100).toFixed(2));
+}
 
-        // coverage-final.json: { "<file>": { s, b, f, fnMap, ... } }
-        // Calculamos a média ponderada dos contadores para cada métrica
-        let stmtTotal = 0, stmtCovered = 0;
-        let branchTotal = 0, branchCovered = 0;
-        let fnTotal = 0, fnCovered = 0;
-        let lineTotal = 0, lineCovered = 0;
-
-        for (const fileData of Object.values(raw) as any[]) {
-
-            const s  = Object.values(fileData.s  ?? {}) as number[];
-            const b  = (Object.values(fileData.b  ?? {}) as number[][]).flat();
-            const f  = Object.values(fileData.f  ?? {}) as number[];
-            const lm = fileData.statementMap ?? {};
-
-            stmtTotal    += s.length;    stmtCovered    += s.filter(v => v > 0).length;
-            branchTotal  += b.length;    branchCovered  += b.filter(v => v > 0).length;
-            fnTotal      += f.length;    fnCovered      += f.filter(v => v > 0).length;
-
-            // linhas únicas cobertas
-            const allLines = new Set(Object.values(lm).flatMap((loc: any) =>
-                Array.from({ length: loc.end.line - loc.start.line + 1 },
-                    (_, i) => loc.start.line + i)
-            ));
-            lineTotal   += allLines.size;
-            lineCovered += [...allLines].filter(ln => {
-                // uma linha é coberta se algum statement nela foi executado
-                return Object.entries(fileData.s ?? {}).some(([id, cnt]) => {
-                    const loc = lm[id];
-                    return loc && ln >= loc.start.line && ln <= loc.end.line && (cnt as number) > 0;
-                });
-            }).length;
+function parseCoverage(file: string): Coverage {
+    if (!fs.existsSync(file)) return { statements: null, branches: null, functions: null, lines: null };
+    const raw = JSON.parse(fs.readFileSync(file, "utf8"));
+    let st = 0, sc = 0, bt = 0, bc = 0, ft = 0, fc = 0;
+    const lineHits = new Map<number, number>();
+    for (const data of Object.values(raw) as any[]) {
+        for (const [id, count] of Object.entries(data.s ?? {}) as Array<[string, number]>) {
+            st += 1; if (count > 0) sc += 1;
+            const line = data.statementMap[id].start.line;
+            lineHits.set(line, Math.max(lineHits.get(line) ?? 0, count));
         }
-
-        const pct = (covered: number, total: number) =>
-            total === 0 ? "" : ((covered / total) * 100).toFixed(2);
-
-        return {
-            statements: pct(stmtCovered,   stmtTotal),
-            branches:   pct(branchCovered, branchTotal),
-            functions:  pct(fnCovered,     fnTotal),
-            lines:      pct(lineCovered,   lineTotal)
-        };
-
-    } catch {
-
-        return { statements: "", branches: "", functions: "", lines: "" };
-
+        for (const counts of Object.values(data.b ?? {}) as number[][]) for (const count of counts) { bt += 1; if (count > 0) bc += 1; }
+        for (const count of Object.values(data.f ?? {}) as number[]) { ft += 1; if (count > 0) fc += 1; }
     }
+    return {
+        statements: percent(sc, st), branches: percent(bc, bt), functions: percent(fc, ft),
+        lines: percent([...lineHits.values()].filter(v => v > 0).length, lineHits.size),
+    };
 }
 
-function parseTime(text: string) {
-
-    const m = text.match(/Time:\s*([\d.]+)/);
-
-    return m ? m[1] : "";
-}
-
-// ─── Progresso no terminal ───────────────────────────────────────────────────
-
-const TOTAL = modelos.length * algoritmos.length;
-let executado = 0;
-
-const A = {
-    reset:  "\x1b[0m",
-    bold:   "\x1b[1m",
-    dim:    "\x1b[2m",
-    green:  "\x1b[32m",
-    red:    "\x1b[31m",
-    amber:  "\x1b[33m",
-    cyan:   "\x1b[36m",
-    clear:  "\x1b[K"
-};
-
-function renderBar(status: string, modelo: string, algoritmo: string, tempo: string): void {
-
-    executado++;
-    const pct    = executado / TOTAL;
-    const W      = 30;
-    const filled = Math.round(pct * W);
-    const bar    = "\u2588".repeat(filled) + "\u2591".repeat(W - filled);
-
-    const statusStr =
-        status === "OK"      ? `${A.green}\u2713 OK${A.reset}` :
-        status === "FAIL"    ? `${A.red}\u2717 FAIL${A.reset}` :
-                               `${A.amber}\u23F1 TIMEOUT${A.reset}`;
-
-    const count  = `${String(executado).padStart(2)}/${TOTAL}`;
-    const pctStr = `${Math.round(pct * 100)}%`.padStart(4);
-    const alg    = algoritmo.padEnd(26);
-    const mod    = modelo.padEnd(7);
-
-    const line =
-        `\r${A.dim}[${A.reset}${A.bold}${bar}${A.reset}${A.dim}]${A.reset}` +
-        ` ${A.bold}${count}${A.reset} ${A.dim}${pctStr}${A.reset}` +
-        `  ${A.cyan}${mod}${A.reset}${A.dim}::${A.reset} ${alg}` +
-        ` ${statusStr}  ${A.dim}${tempo}s${A.reset}`;
-
-    process.stdout.write(line + A.clear);
-
-    if (executado === TOTAL) {
-        process.stdout.write("\n");
+function classify(text: string, counts: TestCounts, timedOut: boolean): Status {
+    if (timedOut) return "TIMEOUT";
+    if (/Cannot find module|Could not locate module|ModuleNotFoundError/i.test(text)) return "IMPORT_ERROR";
+    if (/TS\d{4}:|SyntaxError|TypeScript.*error/i.test(text)) return "COMPILE_ERROR";
+    if (/No tests found|Your test suite must contain at least one test/i.test(text) || counts.total === 0) return "NO_TESTS";
+    if (counts.failed > 0) {
+        if (/expect\(|Expected:|Received:|AssertionError|to(Equal|Be|Throw|Contain|Match)/i.test(text)) return "ASSERTION_FAILURE";
+        return "RUNTIME_ERROR";
     }
+    return counts.total > 0 ? "OK" : "INFRA_ERROR";
 }
 
-async function executar() {
+async function runJest(testFile: string, algorithm: string, runDir: string, variant: "correct" | "buggy", coverage: boolean) {
+    fs.rmSync(runDir, { recursive: true, force: true });
+    fs.mkdirSync(runDir, { recursive: true });
+    const jsonFile = path.join(runDir, "jest.json");
+    const coverageDir = path.join(runDir, "coverage");
+    const env = {
+        ...process.env,
+        QUIXBUGS_ALGORITHM: algorithm,
+        QUIXBUGS_VARIANT: variant,
+        QUIXBUGS_COVERAGE: coverage ? "1" : "0",
+        QUIXBUGS_COVERAGE_DIR: coverageDir,
+    };
+    let text = ""; let timedOut = false;
+    try {
+        const result = await execFileAsync(process.execPath, [JEST_BIN, testFile, "--runInBand", "--json", "--outputFile", jsonFile], {
+            cwd: ROOT, env, timeout: TIMEOUT_MS, maxBuffer: 20 * 1024 * 1024,
+        });
+        text = `${result.stdout}\n${result.stderr}`;
+    } catch (error: any) {
+        text = `${error.stdout ?? ""}\n${error.stderr ?? ""}\n${error.message ?? ""}`;
+        timedOut = error.killed === true || error.signal === "SIGTERM" || /timed out/i.test(error.message ?? "");
+    }
+    fs.writeFileSync(path.join(runDir, "run.log"), text, "utf8");
+    const counts = parseCounts(jsonFile);
+    return {
+        status: classify(text, counts, timedOut), ...counts,
+        coverage: coverage ? parseCoverage(path.join(coverageDir, "coverage-final.json")) : undefined,
+    };
+}
 
-    for (const modelo of modelos) {
+function csvCell(value: unknown): string {
+    if (value === null || value === undefined) return "";
+    const text = String(value);
+    return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+}
 
-        // Slug do modelo para nomes de arquivo (ex: "GPT-4o" -> "gpt")
-        const modeloSlug = modelo.nome.toLowerCase().replace(/[^a-z0-9]/g, "").replace("4o", "") || modelo.nome.toLowerCase();
-
-        for (const algoritmo of algoritmos) {
-
-            const teste      = `${modelo.pasta}/${algoritmo}.test.ts`;
-            const jsonOut    = `resultados/json/${modeloSlug}-${algoritmo}.json`;
-            const coverageSrc = `coverage/coverage-final.json`;
-            const coverageDst = `resultados/coverage/${modeloSlug}-${algoritmo}.json`;
-
-            const cmd = [
-                `npx jest "${teste}"`,
-                `--coverage`,
-                `--json`,
-                `--outputFile "${jsonOut}"`
-            ].join(" ");
-
-            try {
-
-                const { stdout, stderr } = await execAsync(cmd, {
-                    timeout: TIMEOUT,
-                    maxBuffer: 1024 * 1024 * 20
-                });
-
-                const texto = stdout + stderr;
-
-                // Salva log individual
-                fs.writeFileSync(`resultados/logs/${modeloSlug}-${algoritmo}.log`, texto, "utf8");
-
-                const tests = parseTestsFromJson(jsonOut);
-
-                // Copia coverage-final.json para resultados/coverage/
-                if (fs.existsSync(coverageSrc)) {
-                    fs.copyFileSync(coverageSrc, coverageDst);
-                }
-
-                const cov = parseCoverageFromFile(coverageDst);
-
-                const r = { modelo: modelo.nome, algoritmo, status: "OK", ...tests, ...cov, tempo: parseTime(texto) };
-                resultados.push(r);
-                renderBar(r.status, modelo.nome, algoritmo, r.tempo);
-
-            } catch (err: any) {
-
-                if (err.killed || err.signal === "SIGTERM") {
-
-                    fs.writeFileSync(`resultados/logs/${modeloSlug}-${algoritmo}.log`, `TIMEOUT após ${TIMEOUT / 1000}s\n`, "utf8");
-
-                    resultados.push({
-                        modelo:     modelo.nome,
-                        algoritmo,
-                        status:     "TIMEOUT",
-                        passed:     "",
-                        failed:     "",
-                        total:      "",
-                        statements: "",
-                        branches:   "",
-                        functions:  "",
-                        lines:      "",
-                        tempo:      `>${TIMEOUT / 1000}s`
-                    });
-                    renderBar("TIMEOUT", modelo.nome, algoritmo, `>${TIMEOUT / 1000}s`);
-
-                } else {
-
-                    const texto = (err.stdout || "") + (err.stderr || "");
-
-                    // Salva log individual mesmo em caso de falha
-                    fs.writeFileSync(`resultados/logs/${modeloSlug}-${algoritmo}.log`, texto, "utf8");
-
-                    // Mesmo em caso de falha, tenta ler o JSON e o coverage
-                    const tests = parseTestsFromJson(jsonOut);
-
-                    if (fs.existsSync(coverageSrc)) {
-                        fs.copyFileSync(coverageSrc, coverageDst);
-                    }
-
-                    const cov = parseCoverageFromFile(coverageDst);
-
-                    const r = { modelo: modelo.nome, algoritmo, status: "FAIL", ...tests, ...cov, tempo: parseTime(texto) };
-                    resultados.push(r);
-                    renderBar(r.status, modelo.nome, algoritmo, r.tempo);
-
-                }
-
+async function main(): Promise<void> {
+    resetOutputs();
+    const results: any[] = [];
+    for (const model of MODELS) for (const algorithm of ALGORITHMS) {
+        for (let repetition = 1; repetition <= REPETITION_COUNT; repetition += 1) {
+            const testFile = findTestFile(model.dir, algorithm, repetition);
+            if (testFile === null) {
+                results.push({ model: model.name, modelSlug: model.slug, algorithm, repetition, testFile: null, status: "NO_TESTS", bugStatus: null, detectedKnownBug: null, passed: 0, failed: 0, total: 0, statements: null, branches: null, functions: null, lines: null });
+                continue;
             }
-
+            const base = path.join(OUTPUT_ROOT, model.slug, algorithm, `rep${String(repetition).padStart(2, "0")}`);
+            const correct = await runJest(testFile, algorithm, path.join(base, "correct"), "correct", true);
+            let buggy: Awaited<ReturnType<typeof runJest>> | null = null;
+            if (correct.status === "OK") buggy = await runJest(testFile, algorithm, path.join(base, "buggy"), "buggy", false);
+            results.push({
+                model: model.name, modelSlug: model.slug, algorithm, repetition,
+                testFile: testFile.replace(/\\/g, "/"), status: correct.status,
+                bugStatus: buggy?.status ?? null,
+                detectedKnownBug: buggy
+                    ? (["ASSERTION_FAILURE", "RUNTIME_ERROR", "TIMEOUT"] as Status[]).includes(buggy.status)
+                        ? true
+                        : buggy.status === "OK" ? false : null
+                    : null,
+                passed: correct.passed, failed: correct.failed, total: correct.total,
+                statements: correct.coverage?.statements ?? null, branches: correct.coverage?.branches ?? null,
+                functions: correct.coverage?.functions ?? null, lines: correct.coverage?.lines ?? null,
+            });
+            process.stdout.write(`\r${model.slug} ${algorithm} rep${repetition}: ${correct.status}             `);
         }
-
     }
-
-    fs.writeFileSync(
-        "resultados/resultados-compilados/resultados.json",
-        JSON.stringify(resultados, null, 4)
-    );
-
-    const csv = [
-        "Modelo,Algoritmo,Status,Total,Passou,Falhou,Statements,Branches,Functions,Lines,Tempo"
-    ];
-
-    for (const r of resultados) {
-        csv.push([
-            r.modelo, r.algoritmo, r.status, r.total,
-            r.passed, r.failed, r.statements, r.branches,
-            r.functions, r.lines, r.tempo
-        ].join(","));
-    }
-
-    fs.writeFileSync(
-        "resultados/resultados-compilados/resultados.csv",
-        csv.join("\n")
-    );
-
-    console.log("Testes concluídos.");
-    console.log(`  resultados/resultados-compilados/resultados.json (${resultados.length} entradas)`);
-    console.log(`  resultados/resultados-compilados/resultados.csv`);
-    console.log(`  resultados/json/           (${resultados.length} JSONs do Jest)`);
-    console.log(`  resultados/coverage/        (${resultados.length} arquivos de coverage)`);
-    console.log(`  resultados/logs/            (${resultados.length} logs individuais)`);
-
+    process.stdout.write("\n");
+    fs.writeFileSync(path.join(COMPILED_ROOT, "resultados.json"), JSON.stringify(results, null, 2));
+    const headers = ["Modelo", "ModeloSlug", "Algoritmo", "Repeticao", "Arquivo", "Status", "StatusBug", "DetectouBug", "Total", "Passou", "Falhou", "Statements", "Branches", "Functions", "Lines"];
+    const rows = results.map(r => [r.model, r.modelSlug, r.algorithm, r.repetition, r.testFile, r.status, r.bugStatus, r.detectedKnownBug, r.total, r.passed, r.failed, r.statements, r.branches, r.functions, r.lines].map(csvCell).join(","));
+    fs.writeFileSync(path.join(COMPILED_ROOT, "resultados.csv"), [headers.join(","), ...rows].join("\n"));
+    console.log(`Resultados gravados: ${results.length} execuções planejadas/encontradas.`);
 }
 
-executar();
+main().catch(error => { console.error(error); process.exitCode = 1; });
