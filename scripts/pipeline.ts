@@ -3,7 +3,13 @@
 import { spawn } from "child_process";
 import path from "path";
 
-const scripts = ["medirComplexidade.ts", "coletarResultados.ts", "gerarEstatisticas.ts"];
+const scripts = [
+    "medirComplexidade.ts",
+    "coletarResultados.ts",
+    "gerarEstatisticas.ts",
+    "gerarTabelas.ts",
+    "gerarGraficos.ts",
+];
 
 function run(script: string): Promise<void> {
     return new Promise((resolve, reject) => {

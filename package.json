@@ -8,7 +8,9 @@
     "testes":       "ts-node scripts/coletarResultados.ts",
     "validar-traducao": "jest src/reference/quixbugs-reference.test.ts --runInBand --coverage=false",
     "complexidade": "ts-node scripts/medirComplexidade.ts",
-    "estatisticas": "ts-node scripts/gerarEstatisticas.ts"
+    "estatisticas": "ts-node scripts/gerarEstatisticas.ts",
+    "tabelas":      "ts-node scripts/gerarTabelas.ts",
+    "graficos":     "ts-node scripts/gerarGraficos.ts"
   },
   "keywords": [],
   "author": "",
