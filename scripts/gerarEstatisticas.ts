@@ -3,7 +3,7 @@
 import fs from "fs";
 
 interface Result {
-    model: string; algorithm: string; repetition: number; status: string;
+    model: string; algorithm: string; status: string;
     detectedKnownBug: boolean | null;
     statements: number | null; branches: number | null; functions: number | null; lines: number | null;
 }

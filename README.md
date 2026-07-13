@@ -67,7 +67,7 @@ import { edgeKey, shortest_path_lengths } from "../functions/shortest_path_lengt
 
 Não use mais `../funcoes` nas novas gerações. O agregador `src/funcoes.ts` permanece apenas para compatibilidade interna e para os testes de referência.
 
-## Modelos, repetições e nomes dos arquivos
+## Modelos e nomes dos arquivos
 
 As pastas dos modelos são:
 
@@ -77,29 +77,25 @@ As pastas dos modelos são:
 | Gemini 1.5 Pro | `src/gemini15/` |
 | Claude 3.5 Sonnet | `src/claude35/` |
 
-Devem ser realizadas três gerações independentes para cada combinação de modelo e algoritmo. O experimento completo possui `3 modelos × 20 algoritmos × 3 repetições = 180 suítes`.
+Deve ser realizada uma geração para cada combinação de modelo e algoritmo. O experimento completo possui `3 modelos × 20 algoritmos = 60 suítes`.
 
 Use obrigatoriamente os nomes:
 
 ```text
-<algoritmo>.rep01.test.ts
-<algoritmo>.rep02.test.ts
-<algoritmo>.rep03.test.ts
+<algoritmo>.test.ts
 ```
 
 Exemplo para GPT-4o e `gcd`:
 
 ```text
-src/gpt4o/gcd.rep01.test.ts
-src/gpt4o/gcd.rep02.test.ts
-src/gpt4o/gcd.rep03.test.ts
+src/gpt4o/gcd.test.ts
 ```
 
-O formato antigo `<algoritmo>.test.ts` não é aceito pelo novo coletor. Uma repetição ausente é registrada explicitamente como `NO_TESTS`.
+Um arquivo ausente ou sem testes executáveis é registrado como `NO_TESTS`.
 
-Para cada geração, preencha uma linha de `artifacts/generation-metadata.csv` com modelo/snapshot, data e hora, parâmetros disponíveis, arquivos e hash do prompt. Salve a resposta integral em `artifacts/raw-responses/<modelo>/<algoritmo>.repNN.txt`.
+Para cada geração, preencha uma linha de `artifacts/generation-metadata.csv` com modelo/snapshot, data e hora, parâmetros disponíveis, arquivos e hash do prompt. Salve a resposta integral em `artifacts/raw-responses/<modelo>/<algoritmo>.txt`.
 
-Não misture snapshots diferentes sob o mesmo nome de modelo. Se algum modelo original não estiver disponível, redefina formalmente os modelos do experimento e gere todas as 180 suítes com a nova seleção.
+Não misture snapshots diferentes sob o mesmo nome de modelo. Se algum modelo original não estiver disponível, redefina formalmente os modelos do experimento e gere todas as 60 suítes com a nova seleção.
 
 ## Execução do experimento
 
@@ -112,7 +108,7 @@ npm run experimento
 O pipeline:
 
 1. mede e registra a complexidade ciclomática de cada função;
-2. verifica as 180 combinações planejadas;
+2. verifica as 60 combinações planejadas;
 3. executa cada suíte contra a versão correta;
 4. calcula cobertura exclusivamente sobre `src/functions/<algoritmo>.ts` em um diretório novo por execução;
 5. executa as suítes válidas contra a versão defeituosa correspondente;
@@ -139,7 +135,6 @@ Para diagnósticos, é possível restringir a execução:
 ```powershell
 $env:EXPERIMENT_MODELS="gpt4o"
 $env:EXPERIMENT_ALGORITHMS="gcd"
-$env:EXPERIMENT_REPETITIONS="3"
 npm run testes
 ```
 
@@ -147,7 +142,7 @@ npm run testes
 
 ```text
 resultados/
-  runs/<modelo>/<algoritmo>/repNN/
+  runs/<modelo>/<algoritmo>/
     correct/
       jest.json
       run.log

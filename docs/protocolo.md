@@ -2,7 +2,7 @@
 
 ## Unidade experimental
 
-Uma unidade é a combinação `modelo × algoritmo × repetição`. Cada geração deve ocorrer em contexto limpo, com o mesmo prompt, sem correção manual. O delineamento fixa três repetições independentes, totalizando 180 unidades planejadas.
+Uma unidade é a combinação `modelo × algoritmo`. Cada geração deve ocorrer em contexto limpo, com o mesmo prompt e sem correção manual. O delineamento possui 60 unidades planejadas.
 
 ## Rastreabilidade
 
@@ -15,10 +15,10 @@ Uma unidade é a combinação `modelo × algoritmo × repetição`. Cada geraç�
 
 ## Geração
 
-1. Registre fornecedor, nome/snapshot exato do modelo, data/hora, parâmetros, algoritmo e repetição.
+1. Registre fornecedor, nome/snapshot exato do modelo, data/hora, parâmetros e algoritmo.
 2. Calcule e registre o SHA-256 de `artifacts/prompt/prompt.txt` depois de substituir o marcador pelo código da função.
 3. Preserve a resposta bruta, mesmo se vazia ou inválida.
-4. Extraia o código sem corrigi-lo e salve como `<algoritmo>.repNN.test.ts` na pasta do modelo.
+4. Extraia o código sem corrigi-lo e salve como `<algoritmo>.test.ts` na pasta do modelo.
 5. Confirme que a suíte importa diretamente de `../functions/<algoritmo>`; o caminho legado `../funcoes` não deve ser usado.
 
 ## Execução e estados
@@ -33,4 +33,4 @@ Cada execução recebe um diretório novo. O coletor remove o diretório antes d
 
 ## Dados ausentes e estatística
 
-Cobertura inexistente é `null`. Zero é um valor observado e não é filtrado. O resumo inclui `n`, média, mediana, desvio-padrão amostral, quartis, IQR, mínimo, máximo e intervalo de 95% aproximado. Comparações inferenciais e correção de múltiplos testes devem ser executadas somente depois de fixar o número de repetições e conferir o pareamento dos dados.
+Cobertura inexistente é `null`. Zero é um valor observado e não é filtrado. O resumo inclui `n`, média, mediana, desvio-padrão amostral, quartis, IQR, mínimo, máximo e intervalo de 95% aproximado. A análise deve considerar que existe somente uma observação por combinação de modelo e algoritmo.

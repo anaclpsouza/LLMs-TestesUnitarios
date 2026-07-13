@@ -7,7 +7,6 @@ import path from "path";
 
 const execFileAsync = promisify(execFile);
 const TIMEOUT_MS = Number(process.env.EXPERIMENT_TIMEOUT_MS ?? 30_000);
-const REPETITION_COUNT = Number(process.env.EXPERIMENT_REPETITIONS ?? 3);
 const ROOT = process.cwd();
 const OUTPUT_ROOT = path.join(ROOT, "resultados", "runs");
 const COMPILED_ROOT = path.join(ROOT, "resultados", "resultados-compilados");
@@ -44,10 +43,10 @@ function resetOutputs(): void {
     fs.mkdirSync(COMPILED_ROOT, { recursive: true });
 }
 
-function findTestFile(modelDir: string, algorithm: string, repetition: number): string | null {
+function findTestFile(modelDir: string, algorithm: string): string | null {
     const dir = path.join(ROOT, modelDir);
     if (!fs.existsSync(dir)) return null;
-    const file = `${algorithm}.rep${String(repetition).padStart(2, "0")}.test.ts`;
+    const file = `${algorithm}.test.ts`;
     return fs.existsSync(path.join(dir, file)) ? path.join(modelDir, file) : null;
 }
 
@@ -135,36 +134,34 @@ async function main(): Promise<void> {
     resetOutputs();
     const results: any[] = [];
     for (const model of MODELS) for (const algorithm of ALGORITHMS) {
-        for (let repetition = 1; repetition <= REPETITION_COUNT; repetition += 1) {
-            const testFile = findTestFile(model.dir, algorithm, repetition);
-            if (testFile === null) {
-                results.push({ model: model.name, modelSlug: model.slug, algorithm, repetition, testFile: null, status: "NO_TESTS", bugStatus: null, detectedKnownBug: null, passed: 0, failed: 0, total: 0, statements: null, branches: null, functions: null, lines: null });
-                continue;
-            }
-            const base = path.join(OUTPUT_ROOT, model.slug, algorithm, `rep${String(repetition).padStart(2, "0")}`);
-            const correct = await runJest(testFile, algorithm, path.join(base, "correct"), "correct", true);
-            let buggy: Awaited<ReturnType<typeof runJest>> | null = null;
-            if (correct.status === "OK") buggy = await runJest(testFile, algorithm, path.join(base, "buggy"), "buggy", false);
-            results.push({
-                model: model.name, modelSlug: model.slug, algorithm, repetition,
-                testFile: testFile.replace(/\\/g, "/"), status: correct.status,
-                bugStatus: buggy?.status ?? null,
-                detectedKnownBug: buggy
-                    ? (["ASSERTION_FAILURE", "RUNTIME_ERROR", "TIMEOUT"] as Status[]).includes(buggy.status)
-                        ? true
-                        : buggy.status === "OK" ? false : null
-                    : null,
-                passed: correct.passed, failed: correct.failed, total: correct.total,
-                statements: correct.coverage?.statements ?? null, branches: correct.coverage?.branches ?? null,
-                functions: correct.coverage?.functions ?? null, lines: correct.coverage?.lines ?? null,
-            });
-            process.stdout.write(`\r${model.slug} ${algorithm} rep${repetition}: ${correct.status}             `);
+        const testFile = findTestFile(model.dir, algorithm);
+        if (testFile === null) {
+            results.push({ model: model.name, modelSlug: model.slug, algorithm, testFile: null, status: "NO_TESTS", bugStatus: null, detectedKnownBug: null, passed: 0, failed: 0, total: 0, statements: null, branches: null, functions: null, lines: null });
+            continue;
         }
+        const base = path.join(OUTPUT_ROOT, model.slug, algorithm);
+        const correct = await runJest(testFile, algorithm, path.join(base, "correct"), "correct", true);
+        let buggy: Awaited<ReturnType<typeof runJest>> | null = null;
+        if (correct.status === "OK") buggy = await runJest(testFile, algorithm, path.join(base, "buggy"), "buggy", false);
+        results.push({
+            model: model.name, modelSlug: model.slug, algorithm,
+            testFile: testFile.replace(/\\/g, "/"), status: correct.status,
+            bugStatus: buggy?.status ?? null,
+            detectedKnownBug: buggy
+                ? (["ASSERTION_FAILURE", "RUNTIME_ERROR", "TIMEOUT"] as Status[]).includes(buggy.status)
+                    ? true
+                    : buggy.status === "OK" ? false : null
+                : null,
+            passed: correct.passed, failed: correct.failed, total: correct.total,
+            statements: correct.coverage?.statements ?? null, branches: correct.coverage?.branches ?? null,
+            functions: correct.coverage?.functions ?? null, lines: correct.coverage?.lines ?? null,
+        });
+        process.stdout.write(`\r${model.slug} ${algorithm}: ${correct.status}             `);
     }
     process.stdout.write("\n");
     fs.writeFileSync(path.join(COMPILED_ROOT, "resultados.json"), JSON.stringify(results, null, 2));
-    const headers = ["Modelo", "ModeloSlug", "Algoritmo", "Repeticao", "Arquivo", "Status", "StatusBug", "DetectouBug", "Total", "Passou", "Falhou", "Statements", "Branches", "Functions", "Lines"];
-    const rows = results.map(r => [r.model, r.modelSlug, r.algorithm, r.repetition, r.testFile, r.status, r.bugStatus, r.detectedKnownBug, r.total, r.passed, r.failed, r.statements, r.branches, r.functions, r.lines].map(csvCell).join(","));
+    const headers = ["Modelo", "ModeloSlug", "Algoritmo", "Arquivo", "Status", "StatusBug", "DetectouBug", "Total", "Passou", "Falhou", "Statements", "Branches", "Functions", "Lines"];
+    const rows = results.map(r => [r.model, r.modelSlug, r.algorithm, r.testFile, r.status, r.bugStatus, r.detectedKnownBug, r.total, r.passed, r.failed, r.statements, r.branches, r.functions, r.lines].map(csvCell).join(","));
     fs.writeFileSync(path.join(COMPILED_ROOT, "resultados.csv"), [headers.join(","), ...rows].join("\n"));
     console.log(`Resultados gravados: ${results.length} execuções planejadas/encontradas.`);
 }
