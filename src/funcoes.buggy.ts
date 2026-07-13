@@ -1,0 +1,21 @@
+// Versões defeituosas oficiais do QuixBugs, traduzidas para medir detecção do bug.
+export { bitcount } from "./functions-buggy/bitcount";
+export { bucketsort } from "./functions-buggy/bucketsort";
+export { find_first_in_sorted } from "./functions-buggy/find_first_in_sorted";
+export { find_in_sorted } from "./functions-buggy/find_in_sorted";
+export { flatten } from "./functions-buggy/flatten";
+export { gcd } from "./functions-buggy/gcd";
+export { get_factors } from "./functions-buggy/get_factors";
+export { is_valid_parenthesization } from "./functions-buggy/is_valid_parenthesization";
+export { knapsack } from "./functions-buggy/knapsack";
+export { levenshtein } from "./functions-buggy/levenshtein";
+export { lis } from "./functions-buggy/lis";
+export { max_sublist_sum } from "./functions-buggy/max_sublist_sum";
+export { mergesort } from "./functions-buggy/mergesort";
+export { next_palindrome } from "./functions-buggy/next_palindrome";
+export { next_permutation } from "./functions-buggy/next_permutation";
+export { pascal } from "./functions-buggy/pascal";
+export { possible_change } from "./functions-buggy/possible_change";
+export { powerset } from "./functions-buggy/powerset";
+export { quicksort } from "./functions-buggy/quicksort";
+export { edgeKey, shortest_path_lengths } from "./functions-buggy/shortest_path_lengths";
